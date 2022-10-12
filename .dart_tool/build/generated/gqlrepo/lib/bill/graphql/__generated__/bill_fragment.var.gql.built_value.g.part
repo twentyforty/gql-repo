@@ -1,0 +1,88 @@
+// **************************************************************************
+// BuiltValueGenerator
+// **************************************************************************
+
+Serializer<GBillFragmentVars> _$gBillFragmentVarsSerializer =
+    new _$GBillFragmentVarsSerializer();
+
+class _$GBillFragmentVarsSerializer
+    implements StructuredSerializer<GBillFragmentVars> {
+  @override
+  final Iterable<Type> types = const [GBillFragmentVars, _$GBillFragmentVars];
+  @override
+  final String wireName = 'GBillFragmentVars';
+
+  @override
+  Iterable<Object?> serialize(Serializers serializers, GBillFragmentVars object,
+      {FullType specifiedType = FullType.unspecified}) {
+    return <Object?>[];
+  }
+
+  @override
+  GBillFragmentVars deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    return new GBillFragmentVarsBuilder().build();
+  }
+}
+
+class _$GBillFragmentVars extends GBillFragmentVars {
+  factory _$GBillFragmentVars(
+          [void Function(GBillFragmentVarsBuilder)? updates]) =>
+      (new GBillFragmentVarsBuilder()..update(updates))._build();
+
+  _$GBillFragmentVars._() : super._();
+
+  @override
+  GBillFragmentVars rebuild(void Function(GBillFragmentVarsBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GBillFragmentVarsBuilder toBuilder() =>
+      new GBillFragmentVarsBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GBillFragmentVars;
+  }
+
+  @override
+  int get hashCode {
+    return 798516955;
+  }
+
+  @override
+  String toString() {
+    return newBuiltValueToStringHelper(r'GBillFragmentVars').toString();
+  }
+}
+
+class GBillFragmentVarsBuilder
+    implements Builder<GBillFragmentVars, GBillFragmentVarsBuilder> {
+  _$GBillFragmentVars? _$v;
+
+  GBillFragmentVarsBuilder();
+
+  @override
+  void replace(GBillFragmentVars other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GBillFragmentVars;
+  }
+
+  @override
+  void update(void Function(GBillFragmentVarsBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GBillFragmentVars build() => _build();
+
+  _$GBillFragmentVars _build() {
+    final _$result = _$v ?? new _$GBillFragmentVars._();
+    replace(_$result);
+    return _$result;
+  }
+}
+
+// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas

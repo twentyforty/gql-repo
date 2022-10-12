@@ -1,0 +1,155 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'get_user_camera_medias.var.gql.dart';
+
+// **************************************************************************
+// BuiltValueGenerator
+// **************************************************************************
+
+Serializer<GGetUserCameraMediasVars> _$gGetUserCameraMediasVarsSerializer =
+    new _$GGetUserCameraMediasVarsSerializer();
+
+class _$GGetUserCameraMediasVarsSerializer
+    implements StructuredSerializer<GGetUserCameraMediasVars> {
+  @override
+  final Iterable<Type> types = const [
+    GGetUserCameraMediasVars,
+    _$GGetUserCameraMediasVars
+  ];
+  @override
+  final String wireName = 'GGetUserCameraMediasVars';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GGetUserCameraMediasVars object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      'input',
+      serializers.serialize(object.input,
+          specifiedType: const FullType(_i1.GUserCameraMediaInput)),
+    ];
+
+    return result;
+  }
+
+  @override
+  GGetUserCameraMediasVars deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GGetUserCameraMediasVarsBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case 'input':
+          result.input.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(_i1.GUserCameraMediaInput))!
+              as _i1.GUserCameraMediaInput);
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GGetUserCameraMediasVars extends GGetUserCameraMediasVars {
+  @override
+  final _i1.GUserCameraMediaInput input;
+
+  factory _$GGetUserCameraMediasVars(
+          [void Function(GGetUserCameraMediasVarsBuilder)? updates]) =>
+      (new GGetUserCameraMediasVarsBuilder()..update(updates))._build();
+
+  _$GGetUserCameraMediasVars._({required this.input}) : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        input, r'GGetUserCameraMediasVars', 'input');
+  }
+
+  @override
+  GGetUserCameraMediasVars rebuild(
+          void Function(GGetUserCameraMediasVarsBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GGetUserCameraMediasVarsBuilder toBuilder() =>
+      new GGetUserCameraMediasVarsBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GGetUserCameraMediasVars && input == other.input;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(0, input.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(r'GGetUserCameraMediasVars')
+          ..add('input', input))
+        .toString();
+  }
+}
+
+class GGetUserCameraMediasVarsBuilder
+    implements
+        Builder<GGetUserCameraMediasVars, GGetUserCameraMediasVarsBuilder> {
+  _$GGetUserCameraMediasVars? _$v;
+
+  _i1.GUserCameraMediaInputBuilder? _input;
+  _i1.GUserCameraMediaInputBuilder get input =>
+      _$this._input ??= new _i1.GUserCameraMediaInputBuilder();
+  set input(_i1.GUserCameraMediaInputBuilder? input) => _$this._input = input;
+
+  GGetUserCameraMediasVarsBuilder();
+
+  GGetUserCameraMediasVarsBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _input = $v.input.toBuilder();
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GGetUserCameraMediasVars other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GGetUserCameraMediasVars;
+  }
+
+  @override
+  void update(void Function(GGetUserCameraMediasVarsBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GGetUserCameraMediasVars build() => _build();
+
+  _$GGetUserCameraMediasVars _build() {
+    _$GGetUserCameraMediasVars _$result;
+    try {
+      _$result = _$v ?? new _$GGetUserCameraMediasVars._(input: input.build());
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'input';
+        input.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'GGetUserCameraMediasVars', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas

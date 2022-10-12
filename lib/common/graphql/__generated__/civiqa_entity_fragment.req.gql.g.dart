@@ -1,0 +1,234 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'civiqa_entity_fragment.req.gql.dart';
+
+// **************************************************************************
+// BuiltValueGenerator
+// **************************************************************************
+
+Serializer<GCiviqaEntityFragmentReq> _$gCiviqaEntityFragmentReqSerializer =
+    new _$GCiviqaEntityFragmentReqSerializer();
+
+class _$GCiviqaEntityFragmentReqSerializer
+    implements StructuredSerializer<GCiviqaEntityFragmentReq> {
+  @override
+  final Iterable<Type> types = const [
+    GCiviqaEntityFragmentReq,
+    _$GCiviqaEntityFragmentReq
+  ];
+  @override
+  final String wireName = 'GCiviqaEntityFragmentReq';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GCiviqaEntityFragmentReq object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      'vars',
+      serializers.serialize(object.vars,
+          specifiedType: const FullType(_i3.GCiviqaEntityFragmentVars)),
+      'document',
+      serializers.serialize(object.document,
+          specifiedType: const FullType(_i5.DocumentNode)),
+      'idFields',
+      serializers.serialize(object.idFields,
+          specifiedType: const FullType(
+              Map, const [const FullType(String), const FullType(dynamic)])),
+    ];
+    Object? value;
+    value = object.fragmentName;
+    if (value != null) {
+      result
+        ..add('fragmentName')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    return result;
+  }
+
+  @override
+  GCiviqaEntityFragmentReq deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GCiviqaEntityFragmentReqBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case 'vars':
+          result.vars.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(_i3.GCiviqaEntityFragmentVars))!
+              as _i3.GCiviqaEntityFragmentVars);
+          break;
+        case 'document':
+          result.document = serializers.deserialize(value,
+                  specifiedType: const FullType(_i5.DocumentNode))!
+              as _i5.DocumentNode;
+          break;
+        case 'fragmentName':
+          result.fragmentName = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'idFields':
+          result.idFields = serializers.deserialize(value,
+              specifiedType: const FullType(Map, const [
+                const FullType(String),
+                const FullType(dynamic)
+              ]))! as Map<String, dynamic>;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GCiviqaEntityFragmentReq extends GCiviqaEntityFragmentReq {
+  @override
+  final _i3.GCiviqaEntityFragmentVars vars;
+  @override
+  final _i5.DocumentNode document;
+  @override
+  final String? fragmentName;
+  @override
+  final Map<String, dynamic> idFields;
+
+  factory _$GCiviqaEntityFragmentReq(
+          [void Function(GCiviqaEntityFragmentReqBuilder)? updates]) =>
+      (new GCiviqaEntityFragmentReqBuilder()..update(updates))._build();
+
+  _$GCiviqaEntityFragmentReq._(
+      {required this.vars,
+      required this.document,
+      this.fragmentName,
+      required this.idFields})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        vars, r'GCiviqaEntityFragmentReq', 'vars');
+    BuiltValueNullFieldError.checkNotNull(
+        document, r'GCiviqaEntityFragmentReq', 'document');
+    BuiltValueNullFieldError.checkNotNull(
+        idFields, r'GCiviqaEntityFragmentReq', 'idFields');
+  }
+
+  @override
+  GCiviqaEntityFragmentReq rebuild(
+          void Function(GCiviqaEntityFragmentReqBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GCiviqaEntityFragmentReqBuilder toBuilder() =>
+      new GCiviqaEntityFragmentReqBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GCiviqaEntityFragmentReq &&
+        vars == other.vars &&
+        document == other.document &&
+        fragmentName == other.fragmentName &&
+        idFields == other.idFields;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(
+        $jc($jc($jc(0, vars.hashCode), document.hashCode),
+            fragmentName.hashCode),
+        idFields.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(r'GCiviqaEntityFragmentReq')
+          ..add('vars', vars)
+          ..add('document', document)
+          ..add('fragmentName', fragmentName)
+          ..add('idFields', idFields))
+        .toString();
+  }
+}
+
+class GCiviqaEntityFragmentReqBuilder
+    implements
+        Builder<GCiviqaEntityFragmentReq, GCiviqaEntityFragmentReqBuilder> {
+  _$GCiviqaEntityFragmentReq? _$v;
+
+  _i3.GCiviqaEntityFragmentVarsBuilder? _vars;
+  _i3.GCiviqaEntityFragmentVarsBuilder get vars =>
+      _$this._vars ??= new _i3.GCiviqaEntityFragmentVarsBuilder();
+  set vars(_i3.GCiviqaEntityFragmentVarsBuilder? vars) => _$this._vars = vars;
+
+  _i5.DocumentNode? _document;
+  _i5.DocumentNode? get document => _$this._document;
+  set document(_i5.DocumentNode? document) => _$this._document = document;
+
+  String? _fragmentName;
+  String? get fragmentName => _$this._fragmentName;
+  set fragmentName(String? fragmentName) => _$this._fragmentName = fragmentName;
+
+  Map<String, dynamic>? _idFields;
+  Map<String, dynamic>? get idFields => _$this._idFields;
+  set idFields(Map<String, dynamic>? idFields) => _$this._idFields = idFields;
+
+  GCiviqaEntityFragmentReqBuilder() {
+    GCiviqaEntityFragmentReq._initializeBuilder(this);
+  }
+
+  GCiviqaEntityFragmentReqBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _vars = $v.vars.toBuilder();
+      _document = $v.document;
+      _fragmentName = $v.fragmentName;
+      _idFields = $v.idFields;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GCiviqaEntityFragmentReq other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GCiviqaEntityFragmentReq;
+  }
+
+  @override
+  void update(void Function(GCiviqaEntityFragmentReqBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GCiviqaEntityFragmentReq build() => _build();
+
+  _$GCiviqaEntityFragmentReq _build() {
+    _$GCiviqaEntityFragmentReq _$result;
+    try {
+      _$result = _$v ??
+          new _$GCiviqaEntityFragmentReq._(
+              vars: vars.build(),
+              document: BuiltValueNullFieldError.checkNotNull(
+                  document, r'GCiviqaEntityFragmentReq', 'document'),
+              fragmentName: fragmentName,
+              idFields: BuiltValueNullFieldError.checkNotNull(
+                  idFields, r'GCiviqaEntityFragmentReq', 'idFields'));
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'vars';
+        vars.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'GCiviqaEntityFragmentReq', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas

@@ -1,0 +1,561 @@
+// **************************************************************************
+// BuiltValueGenerator
+// **************************************************************************
+
+Serializer<GEventRenderFragmentData> _$gEventRenderFragmentDataSerializer =
+    new _$GEventRenderFragmentDataSerializer();
+Serializer<GEventRenderFragmentData_jurisdiction>
+    _$gEventRenderFragmentDataJurisdictionSerializer =
+    new _$GEventRenderFragmentData_jurisdictionSerializer();
+
+class _$GEventRenderFragmentDataSerializer
+    implements StructuredSerializer<GEventRenderFragmentData> {
+  @override
+  final Iterable<Type> types = const [
+    GEventRenderFragmentData,
+    _$GEventRenderFragmentData
+  ];
+  @override
+  final String wireName = 'GEventRenderFragmentData';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GEventRenderFragmentData object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+      'id',
+      serializers.serialize(object.id, specifiedType: const FullType(String)),
+      'name',
+      serializers.serialize(object.name, specifiedType: const FullType(String)),
+      'jurisdiction',
+      serializers.serialize(object.jurisdiction,
+          specifiedType: const FullType(GEventRenderFragmentData_jurisdiction)),
+      'description',
+      serializers.serialize(object.description,
+          specifiedType: const FullType(String)),
+      'startDate',
+      serializers.serialize(object.startDate,
+          specifiedType: const FullType(String)),
+    ];
+    Object? value;
+    value = object.videoUrl;
+    if (value != null) {
+      result
+        ..add('videoUrl')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.videoThumbnailUrl;
+    if (value != null) {
+      result
+        ..add('videoThumbnailUrl')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    return result;
+  }
+
+  @override
+  GEventRenderFragmentData deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GEventRenderFragmentDataBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'id':
+          result.id = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'name':
+          result.name = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'jurisdiction':
+          result.jurisdiction.replace(serializers.deserialize(value,
+                  specifiedType:
+                      const FullType(GEventRenderFragmentData_jurisdiction))!
+              as GEventRenderFragmentData_jurisdiction);
+          break;
+        case 'description':
+          result.description = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'startDate':
+          result.startDate = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'videoUrl':
+          result.videoUrl = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'videoThumbnailUrl':
+          result.videoThumbnailUrl = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GEventRenderFragmentData_jurisdictionSerializer
+    implements StructuredSerializer<GEventRenderFragmentData_jurisdiction> {
+  @override
+  final Iterable<Type> types = const [
+    GEventRenderFragmentData_jurisdiction,
+    _$GEventRenderFragmentData_jurisdiction
+  ];
+  @override
+  final String wireName = 'GEventRenderFragmentData_jurisdiction';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GEventRenderFragmentData_jurisdiction object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+      'id',
+      serializers.serialize(object.id, specifiedType: const FullType(String)),
+      'name',
+      serializers.serialize(object.name, specifiedType: const FullType(String)),
+      'classification',
+      serializers.serialize(object.classification,
+          specifiedType:
+              const FullType(_i2.GDataJurisdictionClassificationChoices)),
+    ];
+    Object? value;
+    value = object.photoUrl;
+    if (value != null) {
+      result
+        ..add('photoUrl')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    return result;
+  }
+
+  @override
+  GEventRenderFragmentData_jurisdiction deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GEventRenderFragmentData_jurisdictionBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'id':
+          result.id = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'name':
+          result.name = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'photoUrl':
+          result.photoUrl = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'classification':
+          result.classification = serializers.deserialize(value,
+                  specifiedType: const FullType(
+                      _i2.GDataJurisdictionClassificationChoices))!
+              as _i2.GDataJurisdictionClassificationChoices;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GEventRenderFragmentData extends GEventRenderFragmentData {
+  @override
+  final String G__typename;
+  @override
+  final String id;
+  @override
+  final String name;
+  @override
+  final GEventRenderFragmentData_jurisdiction jurisdiction;
+  @override
+  final String description;
+  @override
+  final String startDate;
+  @override
+  final String? videoUrl;
+  @override
+  final String? videoThumbnailUrl;
+
+  factory _$GEventRenderFragmentData(
+          [void Function(GEventRenderFragmentDataBuilder)? updates]) =>
+      (new GEventRenderFragmentDataBuilder()..update(updates))._build();
+
+  _$GEventRenderFragmentData._(
+      {required this.G__typename,
+      required this.id,
+      required this.name,
+      required this.jurisdiction,
+      required this.description,
+      required this.startDate,
+      this.videoUrl,
+      this.videoThumbnailUrl})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        G__typename, r'GEventRenderFragmentData', 'G__typename');
+    BuiltValueNullFieldError.checkNotNull(
+        id, r'GEventRenderFragmentData', 'id');
+    BuiltValueNullFieldError.checkNotNull(
+        name, r'GEventRenderFragmentData', 'name');
+    BuiltValueNullFieldError.checkNotNull(
+        jurisdiction, r'GEventRenderFragmentData', 'jurisdiction');
+    BuiltValueNullFieldError.checkNotNull(
+        description, r'GEventRenderFragmentData', 'description');
+    BuiltValueNullFieldError.checkNotNull(
+        startDate, r'GEventRenderFragmentData', 'startDate');
+  }
+
+  @override
+  GEventRenderFragmentData rebuild(
+          void Function(GEventRenderFragmentDataBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GEventRenderFragmentDataBuilder toBuilder() =>
+      new GEventRenderFragmentDataBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GEventRenderFragmentData &&
+        G__typename == other.G__typename &&
+        id == other.id &&
+        name == other.name &&
+        jurisdiction == other.jurisdiction &&
+        description == other.description &&
+        startDate == other.startDate &&
+        videoUrl == other.videoUrl &&
+        videoThumbnailUrl == other.videoThumbnailUrl;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(
+        $jc(
+            $jc(
+                $jc(
+                    $jc(
+                        $jc($jc($jc(0, G__typename.hashCode), id.hashCode),
+                            name.hashCode),
+                        jurisdiction.hashCode),
+                    description.hashCode),
+                startDate.hashCode),
+            videoUrl.hashCode),
+        videoThumbnailUrl.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(r'GEventRenderFragmentData')
+          ..add('G__typename', G__typename)
+          ..add('id', id)
+          ..add('name', name)
+          ..add('jurisdiction', jurisdiction)
+          ..add('description', description)
+          ..add('startDate', startDate)
+          ..add('videoUrl', videoUrl)
+          ..add('videoThumbnailUrl', videoThumbnailUrl))
+        .toString();
+  }
+}
+
+class GEventRenderFragmentDataBuilder
+    implements
+        Builder<GEventRenderFragmentData, GEventRenderFragmentDataBuilder> {
+  _$GEventRenderFragmentData? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  String? _id;
+  String? get id => _$this._id;
+  set id(String? id) => _$this._id = id;
+
+  String? _name;
+  String? get name => _$this._name;
+  set name(String? name) => _$this._name = name;
+
+  GEventRenderFragmentData_jurisdictionBuilder? _jurisdiction;
+  GEventRenderFragmentData_jurisdictionBuilder get jurisdiction =>
+      _$this._jurisdiction ??=
+          new GEventRenderFragmentData_jurisdictionBuilder();
+  set jurisdiction(
+          GEventRenderFragmentData_jurisdictionBuilder? jurisdiction) =>
+      _$this._jurisdiction = jurisdiction;
+
+  String? _description;
+  String? get description => _$this._description;
+  set description(String? description) => _$this._description = description;
+
+  String? _startDate;
+  String? get startDate => _$this._startDate;
+  set startDate(String? startDate) => _$this._startDate = startDate;
+
+  String? _videoUrl;
+  String? get videoUrl => _$this._videoUrl;
+  set videoUrl(String? videoUrl) => _$this._videoUrl = videoUrl;
+
+  String? _videoThumbnailUrl;
+  String? get videoThumbnailUrl => _$this._videoThumbnailUrl;
+  set videoThumbnailUrl(String? videoThumbnailUrl) =>
+      _$this._videoThumbnailUrl = videoThumbnailUrl;
+
+  GEventRenderFragmentDataBuilder() {
+    GEventRenderFragmentData._initializeBuilder(this);
+  }
+
+  GEventRenderFragmentDataBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _id = $v.id;
+      _name = $v.name;
+      _jurisdiction = $v.jurisdiction.toBuilder();
+      _description = $v.description;
+      _startDate = $v.startDate;
+      _videoUrl = $v.videoUrl;
+      _videoThumbnailUrl = $v.videoThumbnailUrl;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GEventRenderFragmentData other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GEventRenderFragmentData;
+  }
+
+  @override
+  void update(void Function(GEventRenderFragmentDataBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GEventRenderFragmentData build() => _build();
+
+  _$GEventRenderFragmentData _build() {
+    _$GEventRenderFragmentData _$result;
+    try {
+      _$result = _$v ??
+          new _$GEventRenderFragmentData._(
+              G__typename: BuiltValueNullFieldError.checkNotNull(
+                  G__typename, r'GEventRenderFragmentData', 'G__typename'),
+              id: BuiltValueNullFieldError.checkNotNull(
+                  id, r'GEventRenderFragmentData', 'id'),
+              name: BuiltValueNullFieldError.checkNotNull(
+                  name, r'GEventRenderFragmentData', 'name'),
+              jurisdiction: jurisdiction.build(),
+              description: BuiltValueNullFieldError.checkNotNull(
+                  description, r'GEventRenderFragmentData', 'description'),
+              startDate: BuiltValueNullFieldError.checkNotNull(
+                  startDate, r'GEventRenderFragmentData', 'startDate'),
+              videoUrl: videoUrl,
+              videoThumbnailUrl: videoThumbnailUrl);
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'jurisdiction';
+        jurisdiction.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'GEventRenderFragmentData', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GEventRenderFragmentData_jurisdiction
+    extends GEventRenderFragmentData_jurisdiction {
+  @override
+  final String G__typename;
+  @override
+  final String id;
+  @override
+  final String name;
+  @override
+  final String? photoUrl;
+  @override
+  final _i2.GDataJurisdictionClassificationChoices classification;
+
+  factory _$GEventRenderFragmentData_jurisdiction(
+          [void Function(GEventRenderFragmentData_jurisdictionBuilder)?
+              updates]) =>
+      (new GEventRenderFragmentData_jurisdictionBuilder()..update(updates))
+          ._build();
+
+  _$GEventRenderFragmentData_jurisdiction._(
+      {required this.G__typename,
+      required this.id,
+      required this.name,
+      this.photoUrl,
+      required this.classification})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        G__typename, r'GEventRenderFragmentData_jurisdiction', 'G__typename');
+    BuiltValueNullFieldError.checkNotNull(
+        id, r'GEventRenderFragmentData_jurisdiction', 'id');
+    BuiltValueNullFieldError.checkNotNull(
+        name, r'GEventRenderFragmentData_jurisdiction', 'name');
+    BuiltValueNullFieldError.checkNotNull(classification,
+        r'GEventRenderFragmentData_jurisdiction', 'classification');
+  }
+
+  @override
+  GEventRenderFragmentData_jurisdiction rebuild(
+          void Function(GEventRenderFragmentData_jurisdictionBuilder)
+              updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GEventRenderFragmentData_jurisdictionBuilder toBuilder() =>
+      new GEventRenderFragmentData_jurisdictionBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GEventRenderFragmentData_jurisdiction &&
+        G__typename == other.G__typename &&
+        id == other.id &&
+        name == other.name &&
+        photoUrl == other.photoUrl &&
+        classification == other.classification;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(
+        $jc($jc($jc($jc(0, G__typename.hashCode), id.hashCode), name.hashCode),
+            photoUrl.hashCode),
+        classification.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(
+            r'GEventRenderFragmentData_jurisdiction')
+          ..add('G__typename', G__typename)
+          ..add('id', id)
+          ..add('name', name)
+          ..add('photoUrl', photoUrl)
+          ..add('classification', classification))
+        .toString();
+  }
+}
+
+class GEventRenderFragmentData_jurisdictionBuilder
+    implements
+        Builder<GEventRenderFragmentData_jurisdiction,
+            GEventRenderFragmentData_jurisdictionBuilder> {
+  _$GEventRenderFragmentData_jurisdiction? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  String? _id;
+  String? get id => _$this._id;
+  set id(String? id) => _$this._id = id;
+
+  String? _name;
+  String? get name => _$this._name;
+  set name(String? name) => _$this._name = name;
+
+  String? _photoUrl;
+  String? get photoUrl => _$this._photoUrl;
+  set photoUrl(String? photoUrl) => _$this._photoUrl = photoUrl;
+
+  _i2.GDataJurisdictionClassificationChoices? _classification;
+  _i2.GDataJurisdictionClassificationChoices? get classification =>
+      _$this._classification;
+  set classification(
+          _i2.GDataJurisdictionClassificationChoices? classification) =>
+      _$this._classification = classification;
+
+  GEventRenderFragmentData_jurisdictionBuilder() {
+    GEventRenderFragmentData_jurisdiction._initializeBuilder(this);
+  }
+
+  GEventRenderFragmentData_jurisdictionBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _id = $v.id;
+      _name = $v.name;
+      _photoUrl = $v.photoUrl;
+      _classification = $v.classification;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GEventRenderFragmentData_jurisdiction other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GEventRenderFragmentData_jurisdiction;
+  }
+
+  @override
+  void update(
+      void Function(GEventRenderFragmentData_jurisdictionBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GEventRenderFragmentData_jurisdiction build() => _build();
+
+  _$GEventRenderFragmentData_jurisdiction _build() {
+    final _$result = _$v ??
+        new _$GEventRenderFragmentData_jurisdiction._(
+            G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
+                r'GEventRenderFragmentData_jurisdiction', 'G__typename'),
+            id: BuiltValueNullFieldError.checkNotNull(
+                id, r'GEventRenderFragmentData_jurisdiction', 'id'),
+            name: BuiltValueNullFieldError.checkNotNull(
+                name, r'GEventRenderFragmentData_jurisdiction', 'name'),
+            photoUrl: photoUrl,
+            classification: BuiltValueNullFieldError.checkNotNull(
+                classification,
+                r'GEventRenderFragmentData_jurisdiction',
+                'classification'));
+    replace(_$result);
+    return _$result;
+  }
+}
+
+// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas

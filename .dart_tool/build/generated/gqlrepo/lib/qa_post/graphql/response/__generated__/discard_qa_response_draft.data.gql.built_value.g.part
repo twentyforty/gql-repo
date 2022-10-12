@@ -1,0 +1,368 @@
+// **************************************************************************
+// BuiltValueGenerator
+// **************************************************************************
+
+Serializer<GDiscardQAResponseDraftData>
+    _$gDiscardQAResponseDraftDataSerializer =
+    new _$GDiscardQAResponseDraftDataSerializer();
+Serializer<GDiscardQAResponseDraftData_discardQaResponseDraft>
+    _$gDiscardQAResponseDraftDataDiscardQaResponseDraftSerializer =
+    new _$GDiscardQAResponseDraftData_discardQaResponseDraftSerializer();
+
+class _$GDiscardQAResponseDraftDataSerializer
+    implements StructuredSerializer<GDiscardQAResponseDraftData> {
+  @override
+  final Iterable<Type> types = const [
+    GDiscardQAResponseDraftData,
+    _$GDiscardQAResponseDraftData
+  ];
+  @override
+  final String wireName = 'GDiscardQAResponseDraftData';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GDiscardQAResponseDraftData object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+    ];
+    Object? value;
+    value = object.discardQaResponseDraft;
+    if (value != null) {
+      result
+        ..add('discardQaResponseDraft')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(
+                GDiscardQAResponseDraftData_discardQaResponseDraft)));
+    }
+    return result;
+  }
+
+  @override
+  GDiscardQAResponseDraftData deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GDiscardQAResponseDraftDataBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'discardQaResponseDraft':
+          result.discardQaResponseDraft.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(
+                      GDiscardQAResponseDraftData_discardQaResponseDraft))!
+              as GDiscardQAResponseDraftData_discardQaResponseDraft);
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GDiscardQAResponseDraftData_discardQaResponseDraftSerializer
+    implements
+        StructuredSerializer<
+            GDiscardQAResponseDraftData_discardQaResponseDraft> {
+  @override
+  final Iterable<Type> types = const [
+    GDiscardQAResponseDraftData_discardQaResponseDraft,
+    _$GDiscardQAResponseDraftData_discardQaResponseDraft
+  ];
+  @override
+  final String wireName = 'GDiscardQAResponseDraftData_discardQaResponseDraft';
+
+  @override
+  Iterable<Object?> serialize(Serializers serializers,
+      GDiscardQAResponseDraftData_discardQaResponseDraft object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+    ];
+    Object? value;
+    value = object.discarded;
+    if (value != null) {
+      result
+        ..add('discarded')
+        ..add(
+            serializers.serialize(value, specifiedType: const FullType(bool)));
+    }
+    return result;
+  }
+
+  @override
+  GDiscardQAResponseDraftData_discardQaResponseDraft deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result =
+        new GDiscardQAResponseDraftData_discardQaResponseDraftBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'discarded':
+          result.discarded = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool?;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GDiscardQAResponseDraftData extends GDiscardQAResponseDraftData {
+  @override
+  final String G__typename;
+  @override
+  final GDiscardQAResponseDraftData_discardQaResponseDraft?
+      discardQaResponseDraft;
+
+  factory _$GDiscardQAResponseDraftData(
+          [void Function(GDiscardQAResponseDraftDataBuilder)? updates]) =>
+      (new GDiscardQAResponseDraftDataBuilder()..update(updates))._build();
+
+  _$GDiscardQAResponseDraftData._(
+      {required this.G__typename, this.discardQaResponseDraft})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        G__typename, r'GDiscardQAResponseDraftData', 'G__typename');
+  }
+
+  @override
+  GDiscardQAResponseDraftData rebuild(
+          void Function(GDiscardQAResponseDraftDataBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GDiscardQAResponseDraftDataBuilder toBuilder() =>
+      new GDiscardQAResponseDraftDataBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GDiscardQAResponseDraftData &&
+        G__typename == other.G__typename &&
+        discardQaResponseDraft == other.discardQaResponseDraft;
+  }
+
+  @override
+  int get hashCode {
+    return $jf(
+        $jc($jc(0, G__typename.hashCode), discardQaResponseDraft.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(r'GDiscardQAResponseDraftData')
+          ..add('G__typename', G__typename)
+          ..add('discardQaResponseDraft', discardQaResponseDraft))
+        .toString();
+  }
+}
+
+class GDiscardQAResponseDraftDataBuilder
+    implements
+        Builder<GDiscardQAResponseDraftData,
+            GDiscardQAResponseDraftDataBuilder> {
+  _$GDiscardQAResponseDraftData? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  GDiscardQAResponseDraftData_discardQaResponseDraftBuilder?
+      _discardQaResponseDraft;
+  GDiscardQAResponseDraftData_discardQaResponseDraftBuilder
+      get discardQaResponseDraft => _$this._discardQaResponseDraft ??=
+          new GDiscardQAResponseDraftData_discardQaResponseDraftBuilder();
+  set discardQaResponseDraft(
+          GDiscardQAResponseDraftData_discardQaResponseDraftBuilder?
+              discardQaResponseDraft) =>
+      _$this._discardQaResponseDraft = discardQaResponseDraft;
+
+  GDiscardQAResponseDraftDataBuilder() {
+    GDiscardQAResponseDraftData._initializeBuilder(this);
+  }
+
+  GDiscardQAResponseDraftDataBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _discardQaResponseDraft = $v.discardQaResponseDraft?.toBuilder();
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GDiscardQAResponseDraftData other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GDiscardQAResponseDraftData;
+  }
+
+  @override
+  void update(void Function(GDiscardQAResponseDraftDataBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GDiscardQAResponseDraftData build() => _build();
+
+  _$GDiscardQAResponseDraftData _build() {
+    _$GDiscardQAResponseDraftData _$result;
+    try {
+      _$result = _$v ??
+          new _$GDiscardQAResponseDraftData._(
+              G__typename: BuiltValueNullFieldError.checkNotNull(
+                  G__typename, r'GDiscardQAResponseDraftData', 'G__typename'),
+              discardQaResponseDraft: _discardQaResponseDraft?.build());
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'discardQaResponseDraft';
+        _discardQaResponseDraft?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'GDiscardQAResponseDraftData', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GDiscardQAResponseDraftData_discardQaResponseDraft
+    extends GDiscardQAResponseDraftData_discardQaResponseDraft {
+  @override
+  final String G__typename;
+  @override
+  final bool? discarded;
+
+  factory _$GDiscardQAResponseDraftData_discardQaResponseDraft(
+          [void Function(
+                  GDiscardQAResponseDraftData_discardQaResponseDraftBuilder)?
+              updates]) =>
+      (new GDiscardQAResponseDraftData_discardQaResponseDraftBuilder()
+            ..update(updates))
+          ._build();
+
+  _$GDiscardQAResponseDraftData_discardQaResponseDraft._(
+      {required this.G__typename, this.discarded})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(G__typename,
+        r'GDiscardQAResponseDraftData_discardQaResponseDraft', 'G__typename');
+  }
+
+  @override
+  GDiscardQAResponseDraftData_discardQaResponseDraft rebuild(
+          void Function(
+                  GDiscardQAResponseDraftData_discardQaResponseDraftBuilder)
+              updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GDiscardQAResponseDraftData_discardQaResponseDraftBuilder toBuilder() =>
+      new GDiscardQAResponseDraftData_discardQaResponseDraftBuilder()
+        ..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GDiscardQAResponseDraftData_discardQaResponseDraft &&
+        G__typename == other.G__typename &&
+        discarded == other.discarded;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc($jc(0, G__typename.hashCode), discarded.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(
+            r'GDiscardQAResponseDraftData_discardQaResponseDraft')
+          ..add('G__typename', G__typename)
+          ..add('discarded', discarded))
+        .toString();
+  }
+}
+
+class GDiscardQAResponseDraftData_discardQaResponseDraftBuilder
+    implements
+        Builder<GDiscardQAResponseDraftData_discardQaResponseDraft,
+            GDiscardQAResponseDraftData_discardQaResponseDraftBuilder> {
+  _$GDiscardQAResponseDraftData_discardQaResponseDraft? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  bool? _discarded;
+  bool? get discarded => _$this._discarded;
+  set discarded(bool? discarded) => _$this._discarded = discarded;
+
+  GDiscardQAResponseDraftData_discardQaResponseDraftBuilder() {
+    GDiscardQAResponseDraftData_discardQaResponseDraft._initializeBuilder(this);
+  }
+
+  GDiscardQAResponseDraftData_discardQaResponseDraftBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _discarded = $v.discarded;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GDiscardQAResponseDraftData_discardQaResponseDraft other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GDiscardQAResponseDraftData_discardQaResponseDraft;
+  }
+
+  @override
+  void update(
+      void Function(GDiscardQAResponseDraftData_discardQaResponseDraftBuilder)?
+          updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GDiscardQAResponseDraftData_discardQaResponseDraft build() => _build();
+
+  _$GDiscardQAResponseDraftData_discardQaResponseDraft _build() {
+    final _$result = _$v ??
+        new _$GDiscardQAResponseDraftData_discardQaResponseDraft._(
+            G__typename: BuiltValueNullFieldError.checkNotNull(
+                G__typename,
+                r'GDiscardQAResponseDraftData_discardQaResponseDraft',
+                'G__typename'),
+            discarded: discarded);
+    replace(_$result);
+    return _$result;
+  }
+}
+
+// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas

@@ -1,0 +1,349 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'follow_interest.data.gql.dart';
+
+// **************************************************************************
+// BuiltValueGenerator
+// **************************************************************************
+
+Serializer<GFollowInterestData> _$gFollowInterestDataSerializer =
+    new _$GFollowInterestDataSerializer();
+Serializer<GFollowInterestData_followInterest>
+    _$gFollowInterestDataFollowInterestSerializer =
+    new _$GFollowInterestData_followInterestSerializer();
+
+class _$GFollowInterestDataSerializer
+    implements StructuredSerializer<GFollowInterestData> {
+  @override
+  final Iterable<Type> types = const [
+    GFollowInterestData,
+    _$GFollowInterestData
+  ];
+  @override
+  final String wireName = 'GFollowInterestData';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GFollowInterestData object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+    ];
+    Object? value;
+    value = object.followInterest;
+    if (value != null) {
+      result
+        ..add('followInterest')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(GFollowInterestData_followInterest)));
+    }
+    return result;
+  }
+
+  @override
+  GFollowInterestData deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GFollowInterestDataBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'followInterest':
+          result.followInterest.replace(serializers.deserialize(value,
+                  specifiedType:
+                      const FullType(GFollowInterestData_followInterest))!
+              as GFollowInterestData_followInterest);
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GFollowInterestData_followInterestSerializer
+    implements StructuredSerializer<GFollowInterestData_followInterest> {
+  @override
+  final Iterable<Type> types = const [
+    GFollowInterestData_followInterest,
+    _$GFollowInterestData_followInterest
+  ];
+  @override
+  final String wireName = 'GFollowInterestData_followInterest';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GFollowInterestData_followInterest object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+      'result',
+      serializers.serialize(object.result, specifiedType: const FullType(bool)),
+    ];
+
+    return result;
+  }
+
+  @override
+  GFollowInterestData_followInterest deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GFollowInterestData_followInterestBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'result':
+          result.result = serializers.deserialize(value,
+              specifiedType: const FullType(bool))! as bool;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GFollowInterestData extends GFollowInterestData {
+  @override
+  final String G__typename;
+  @override
+  final GFollowInterestData_followInterest? followInterest;
+
+  factory _$GFollowInterestData(
+          [void Function(GFollowInterestDataBuilder)? updates]) =>
+      (new GFollowInterestDataBuilder()..update(updates))._build();
+
+  _$GFollowInterestData._({required this.G__typename, this.followInterest})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        G__typename, r'GFollowInterestData', 'G__typename');
+  }
+
+  @override
+  GFollowInterestData rebuild(
+          void Function(GFollowInterestDataBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GFollowInterestDataBuilder toBuilder() =>
+      new GFollowInterestDataBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GFollowInterestData &&
+        G__typename == other.G__typename &&
+        followInterest == other.followInterest;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc($jc(0, G__typename.hashCode), followInterest.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(r'GFollowInterestData')
+          ..add('G__typename', G__typename)
+          ..add('followInterest', followInterest))
+        .toString();
+  }
+}
+
+class GFollowInterestDataBuilder
+    implements Builder<GFollowInterestData, GFollowInterestDataBuilder> {
+  _$GFollowInterestData? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  GFollowInterestData_followInterestBuilder? _followInterest;
+  GFollowInterestData_followInterestBuilder get followInterest =>
+      _$this._followInterest ??=
+          new GFollowInterestData_followInterestBuilder();
+  set followInterest(
+          GFollowInterestData_followInterestBuilder? followInterest) =>
+      _$this._followInterest = followInterest;
+
+  GFollowInterestDataBuilder() {
+    GFollowInterestData._initializeBuilder(this);
+  }
+
+  GFollowInterestDataBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _followInterest = $v.followInterest?.toBuilder();
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GFollowInterestData other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GFollowInterestData;
+  }
+
+  @override
+  void update(void Function(GFollowInterestDataBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GFollowInterestData build() => _build();
+
+  _$GFollowInterestData _build() {
+    _$GFollowInterestData _$result;
+    try {
+      _$result = _$v ??
+          new _$GFollowInterestData._(
+              G__typename: BuiltValueNullFieldError.checkNotNull(
+                  G__typename, r'GFollowInterestData', 'G__typename'),
+              followInterest: _followInterest?.build());
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'followInterest';
+        _followInterest?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'GFollowInterestData', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GFollowInterestData_followInterest
+    extends GFollowInterestData_followInterest {
+  @override
+  final String G__typename;
+  @override
+  final bool result;
+
+  factory _$GFollowInterestData_followInterest(
+          [void Function(GFollowInterestData_followInterestBuilder)?
+              updates]) =>
+      (new GFollowInterestData_followInterestBuilder()..update(updates))
+          ._build();
+
+  _$GFollowInterestData_followInterest._(
+      {required this.G__typename, required this.result})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        G__typename, r'GFollowInterestData_followInterest', 'G__typename');
+    BuiltValueNullFieldError.checkNotNull(
+        result, r'GFollowInterestData_followInterest', 'result');
+  }
+
+  @override
+  GFollowInterestData_followInterest rebuild(
+          void Function(GFollowInterestData_followInterestBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GFollowInterestData_followInterestBuilder toBuilder() =>
+      new GFollowInterestData_followInterestBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GFollowInterestData_followInterest &&
+        G__typename == other.G__typename &&
+        result == other.result;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc($jc(0, G__typename.hashCode), result.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(r'GFollowInterestData_followInterest')
+          ..add('G__typename', G__typename)
+          ..add('result', result))
+        .toString();
+  }
+}
+
+class GFollowInterestData_followInterestBuilder
+    implements
+        Builder<GFollowInterestData_followInterest,
+            GFollowInterestData_followInterestBuilder> {
+  _$GFollowInterestData_followInterest? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  bool? _result;
+  bool? get result => _$this._result;
+  set result(bool? result) => _$this._result = result;
+
+  GFollowInterestData_followInterestBuilder() {
+    GFollowInterestData_followInterest._initializeBuilder(this);
+  }
+
+  GFollowInterestData_followInterestBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _result = $v.result;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GFollowInterestData_followInterest other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GFollowInterestData_followInterest;
+  }
+
+  @override
+  void update(
+      void Function(GFollowInterestData_followInterestBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GFollowInterestData_followInterest build() => _build();
+
+  _$GFollowInterestData_followInterest _build() {
+    final _$result = _$v ??
+        new _$GFollowInterestData_followInterest._(
+            G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
+                r'GFollowInterestData_followInterest', 'G__typename'),
+            result: BuiltValueNullFieldError.checkNotNull(
+                result, r'GFollowInterestData_followInterest', 'result'));
+    replace(_$result);
+    return _$result;
+  }
+}
+
+// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas

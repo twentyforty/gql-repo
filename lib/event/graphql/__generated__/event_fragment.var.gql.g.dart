@@ -1,0 +1,94 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'event_fragment.var.gql.dart';
+
+// **************************************************************************
+// BuiltValueGenerator
+// **************************************************************************
+
+Serializer<GEventFragmentVars> _$gEventFragmentVarsSerializer =
+    new _$GEventFragmentVarsSerializer();
+
+class _$GEventFragmentVarsSerializer
+    implements StructuredSerializer<GEventFragmentVars> {
+  @override
+  final Iterable<Type> types = const [GEventFragmentVars, _$GEventFragmentVars];
+  @override
+  final String wireName = 'GEventFragmentVars';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GEventFragmentVars object,
+      {FullType specifiedType = FullType.unspecified}) {
+    return <Object?>[];
+  }
+
+  @override
+  GEventFragmentVars deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    return new GEventFragmentVarsBuilder().build();
+  }
+}
+
+class _$GEventFragmentVars extends GEventFragmentVars {
+  factory _$GEventFragmentVars(
+          [void Function(GEventFragmentVarsBuilder)? updates]) =>
+      (new GEventFragmentVarsBuilder()..update(updates))._build();
+
+  _$GEventFragmentVars._() : super._();
+
+  @override
+  GEventFragmentVars rebuild(
+          void Function(GEventFragmentVarsBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GEventFragmentVarsBuilder toBuilder() =>
+      new GEventFragmentVarsBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GEventFragmentVars;
+  }
+
+  @override
+  int get hashCode {
+    return 333174822;
+  }
+
+  @override
+  String toString() {
+    return newBuiltValueToStringHelper(r'GEventFragmentVars').toString();
+  }
+}
+
+class GEventFragmentVarsBuilder
+    implements Builder<GEventFragmentVars, GEventFragmentVarsBuilder> {
+  _$GEventFragmentVars? _$v;
+
+  GEventFragmentVarsBuilder();
+
+  @override
+  void replace(GEventFragmentVars other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GEventFragmentVars;
+  }
+
+  @override
+  void update(void Function(GEventFragmentVarsBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GEventFragmentVars build() => _build();
+
+  _$GEventFragmentVars _build() {
+    final _$result = _$v ?? new _$GEventFragmentVars._();
+    replace(_$result);
+    return _$result;
+  }
+}
+
+// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas

@@ -1,0 +1,128 @@
+// **************************************************************************
+// BuiltValueGenerator
+// **************************************************************************
+
+Serializer<GGetBillVars> _$gGetBillVarsSerializer =
+    new _$GGetBillVarsSerializer();
+
+class _$GGetBillVarsSerializer implements StructuredSerializer<GGetBillVars> {
+  @override
+  final Iterable<Type> types = const [GGetBillVars, _$GGetBillVars];
+  @override
+  final String wireName = 'GGetBillVars';
+
+  @override
+  Iterable<Object?> serialize(Serializers serializers, GGetBillVars object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      'billId',
+      serializers.serialize(object.billId,
+          specifiedType: const FullType(String)),
+    ];
+
+    return result;
+  }
+
+  @override
+  GGetBillVars deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GGetBillVarsBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case 'billId':
+          result.billId = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GGetBillVars extends GGetBillVars {
+  @override
+  final String billId;
+
+  factory _$GGetBillVars([void Function(GGetBillVarsBuilder)? updates]) =>
+      (new GGetBillVarsBuilder()..update(updates))._build();
+
+  _$GGetBillVars._({required this.billId}) : super._() {
+    BuiltValueNullFieldError.checkNotNull(billId, r'GGetBillVars', 'billId');
+  }
+
+  @override
+  GGetBillVars rebuild(void Function(GGetBillVarsBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GGetBillVarsBuilder toBuilder() => new GGetBillVarsBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GGetBillVars && billId == other.billId;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(0, billId.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(r'GGetBillVars')..add('billId', billId))
+        .toString();
+  }
+}
+
+class GGetBillVarsBuilder
+    implements Builder<GGetBillVars, GGetBillVarsBuilder> {
+  _$GGetBillVars? _$v;
+
+  String? _billId;
+  String? get billId => _$this._billId;
+  set billId(String? billId) => _$this._billId = billId;
+
+  GGetBillVarsBuilder();
+
+  GGetBillVarsBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _billId = $v.billId;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GGetBillVars other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GGetBillVars;
+  }
+
+  @override
+  void update(void Function(GGetBillVarsBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GGetBillVars build() => _build();
+
+  _$GGetBillVars _build() {
+    final _$result = _$v ??
+        new _$GGetBillVars._(
+            billId: BuiltValueNullFieldError.checkNotNull(
+                billId, r'GGetBillVars', 'billId'));
+    replace(_$result);
+    return _$result;
+  }
+}
+
+// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas

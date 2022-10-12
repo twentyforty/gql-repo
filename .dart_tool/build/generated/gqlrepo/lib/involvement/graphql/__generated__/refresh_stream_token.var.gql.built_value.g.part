@@ -1,0 +1,94 @@
+// **************************************************************************
+// BuiltValueGenerator
+// **************************************************************************
+
+Serializer<GRefreshStreamTokenVars> _$gRefreshStreamTokenVarsSerializer =
+    new _$GRefreshStreamTokenVarsSerializer();
+
+class _$GRefreshStreamTokenVarsSerializer
+    implements StructuredSerializer<GRefreshStreamTokenVars> {
+  @override
+  final Iterable<Type> types = const [
+    GRefreshStreamTokenVars,
+    _$GRefreshStreamTokenVars
+  ];
+  @override
+  final String wireName = 'GRefreshStreamTokenVars';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GRefreshStreamTokenVars object,
+      {FullType specifiedType = FullType.unspecified}) {
+    return <Object?>[];
+  }
+
+  @override
+  GRefreshStreamTokenVars deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    return new GRefreshStreamTokenVarsBuilder().build();
+  }
+}
+
+class _$GRefreshStreamTokenVars extends GRefreshStreamTokenVars {
+  factory _$GRefreshStreamTokenVars(
+          [void Function(GRefreshStreamTokenVarsBuilder)? updates]) =>
+      (new GRefreshStreamTokenVarsBuilder()..update(updates))._build();
+
+  _$GRefreshStreamTokenVars._() : super._();
+
+  @override
+  GRefreshStreamTokenVars rebuild(
+          void Function(GRefreshStreamTokenVarsBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GRefreshStreamTokenVarsBuilder toBuilder() =>
+      new GRefreshStreamTokenVarsBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GRefreshStreamTokenVars;
+  }
+
+  @override
+  int get hashCode {
+    return 351600388;
+  }
+
+  @override
+  String toString() {
+    return newBuiltValueToStringHelper(r'GRefreshStreamTokenVars').toString();
+  }
+}
+
+class GRefreshStreamTokenVarsBuilder
+    implements
+        Builder<GRefreshStreamTokenVars, GRefreshStreamTokenVarsBuilder> {
+  _$GRefreshStreamTokenVars? _$v;
+
+  GRefreshStreamTokenVarsBuilder();
+
+  @override
+  void replace(GRefreshStreamTokenVars other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GRefreshStreamTokenVars;
+  }
+
+  @override
+  void update(void Function(GRefreshStreamTokenVarsBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GRefreshStreamTokenVars build() => _build();
+
+  _$GRefreshStreamTokenVars _build() {
+    final _$result = _$v ?? new _$GRefreshStreamTokenVars._();
+    replace(_$result);
+    return _$result;
+  }
+}
+
+// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas

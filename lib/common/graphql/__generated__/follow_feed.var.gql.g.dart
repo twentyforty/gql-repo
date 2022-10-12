@@ -1,0 +1,147 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'follow_feed.var.gql.dart';
+
+// **************************************************************************
+// BuiltValueGenerator
+// **************************************************************************
+
+Serializer<GFollowFeedVars> _$gFollowFeedVarsSerializer =
+    new _$GFollowFeedVarsSerializer();
+
+class _$GFollowFeedVarsSerializer
+    implements StructuredSerializer<GFollowFeedVars> {
+  @override
+  final Iterable<Type> types = const [GFollowFeedVars, _$GFollowFeedVars];
+  @override
+  final String wireName = 'GFollowFeedVars';
+
+  @override
+  Iterable<Object?> serialize(Serializers serializers, GFollowFeedVars object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      'input',
+      serializers.serialize(object.input,
+          specifiedType: const FullType(_i1.GFollowFeedsInput)),
+    ];
+
+    return result;
+  }
+
+  @override
+  GFollowFeedVars deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GFollowFeedVarsBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case 'input':
+          result.input.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(_i1.GFollowFeedsInput))!
+              as _i1.GFollowFeedsInput);
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GFollowFeedVars extends GFollowFeedVars {
+  @override
+  final _i1.GFollowFeedsInput input;
+
+  factory _$GFollowFeedVars([void Function(GFollowFeedVarsBuilder)? updates]) =>
+      (new GFollowFeedVarsBuilder()..update(updates))._build();
+
+  _$GFollowFeedVars._({required this.input}) : super._() {
+    BuiltValueNullFieldError.checkNotNull(input, r'GFollowFeedVars', 'input');
+  }
+
+  @override
+  GFollowFeedVars rebuild(void Function(GFollowFeedVarsBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GFollowFeedVarsBuilder toBuilder() =>
+      new GFollowFeedVarsBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GFollowFeedVars && input == other.input;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(0, input.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(r'GFollowFeedVars')
+          ..add('input', input))
+        .toString();
+  }
+}
+
+class GFollowFeedVarsBuilder
+    implements Builder<GFollowFeedVars, GFollowFeedVarsBuilder> {
+  _$GFollowFeedVars? _$v;
+
+  _i1.GFollowFeedsInputBuilder? _input;
+  _i1.GFollowFeedsInputBuilder get input =>
+      _$this._input ??= new _i1.GFollowFeedsInputBuilder();
+  set input(_i1.GFollowFeedsInputBuilder? input) => _$this._input = input;
+
+  GFollowFeedVarsBuilder();
+
+  GFollowFeedVarsBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _input = $v.input.toBuilder();
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GFollowFeedVars other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GFollowFeedVars;
+  }
+
+  @override
+  void update(void Function(GFollowFeedVarsBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GFollowFeedVars build() => _build();
+
+  _$GFollowFeedVars _build() {
+    _$GFollowFeedVars _$result;
+    try {
+      _$result = _$v ?? new _$GFollowFeedVars._(input: input.build());
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'input';
+        input.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'GFollowFeedVars', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas

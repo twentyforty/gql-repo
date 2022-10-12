@@ -1,0 +1,150 @@
+// **************************************************************************
+// BuiltValueGenerator
+// **************************************************************************
+
+Serializer<GGetChildDivisionsVars> _$gGetChildDivisionsVarsSerializer =
+    new _$GGetChildDivisionsVarsSerializer();
+
+class _$GGetChildDivisionsVarsSerializer
+    implements StructuredSerializer<GGetChildDivisionsVars> {
+  @override
+  final Iterable<Type> types = const [
+    GGetChildDivisionsVars,
+    _$GGetChildDivisionsVars
+  ];
+  @override
+  final String wireName = 'GGetChildDivisionsVars';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GGetChildDivisionsVars object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      'input',
+      serializers.serialize(object.input,
+          specifiedType: const FullType(_i1.GChildDivisionsInput)),
+    ];
+
+    return result;
+  }
+
+  @override
+  GGetChildDivisionsVars deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GGetChildDivisionsVarsBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case 'input':
+          result.input.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(_i1.GChildDivisionsInput))!
+              as _i1.GChildDivisionsInput);
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GGetChildDivisionsVars extends GGetChildDivisionsVars {
+  @override
+  final _i1.GChildDivisionsInput input;
+
+  factory _$GGetChildDivisionsVars(
+          [void Function(GGetChildDivisionsVarsBuilder)? updates]) =>
+      (new GGetChildDivisionsVarsBuilder()..update(updates))._build();
+
+  _$GGetChildDivisionsVars._({required this.input}) : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        input, r'GGetChildDivisionsVars', 'input');
+  }
+
+  @override
+  GGetChildDivisionsVars rebuild(
+          void Function(GGetChildDivisionsVarsBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GGetChildDivisionsVarsBuilder toBuilder() =>
+      new GGetChildDivisionsVarsBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GGetChildDivisionsVars && input == other.input;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(0, input.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(r'GGetChildDivisionsVars')
+          ..add('input', input))
+        .toString();
+  }
+}
+
+class GGetChildDivisionsVarsBuilder
+    implements Builder<GGetChildDivisionsVars, GGetChildDivisionsVarsBuilder> {
+  _$GGetChildDivisionsVars? _$v;
+
+  _i1.GChildDivisionsInputBuilder? _input;
+  _i1.GChildDivisionsInputBuilder get input =>
+      _$this._input ??= new _i1.GChildDivisionsInputBuilder();
+  set input(_i1.GChildDivisionsInputBuilder? input) => _$this._input = input;
+
+  GGetChildDivisionsVarsBuilder();
+
+  GGetChildDivisionsVarsBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _input = $v.input.toBuilder();
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GGetChildDivisionsVars other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GGetChildDivisionsVars;
+  }
+
+  @override
+  void update(void Function(GGetChildDivisionsVarsBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GGetChildDivisionsVars build() => _build();
+
+  _$GGetChildDivisionsVars _build() {
+    _$GGetChildDivisionsVars _$result;
+    try {
+      _$result = _$v ?? new _$GGetChildDivisionsVars._(input: input.build());
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'input';
+        input.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'GGetChildDivisionsVars', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas

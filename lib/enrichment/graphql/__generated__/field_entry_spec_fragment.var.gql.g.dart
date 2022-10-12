@@ -1,0 +1,101 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'field_entry_spec_fragment.var.gql.dart';
+
+// **************************************************************************
+// BuiltValueGenerator
+// **************************************************************************
+
+Serializer<GFieldEntrySpecFragmentVars>
+    _$gFieldEntrySpecFragmentVarsSerializer =
+    new _$GFieldEntrySpecFragmentVarsSerializer();
+
+class _$GFieldEntrySpecFragmentVarsSerializer
+    implements StructuredSerializer<GFieldEntrySpecFragmentVars> {
+  @override
+  final Iterable<Type> types = const [
+    GFieldEntrySpecFragmentVars,
+    _$GFieldEntrySpecFragmentVars
+  ];
+  @override
+  final String wireName = 'GFieldEntrySpecFragmentVars';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GFieldEntrySpecFragmentVars object,
+      {FullType specifiedType = FullType.unspecified}) {
+    return <Object?>[];
+  }
+
+  @override
+  GFieldEntrySpecFragmentVars deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    return new GFieldEntrySpecFragmentVarsBuilder().build();
+  }
+}
+
+class _$GFieldEntrySpecFragmentVars extends GFieldEntrySpecFragmentVars {
+  factory _$GFieldEntrySpecFragmentVars(
+          [void Function(GFieldEntrySpecFragmentVarsBuilder)? updates]) =>
+      (new GFieldEntrySpecFragmentVarsBuilder()..update(updates))._build();
+
+  _$GFieldEntrySpecFragmentVars._() : super._();
+
+  @override
+  GFieldEntrySpecFragmentVars rebuild(
+          void Function(GFieldEntrySpecFragmentVarsBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GFieldEntrySpecFragmentVarsBuilder toBuilder() =>
+      new GFieldEntrySpecFragmentVarsBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GFieldEntrySpecFragmentVars;
+  }
+
+  @override
+  int get hashCode {
+    return 975010208;
+  }
+
+  @override
+  String toString() {
+    return newBuiltValueToStringHelper(r'GFieldEntrySpecFragmentVars')
+        .toString();
+  }
+}
+
+class GFieldEntrySpecFragmentVarsBuilder
+    implements
+        Builder<GFieldEntrySpecFragmentVars,
+            GFieldEntrySpecFragmentVarsBuilder> {
+  _$GFieldEntrySpecFragmentVars? _$v;
+
+  GFieldEntrySpecFragmentVarsBuilder();
+
+  @override
+  void replace(GFieldEntrySpecFragmentVars other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GFieldEntrySpecFragmentVars;
+  }
+
+  @override
+  void update(void Function(GFieldEntrySpecFragmentVarsBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GFieldEntrySpecFragmentVars build() => _build();
+
+  _$GFieldEntrySpecFragmentVars _build() {
+    final _$result = _$v ?? new _$GFieldEntrySpecFragmentVars._();
+    replace(_$result);
+    return _$result;
+  }
+}
+
+// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas

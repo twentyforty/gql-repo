@@ -1,0 +1,163 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'get_enrichment_field_entry_specs.var.gql.dart';
+
+// **************************************************************************
+// BuiltValueGenerator
+// **************************************************************************
+
+Serializer<GGetEnrichmentFieldEntrySpecsVars>
+    _$gGetEnrichmentFieldEntrySpecsVarsSerializer =
+    new _$GGetEnrichmentFieldEntrySpecsVarsSerializer();
+
+class _$GGetEnrichmentFieldEntrySpecsVarsSerializer
+    implements StructuredSerializer<GGetEnrichmentFieldEntrySpecsVars> {
+  @override
+  final Iterable<Type> types = const [
+    GGetEnrichmentFieldEntrySpecsVars,
+    _$GGetEnrichmentFieldEntrySpecsVars
+  ];
+  @override
+  final String wireName = 'GGetEnrichmentFieldEntrySpecsVars';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GGetEnrichmentFieldEntrySpecsVars object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      'input',
+      serializers.serialize(object.input,
+          specifiedType: const FullType(_i1.GEnrichmentFieldEntrySpecsInput)),
+    ];
+
+    return result;
+  }
+
+  @override
+  GGetEnrichmentFieldEntrySpecsVars deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GGetEnrichmentFieldEntrySpecsVarsBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case 'input':
+          result.input.replace(serializers.deserialize(value,
+                  specifiedType:
+                      const FullType(_i1.GEnrichmentFieldEntrySpecsInput))!
+              as _i1.GEnrichmentFieldEntrySpecsInput);
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GGetEnrichmentFieldEntrySpecsVars
+    extends GGetEnrichmentFieldEntrySpecsVars {
+  @override
+  final _i1.GEnrichmentFieldEntrySpecsInput input;
+
+  factory _$GGetEnrichmentFieldEntrySpecsVars(
+          [void Function(GGetEnrichmentFieldEntrySpecsVarsBuilder)? updates]) =>
+      (new GGetEnrichmentFieldEntrySpecsVarsBuilder()..update(updates))
+          ._build();
+
+  _$GGetEnrichmentFieldEntrySpecsVars._({required this.input}) : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        input, r'GGetEnrichmentFieldEntrySpecsVars', 'input');
+  }
+
+  @override
+  GGetEnrichmentFieldEntrySpecsVars rebuild(
+          void Function(GGetEnrichmentFieldEntrySpecsVarsBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GGetEnrichmentFieldEntrySpecsVarsBuilder toBuilder() =>
+      new GGetEnrichmentFieldEntrySpecsVarsBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GGetEnrichmentFieldEntrySpecsVars && input == other.input;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(0, input.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(r'GGetEnrichmentFieldEntrySpecsVars')
+          ..add('input', input))
+        .toString();
+  }
+}
+
+class GGetEnrichmentFieldEntrySpecsVarsBuilder
+    implements
+        Builder<GGetEnrichmentFieldEntrySpecsVars,
+            GGetEnrichmentFieldEntrySpecsVarsBuilder> {
+  _$GGetEnrichmentFieldEntrySpecsVars? _$v;
+
+  _i1.GEnrichmentFieldEntrySpecsInputBuilder? _input;
+  _i1.GEnrichmentFieldEntrySpecsInputBuilder get input =>
+      _$this._input ??= new _i1.GEnrichmentFieldEntrySpecsInputBuilder();
+  set input(_i1.GEnrichmentFieldEntrySpecsInputBuilder? input) =>
+      _$this._input = input;
+
+  GGetEnrichmentFieldEntrySpecsVarsBuilder();
+
+  GGetEnrichmentFieldEntrySpecsVarsBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _input = $v.input.toBuilder();
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GGetEnrichmentFieldEntrySpecsVars other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GGetEnrichmentFieldEntrySpecsVars;
+  }
+
+  @override
+  void update(
+      void Function(GGetEnrichmentFieldEntrySpecsVarsBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GGetEnrichmentFieldEntrySpecsVars build() => _build();
+
+  _$GGetEnrichmentFieldEntrySpecsVars _build() {
+    _$GGetEnrichmentFieldEntrySpecsVars _$result;
+    try {
+      _$result = _$v ??
+          new _$GGetEnrichmentFieldEntrySpecsVars._(input: input.build());
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'input';
+        input.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'GGetEnrichmentFieldEntrySpecsVars', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas

@@ -1,0 +1,102 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'legislative_session_fragment.var.gql.dart';
+
+// **************************************************************************
+// BuiltValueGenerator
+// **************************************************************************
+
+Serializer<GLegislativeSessionFragmentVars>
+    _$gLegislativeSessionFragmentVarsSerializer =
+    new _$GLegislativeSessionFragmentVarsSerializer();
+
+class _$GLegislativeSessionFragmentVarsSerializer
+    implements StructuredSerializer<GLegislativeSessionFragmentVars> {
+  @override
+  final Iterable<Type> types = const [
+    GLegislativeSessionFragmentVars,
+    _$GLegislativeSessionFragmentVars
+  ];
+  @override
+  final String wireName = 'GLegislativeSessionFragmentVars';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GLegislativeSessionFragmentVars object,
+      {FullType specifiedType = FullType.unspecified}) {
+    return <Object?>[];
+  }
+
+  @override
+  GLegislativeSessionFragmentVars deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    return new GLegislativeSessionFragmentVarsBuilder().build();
+  }
+}
+
+class _$GLegislativeSessionFragmentVars
+    extends GLegislativeSessionFragmentVars {
+  factory _$GLegislativeSessionFragmentVars(
+          [void Function(GLegislativeSessionFragmentVarsBuilder)? updates]) =>
+      (new GLegislativeSessionFragmentVarsBuilder()..update(updates))._build();
+
+  _$GLegislativeSessionFragmentVars._() : super._();
+
+  @override
+  GLegislativeSessionFragmentVars rebuild(
+          void Function(GLegislativeSessionFragmentVarsBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GLegislativeSessionFragmentVarsBuilder toBuilder() =>
+      new GLegislativeSessionFragmentVarsBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GLegislativeSessionFragmentVars;
+  }
+
+  @override
+  int get hashCode {
+    return 524200512;
+  }
+
+  @override
+  String toString() {
+    return newBuiltValueToStringHelper(r'GLegislativeSessionFragmentVars')
+        .toString();
+  }
+}
+
+class GLegislativeSessionFragmentVarsBuilder
+    implements
+        Builder<GLegislativeSessionFragmentVars,
+            GLegislativeSessionFragmentVarsBuilder> {
+  _$GLegislativeSessionFragmentVars? _$v;
+
+  GLegislativeSessionFragmentVarsBuilder();
+
+  @override
+  void replace(GLegislativeSessionFragmentVars other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GLegislativeSessionFragmentVars;
+  }
+
+  @override
+  void update(void Function(GLegislativeSessionFragmentVarsBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GLegislativeSessionFragmentVars build() => _build();
+
+  _$GLegislativeSessionFragmentVars _build() {
+    final _$result = _$v ?? new _$GLegislativeSessionFragmentVars._();
+    replace(_$result);
+    return _$result;
+  }
+}
+
+// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas

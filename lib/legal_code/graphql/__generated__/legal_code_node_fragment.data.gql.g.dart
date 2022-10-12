@@ -1,0 +1,669 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'legal_code_node_fragment.data.gql.dart';
+
+// **************************************************************************
+// BuiltValueGenerator
+// **************************************************************************
+
+Serializer<GLegalCodeNodeFragmentData> _$gLegalCodeNodeFragmentDataSerializer =
+    new _$GLegalCodeNodeFragmentDataSerializer();
+Serializer<GLegalCodeNodeFragmentData_children>
+    _$gLegalCodeNodeFragmentDataChildrenSerializer =
+    new _$GLegalCodeNodeFragmentData_childrenSerializer();
+
+class _$GLegalCodeNodeFragmentDataSerializer
+    implements StructuredSerializer<GLegalCodeNodeFragmentData> {
+  @override
+  final Iterable<Type> types = const [
+    GLegalCodeNodeFragmentData,
+    _$GLegalCodeNodeFragmentData
+  ];
+  @override
+  final String wireName = 'GLegalCodeNodeFragmentData';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GLegalCodeNodeFragmentData object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+      'id',
+      serializers.serialize(object.id,
+          specifiedType: const FullType(_i2.GUUID)),
+      'title',
+      serializers.serialize(object.title,
+          specifiedType: const FullType(String)),
+      'subtitle',
+      serializers.serialize(object.subtitle,
+          specifiedType: const FullType(String)),
+      'sourceUrl',
+      serializers.serialize(object.sourceUrl,
+          specifiedType: const FullType(String)),
+      'children',
+      serializers.serialize(object.children,
+          specifiedType: const FullType(BuiltList,
+              const [const FullType(GLegalCodeNodeFragmentData_children)])),
+    ];
+    Object? value;
+    value = object.docxFileUrl;
+    if (value != null) {
+      result
+        ..add('docxFileUrl')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.pdfFileUrl;
+    if (value != null) {
+      result
+        ..add('pdfFileUrl')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.childCount;
+    if (value != null) {
+      result
+        ..add('childCount')
+        ..add(serializers.serialize(value, specifiedType: const FullType(int)));
+    }
+    return result;
+  }
+
+  @override
+  GLegalCodeNodeFragmentData deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GLegalCodeNodeFragmentDataBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'id':
+          result.id.replace(serializers.deserialize(value,
+              specifiedType: const FullType(_i2.GUUID))! as _i2.GUUID);
+          break;
+        case 'title':
+          result.title = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'subtitle':
+          result.subtitle = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'sourceUrl':
+          result.sourceUrl = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'docxFileUrl':
+          result.docxFileUrl = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'pdfFileUrl':
+          result.pdfFileUrl = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'childCount':
+          result.childCount = serializers.deserialize(value,
+              specifiedType: const FullType(int)) as int?;
+          break;
+        case 'children':
+          result.children.replace(serializers.deserialize(value,
+              specifiedType: const FullType(BuiltList, const [
+                const FullType(GLegalCodeNodeFragmentData_children)
+              ]))! as BuiltList<Object?>);
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GLegalCodeNodeFragmentData_childrenSerializer
+    implements StructuredSerializer<GLegalCodeNodeFragmentData_children> {
+  @override
+  final Iterable<Type> types = const [
+    GLegalCodeNodeFragmentData_children,
+    _$GLegalCodeNodeFragmentData_children
+  ];
+  @override
+  final String wireName = 'GLegalCodeNodeFragmentData_children';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GLegalCodeNodeFragmentData_children object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+      'id',
+      serializers.serialize(object.id,
+          specifiedType: const FullType(_i2.GUUID)),
+      'title',
+      serializers.serialize(object.title,
+          specifiedType: const FullType(String)),
+      'subtitle',
+      serializers.serialize(object.subtitle,
+          specifiedType: const FullType(String)),
+      'sourceUrl',
+      serializers.serialize(object.sourceUrl,
+          specifiedType: const FullType(String)),
+    ];
+    Object? value;
+    value = object.docxFileUrl;
+    if (value != null) {
+      result
+        ..add('docxFileUrl')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.pdfFileUrl;
+    if (value != null) {
+      result
+        ..add('pdfFileUrl')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.childCount;
+    if (value != null) {
+      result
+        ..add('childCount')
+        ..add(serializers.serialize(value, specifiedType: const FullType(int)));
+    }
+    return result;
+  }
+
+  @override
+  GLegalCodeNodeFragmentData_children deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GLegalCodeNodeFragmentData_childrenBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'id':
+          result.id.replace(serializers.deserialize(value,
+              specifiedType: const FullType(_i2.GUUID))! as _i2.GUUID);
+          break;
+        case 'title':
+          result.title = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'subtitle':
+          result.subtitle = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'sourceUrl':
+          result.sourceUrl = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'docxFileUrl':
+          result.docxFileUrl = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'pdfFileUrl':
+          result.pdfFileUrl = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'childCount':
+          result.childCount = serializers.deserialize(value,
+              specifiedType: const FullType(int)) as int?;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GLegalCodeNodeFragmentData extends GLegalCodeNodeFragmentData {
+  @override
+  final String G__typename;
+  @override
+  final _i2.GUUID id;
+  @override
+  final String title;
+  @override
+  final String subtitle;
+  @override
+  final String sourceUrl;
+  @override
+  final String? docxFileUrl;
+  @override
+  final String? pdfFileUrl;
+  @override
+  final int? childCount;
+  @override
+  final BuiltList<GLegalCodeNodeFragmentData_children> children;
+
+  factory _$GLegalCodeNodeFragmentData(
+          [void Function(GLegalCodeNodeFragmentDataBuilder)? updates]) =>
+      (new GLegalCodeNodeFragmentDataBuilder()..update(updates))._build();
+
+  _$GLegalCodeNodeFragmentData._(
+      {required this.G__typename,
+      required this.id,
+      required this.title,
+      required this.subtitle,
+      required this.sourceUrl,
+      this.docxFileUrl,
+      this.pdfFileUrl,
+      this.childCount,
+      required this.children})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        G__typename, r'GLegalCodeNodeFragmentData', 'G__typename');
+    BuiltValueNullFieldError.checkNotNull(
+        id, r'GLegalCodeNodeFragmentData', 'id');
+    BuiltValueNullFieldError.checkNotNull(
+        title, r'GLegalCodeNodeFragmentData', 'title');
+    BuiltValueNullFieldError.checkNotNull(
+        subtitle, r'GLegalCodeNodeFragmentData', 'subtitle');
+    BuiltValueNullFieldError.checkNotNull(
+        sourceUrl, r'GLegalCodeNodeFragmentData', 'sourceUrl');
+    BuiltValueNullFieldError.checkNotNull(
+        children, r'GLegalCodeNodeFragmentData', 'children');
+  }
+
+  @override
+  GLegalCodeNodeFragmentData rebuild(
+          void Function(GLegalCodeNodeFragmentDataBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GLegalCodeNodeFragmentDataBuilder toBuilder() =>
+      new GLegalCodeNodeFragmentDataBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GLegalCodeNodeFragmentData &&
+        G__typename == other.G__typename &&
+        id == other.id &&
+        title == other.title &&
+        subtitle == other.subtitle &&
+        sourceUrl == other.sourceUrl &&
+        docxFileUrl == other.docxFileUrl &&
+        pdfFileUrl == other.pdfFileUrl &&
+        childCount == other.childCount &&
+        children == other.children;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(
+        $jc(
+            $jc(
+                $jc(
+                    $jc(
+                        $jc(
+                            $jc($jc($jc(0, G__typename.hashCode), id.hashCode),
+                                title.hashCode),
+                            subtitle.hashCode),
+                        sourceUrl.hashCode),
+                    docxFileUrl.hashCode),
+                pdfFileUrl.hashCode),
+            childCount.hashCode),
+        children.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(r'GLegalCodeNodeFragmentData')
+          ..add('G__typename', G__typename)
+          ..add('id', id)
+          ..add('title', title)
+          ..add('subtitle', subtitle)
+          ..add('sourceUrl', sourceUrl)
+          ..add('docxFileUrl', docxFileUrl)
+          ..add('pdfFileUrl', pdfFileUrl)
+          ..add('childCount', childCount)
+          ..add('children', children))
+        .toString();
+  }
+}
+
+class GLegalCodeNodeFragmentDataBuilder
+    implements
+        Builder<GLegalCodeNodeFragmentData, GLegalCodeNodeFragmentDataBuilder> {
+  _$GLegalCodeNodeFragmentData? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  _i2.GUUIDBuilder? _id;
+  _i2.GUUIDBuilder get id => _$this._id ??= new _i2.GUUIDBuilder();
+  set id(_i2.GUUIDBuilder? id) => _$this._id = id;
+
+  String? _title;
+  String? get title => _$this._title;
+  set title(String? title) => _$this._title = title;
+
+  String? _subtitle;
+  String? get subtitle => _$this._subtitle;
+  set subtitle(String? subtitle) => _$this._subtitle = subtitle;
+
+  String? _sourceUrl;
+  String? get sourceUrl => _$this._sourceUrl;
+  set sourceUrl(String? sourceUrl) => _$this._sourceUrl = sourceUrl;
+
+  String? _docxFileUrl;
+  String? get docxFileUrl => _$this._docxFileUrl;
+  set docxFileUrl(String? docxFileUrl) => _$this._docxFileUrl = docxFileUrl;
+
+  String? _pdfFileUrl;
+  String? get pdfFileUrl => _$this._pdfFileUrl;
+  set pdfFileUrl(String? pdfFileUrl) => _$this._pdfFileUrl = pdfFileUrl;
+
+  int? _childCount;
+  int? get childCount => _$this._childCount;
+  set childCount(int? childCount) => _$this._childCount = childCount;
+
+  ListBuilder<GLegalCodeNodeFragmentData_children>? _children;
+  ListBuilder<GLegalCodeNodeFragmentData_children> get children =>
+      _$this._children ??=
+          new ListBuilder<GLegalCodeNodeFragmentData_children>();
+  set children(ListBuilder<GLegalCodeNodeFragmentData_children>? children) =>
+      _$this._children = children;
+
+  GLegalCodeNodeFragmentDataBuilder() {
+    GLegalCodeNodeFragmentData._initializeBuilder(this);
+  }
+
+  GLegalCodeNodeFragmentDataBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _id = $v.id.toBuilder();
+      _title = $v.title;
+      _subtitle = $v.subtitle;
+      _sourceUrl = $v.sourceUrl;
+      _docxFileUrl = $v.docxFileUrl;
+      _pdfFileUrl = $v.pdfFileUrl;
+      _childCount = $v.childCount;
+      _children = $v.children.toBuilder();
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GLegalCodeNodeFragmentData other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GLegalCodeNodeFragmentData;
+  }
+
+  @override
+  void update(void Function(GLegalCodeNodeFragmentDataBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GLegalCodeNodeFragmentData build() => _build();
+
+  _$GLegalCodeNodeFragmentData _build() {
+    _$GLegalCodeNodeFragmentData _$result;
+    try {
+      _$result = _$v ??
+          new _$GLegalCodeNodeFragmentData._(
+              G__typename: BuiltValueNullFieldError.checkNotNull(
+                  G__typename, r'GLegalCodeNodeFragmentData', 'G__typename'),
+              id: id.build(),
+              title: BuiltValueNullFieldError.checkNotNull(
+                  title, r'GLegalCodeNodeFragmentData', 'title'),
+              subtitle: BuiltValueNullFieldError.checkNotNull(
+                  subtitle, r'GLegalCodeNodeFragmentData', 'subtitle'),
+              sourceUrl: BuiltValueNullFieldError.checkNotNull(
+                  sourceUrl, r'GLegalCodeNodeFragmentData', 'sourceUrl'),
+              docxFileUrl: docxFileUrl,
+              pdfFileUrl: pdfFileUrl,
+              childCount: childCount,
+              children: children.build());
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'id';
+        id.build();
+
+        _$failedField = 'children';
+        children.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'GLegalCodeNodeFragmentData', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GLegalCodeNodeFragmentData_children
+    extends GLegalCodeNodeFragmentData_children {
+  @override
+  final String G__typename;
+  @override
+  final _i2.GUUID id;
+  @override
+  final String title;
+  @override
+  final String subtitle;
+  @override
+  final String sourceUrl;
+  @override
+  final String? docxFileUrl;
+  @override
+  final String? pdfFileUrl;
+  @override
+  final int? childCount;
+
+  factory _$GLegalCodeNodeFragmentData_children(
+          [void Function(GLegalCodeNodeFragmentData_childrenBuilder)?
+              updates]) =>
+      (new GLegalCodeNodeFragmentData_childrenBuilder()..update(updates))
+          ._build();
+
+  _$GLegalCodeNodeFragmentData_children._(
+      {required this.G__typename,
+      required this.id,
+      required this.title,
+      required this.subtitle,
+      required this.sourceUrl,
+      this.docxFileUrl,
+      this.pdfFileUrl,
+      this.childCount})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        G__typename, r'GLegalCodeNodeFragmentData_children', 'G__typename');
+    BuiltValueNullFieldError.checkNotNull(
+        id, r'GLegalCodeNodeFragmentData_children', 'id');
+    BuiltValueNullFieldError.checkNotNull(
+        title, r'GLegalCodeNodeFragmentData_children', 'title');
+    BuiltValueNullFieldError.checkNotNull(
+        subtitle, r'GLegalCodeNodeFragmentData_children', 'subtitle');
+    BuiltValueNullFieldError.checkNotNull(
+        sourceUrl, r'GLegalCodeNodeFragmentData_children', 'sourceUrl');
+  }
+
+  @override
+  GLegalCodeNodeFragmentData_children rebuild(
+          void Function(GLegalCodeNodeFragmentData_childrenBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GLegalCodeNodeFragmentData_childrenBuilder toBuilder() =>
+      new GLegalCodeNodeFragmentData_childrenBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GLegalCodeNodeFragmentData_children &&
+        G__typename == other.G__typename &&
+        id == other.id &&
+        title == other.title &&
+        subtitle == other.subtitle &&
+        sourceUrl == other.sourceUrl &&
+        docxFileUrl == other.docxFileUrl &&
+        pdfFileUrl == other.pdfFileUrl &&
+        childCount == other.childCount;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(
+        $jc(
+            $jc(
+                $jc(
+                    $jc(
+                        $jc($jc($jc(0, G__typename.hashCode), id.hashCode),
+                            title.hashCode),
+                        subtitle.hashCode),
+                    sourceUrl.hashCode),
+                docxFileUrl.hashCode),
+            pdfFileUrl.hashCode),
+        childCount.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(r'GLegalCodeNodeFragmentData_children')
+          ..add('G__typename', G__typename)
+          ..add('id', id)
+          ..add('title', title)
+          ..add('subtitle', subtitle)
+          ..add('sourceUrl', sourceUrl)
+          ..add('docxFileUrl', docxFileUrl)
+          ..add('pdfFileUrl', pdfFileUrl)
+          ..add('childCount', childCount))
+        .toString();
+  }
+}
+
+class GLegalCodeNodeFragmentData_childrenBuilder
+    implements
+        Builder<GLegalCodeNodeFragmentData_children,
+            GLegalCodeNodeFragmentData_childrenBuilder> {
+  _$GLegalCodeNodeFragmentData_children? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  _i2.GUUIDBuilder? _id;
+  _i2.GUUIDBuilder get id => _$this._id ??= new _i2.GUUIDBuilder();
+  set id(_i2.GUUIDBuilder? id) => _$this._id = id;
+
+  String? _title;
+  String? get title => _$this._title;
+  set title(String? title) => _$this._title = title;
+
+  String? _subtitle;
+  String? get subtitle => _$this._subtitle;
+  set subtitle(String? subtitle) => _$this._subtitle = subtitle;
+
+  String? _sourceUrl;
+  String? get sourceUrl => _$this._sourceUrl;
+  set sourceUrl(String? sourceUrl) => _$this._sourceUrl = sourceUrl;
+
+  String? _docxFileUrl;
+  String? get docxFileUrl => _$this._docxFileUrl;
+  set docxFileUrl(String? docxFileUrl) => _$this._docxFileUrl = docxFileUrl;
+
+  String? _pdfFileUrl;
+  String? get pdfFileUrl => _$this._pdfFileUrl;
+  set pdfFileUrl(String? pdfFileUrl) => _$this._pdfFileUrl = pdfFileUrl;
+
+  int? _childCount;
+  int? get childCount => _$this._childCount;
+  set childCount(int? childCount) => _$this._childCount = childCount;
+
+  GLegalCodeNodeFragmentData_childrenBuilder() {
+    GLegalCodeNodeFragmentData_children._initializeBuilder(this);
+  }
+
+  GLegalCodeNodeFragmentData_childrenBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _id = $v.id.toBuilder();
+      _title = $v.title;
+      _subtitle = $v.subtitle;
+      _sourceUrl = $v.sourceUrl;
+      _docxFileUrl = $v.docxFileUrl;
+      _pdfFileUrl = $v.pdfFileUrl;
+      _childCount = $v.childCount;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GLegalCodeNodeFragmentData_children other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GLegalCodeNodeFragmentData_children;
+  }
+
+  @override
+  void update(
+      void Function(GLegalCodeNodeFragmentData_childrenBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GLegalCodeNodeFragmentData_children build() => _build();
+
+  _$GLegalCodeNodeFragmentData_children _build() {
+    _$GLegalCodeNodeFragmentData_children _$result;
+    try {
+      _$result = _$v ??
+          new _$GLegalCodeNodeFragmentData_children._(
+              G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
+                  r'GLegalCodeNodeFragmentData_children', 'G__typename'),
+              id: id.build(),
+              title: BuiltValueNullFieldError.checkNotNull(
+                  title, r'GLegalCodeNodeFragmentData_children', 'title'),
+              subtitle: BuiltValueNullFieldError.checkNotNull(
+                  subtitle, r'GLegalCodeNodeFragmentData_children', 'subtitle'),
+              sourceUrl: BuiltValueNullFieldError.checkNotNull(sourceUrl,
+                  r'GLegalCodeNodeFragmentData_children', 'sourceUrl'),
+              docxFileUrl: docxFileUrl,
+              pdfFileUrl: pdfFileUrl,
+              childCount: childCount);
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'id';
+        id.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'GLegalCodeNodeFragmentData_children',
+            _$failedField,
+            e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas

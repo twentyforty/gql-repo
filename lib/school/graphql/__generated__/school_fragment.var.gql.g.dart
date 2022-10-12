@@ -1,0 +1,97 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'school_fragment.var.gql.dart';
+
+// **************************************************************************
+// BuiltValueGenerator
+// **************************************************************************
+
+Serializer<GSchoolFragmentVars> _$gSchoolFragmentVarsSerializer =
+    new _$GSchoolFragmentVarsSerializer();
+
+class _$GSchoolFragmentVarsSerializer
+    implements StructuredSerializer<GSchoolFragmentVars> {
+  @override
+  final Iterable<Type> types = const [
+    GSchoolFragmentVars,
+    _$GSchoolFragmentVars
+  ];
+  @override
+  final String wireName = 'GSchoolFragmentVars';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GSchoolFragmentVars object,
+      {FullType specifiedType = FullType.unspecified}) {
+    return <Object?>[];
+  }
+
+  @override
+  GSchoolFragmentVars deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    return new GSchoolFragmentVarsBuilder().build();
+  }
+}
+
+class _$GSchoolFragmentVars extends GSchoolFragmentVars {
+  factory _$GSchoolFragmentVars(
+          [void Function(GSchoolFragmentVarsBuilder)? updates]) =>
+      (new GSchoolFragmentVarsBuilder()..update(updates))._build();
+
+  _$GSchoolFragmentVars._() : super._();
+
+  @override
+  GSchoolFragmentVars rebuild(
+          void Function(GSchoolFragmentVarsBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GSchoolFragmentVarsBuilder toBuilder() =>
+      new GSchoolFragmentVarsBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GSchoolFragmentVars;
+  }
+
+  @override
+  int get hashCode {
+    return 65021794;
+  }
+
+  @override
+  String toString() {
+    return newBuiltValueToStringHelper(r'GSchoolFragmentVars').toString();
+  }
+}
+
+class GSchoolFragmentVarsBuilder
+    implements Builder<GSchoolFragmentVars, GSchoolFragmentVarsBuilder> {
+  _$GSchoolFragmentVars? _$v;
+
+  GSchoolFragmentVarsBuilder();
+
+  @override
+  void replace(GSchoolFragmentVars other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GSchoolFragmentVars;
+  }
+
+  @override
+  void update(void Function(GSchoolFragmentVarsBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GSchoolFragmentVars build() => _build();
+
+  _$GSchoolFragmentVars _build() {
+    final _$result = _$v ?? new _$GSchoolFragmentVars._();
+    replace(_$result);
+    return _$result;
+  }
+}
+
+// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas

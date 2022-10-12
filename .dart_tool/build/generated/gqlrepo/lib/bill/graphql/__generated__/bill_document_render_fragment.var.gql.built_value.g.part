@@ -1,0 +1,98 @@
+// **************************************************************************
+// BuiltValueGenerator
+// **************************************************************************
+
+Serializer<GBillDocumentRenderFragmentVars>
+    _$gBillDocumentRenderFragmentVarsSerializer =
+    new _$GBillDocumentRenderFragmentVarsSerializer();
+
+class _$GBillDocumentRenderFragmentVarsSerializer
+    implements StructuredSerializer<GBillDocumentRenderFragmentVars> {
+  @override
+  final Iterable<Type> types = const [
+    GBillDocumentRenderFragmentVars,
+    _$GBillDocumentRenderFragmentVars
+  ];
+  @override
+  final String wireName = 'GBillDocumentRenderFragmentVars';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GBillDocumentRenderFragmentVars object,
+      {FullType specifiedType = FullType.unspecified}) {
+    return <Object?>[];
+  }
+
+  @override
+  GBillDocumentRenderFragmentVars deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    return new GBillDocumentRenderFragmentVarsBuilder().build();
+  }
+}
+
+class _$GBillDocumentRenderFragmentVars
+    extends GBillDocumentRenderFragmentVars {
+  factory _$GBillDocumentRenderFragmentVars(
+          [void Function(GBillDocumentRenderFragmentVarsBuilder)? updates]) =>
+      (new GBillDocumentRenderFragmentVarsBuilder()..update(updates))._build();
+
+  _$GBillDocumentRenderFragmentVars._() : super._();
+
+  @override
+  GBillDocumentRenderFragmentVars rebuild(
+          void Function(GBillDocumentRenderFragmentVarsBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GBillDocumentRenderFragmentVarsBuilder toBuilder() =>
+      new GBillDocumentRenderFragmentVarsBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GBillDocumentRenderFragmentVars;
+  }
+
+  @override
+  int get hashCode {
+    return 157961141;
+  }
+
+  @override
+  String toString() {
+    return newBuiltValueToStringHelper(r'GBillDocumentRenderFragmentVars')
+        .toString();
+  }
+}
+
+class GBillDocumentRenderFragmentVarsBuilder
+    implements
+        Builder<GBillDocumentRenderFragmentVars,
+            GBillDocumentRenderFragmentVarsBuilder> {
+  _$GBillDocumentRenderFragmentVars? _$v;
+
+  GBillDocumentRenderFragmentVarsBuilder();
+
+  @override
+  void replace(GBillDocumentRenderFragmentVars other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GBillDocumentRenderFragmentVars;
+  }
+
+  @override
+  void update(void Function(GBillDocumentRenderFragmentVarsBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GBillDocumentRenderFragmentVars build() => _build();
+
+  _$GBillDocumentRenderFragmentVars _build() {
+    final _$result = _$v ?? new _$GBillDocumentRenderFragmentVars._();
+    replace(_$result);
+    return _$result;
+  }
+}
+
+// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas

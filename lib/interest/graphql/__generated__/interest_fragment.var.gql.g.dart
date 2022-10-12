@@ -1,0 +1,97 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'interest_fragment.var.gql.dart';
+
+// **************************************************************************
+// BuiltValueGenerator
+// **************************************************************************
+
+Serializer<GInterestFragmentVars> _$gInterestFragmentVarsSerializer =
+    new _$GInterestFragmentVarsSerializer();
+
+class _$GInterestFragmentVarsSerializer
+    implements StructuredSerializer<GInterestFragmentVars> {
+  @override
+  final Iterable<Type> types = const [
+    GInterestFragmentVars,
+    _$GInterestFragmentVars
+  ];
+  @override
+  final String wireName = 'GInterestFragmentVars';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GInterestFragmentVars object,
+      {FullType specifiedType = FullType.unspecified}) {
+    return <Object?>[];
+  }
+
+  @override
+  GInterestFragmentVars deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    return new GInterestFragmentVarsBuilder().build();
+  }
+}
+
+class _$GInterestFragmentVars extends GInterestFragmentVars {
+  factory _$GInterestFragmentVars(
+          [void Function(GInterestFragmentVarsBuilder)? updates]) =>
+      (new GInterestFragmentVarsBuilder()..update(updates))._build();
+
+  _$GInterestFragmentVars._() : super._();
+
+  @override
+  GInterestFragmentVars rebuild(
+          void Function(GInterestFragmentVarsBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GInterestFragmentVarsBuilder toBuilder() =>
+      new GInterestFragmentVarsBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GInterestFragmentVars;
+  }
+
+  @override
+  int get hashCode {
+    return 924959719;
+  }
+
+  @override
+  String toString() {
+    return newBuiltValueToStringHelper(r'GInterestFragmentVars').toString();
+  }
+}
+
+class GInterestFragmentVarsBuilder
+    implements Builder<GInterestFragmentVars, GInterestFragmentVarsBuilder> {
+  _$GInterestFragmentVars? _$v;
+
+  GInterestFragmentVarsBuilder();
+
+  @override
+  void replace(GInterestFragmentVars other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GInterestFragmentVars;
+  }
+
+  @override
+  void update(void Function(GInterestFragmentVarsBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GInterestFragmentVars build() => _build();
+
+  _$GInterestFragmentVars _build() {
+    final _$result = _$v ?? new _$GInterestFragmentVars._();
+    replace(_$result);
+    return _$result;
+  }
+}
+
+// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas

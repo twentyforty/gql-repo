@@ -1,0 +1,98 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'civiqa_entity_fragment.var.gql.dart';
+
+// **************************************************************************
+// BuiltValueGenerator
+// **************************************************************************
+
+Serializer<GCiviqaEntityFragmentVars> _$gCiviqaEntityFragmentVarsSerializer =
+    new _$GCiviqaEntityFragmentVarsSerializer();
+
+class _$GCiviqaEntityFragmentVarsSerializer
+    implements StructuredSerializer<GCiviqaEntityFragmentVars> {
+  @override
+  final Iterable<Type> types = const [
+    GCiviqaEntityFragmentVars,
+    _$GCiviqaEntityFragmentVars
+  ];
+  @override
+  final String wireName = 'GCiviqaEntityFragmentVars';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GCiviqaEntityFragmentVars object,
+      {FullType specifiedType = FullType.unspecified}) {
+    return <Object?>[];
+  }
+
+  @override
+  GCiviqaEntityFragmentVars deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    return new GCiviqaEntityFragmentVarsBuilder().build();
+  }
+}
+
+class _$GCiviqaEntityFragmentVars extends GCiviqaEntityFragmentVars {
+  factory _$GCiviqaEntityFragmentVars(
+          [void Function(GCiviqaEntityFragmentVarsBuilder)? updates]) =>
+      (new GCiviqaEntityFragmentVarsBuilder()..update(updates))._build();
+
+  _$GCiviqaEntityFragmentVars._() : super._();
+
+  @override
+  GCiviqaEntityFragmentVars rebuild(
+          void Function(GCiviqaEntityFragmentVarsBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GCiviqaEntityFragmentVarsBuilder toBuilder() =>
+      new GCiviqaEntityFragmentVarsBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GCiviqaEntityFragmentVars;
+  }
+
+  @override
+  int get hashCode {
+    return 858264583;
+  }
+
+  @override
+  String toString() {
+    return newBuiltValueToStringHelper(r'GCiviqaEntityFragmentVars').toString();
+  }
+}
+
+class GCiviqaEntityFragmentVarsBuilder
+    implements
+        Builder<GCiviqaEntityFragmentVars, GCiviqaEntityFragmentVarsBuilder> {
+  _$GCiviqaEntityFragmentVars? _$v;
+
+  GCiviqaEntityFragmentVarsBuilder();
+
+  @override
+  void replace(GCiviqaEntityFragmentVars other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GCiviqaEntityFragmentVars;
+  }
+
+  @override
+  void update(void Function(GCiviqaEntityFragmentVarsBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GCiviqaEntityFragmentVars build() => _build();
+
+  _$GCiviqaEntityFragmentVars _build() {
+    final _$result = _$v ?? new _$GCiviqaEntityFragmentVars._();
+    replace(_$result);
+    return _$result;
+  }
+}
+
+// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas

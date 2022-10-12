@@ -1,0 +1,93 @@
+// **************************************************************************
+// BuiltValueGenerator
+// **************************************************************************
+
+Serializer<GGetJurisdictionsVars> _$gGetJurisdictionsVarsSerializer =
+    new _$GGetJurisdictionsVarsSerializer();
+
+class _$GGetJurisdictionsVarsSerializer
+    implements StructuredSerializer<GGetJurisdictionsVars> {
+  @override
+  final Iterable<Type> types = const [
+    GGetJurisdictionsVars,
+    _$GGetJurisdictionsVars
+  ];
+  @override
+  final String wireName = 'GGetJurisdictionsVars';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GGetJurisdictionsVars object,
+      {FullType specifiedType = FullType.unspecified}) {
+    return <Object?>[];
+  }
+
+  @override
+  GGetJurisdictionsVars deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    return new GGetJurisdictionsVarsBuilder().build();
+  }
+}
+
+class _$GGetJurisdictionsVars extends GGetJurisdictionsVars {
+  factory _$GGetJurisdictionsVars(
+          [void Function(GGetJurisdictionsVarsBuilder)? updates]) =>
+      (new GGetJurisdictionsVarsBuilder()..update(updates))._build();
+
+  _$GGetJurisdictionsVars._() : super._();
+
+  @override
+  GGetJurisdictionsVars rebuild(
+          void Function(GGetJurisdictionsVarsBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GGetJurisdictionsVarsBuilder toBuilder() =>
+      new GGetJurisdictionsVarsBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GGetJurisdictionsVars;
+  }
+
+  @override
+  int get hashCode {
+    return 12687397;
+  }
+
+  @override
+  String toString() {
+    return newBuiltValueToStringHelper(r'GGetJurisdictionsVars').toString();
+  }
+}
+
+class GGetJurisdictionsVarsBuilder
+    implements Builder<GGetJurisdictionsVars, GGetJurisdictionsVarsBuilder> {
+  _$GGetJurisdictionsVars? _$v;
+
+  GGetJurisdictionsVarsBuilder();
+
+  @override
+  void replace(GGetJurisdictionsVars other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GGetJurisdictionsVars;
+  }
+
+  @override
+  void update(void Function(GGetJurisdictionsVarsBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GGetJurisdictionsVars build() => _build();
+
+  _$GGetJurisdictionsVars _build() {
+    final _$result = _$v ?? new _$GGetJurisdictionsVars._();
+    replace(_$result);
+    return _$result;
+  }
+}
+
+// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas

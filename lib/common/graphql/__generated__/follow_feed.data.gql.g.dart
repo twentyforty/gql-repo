@@ -1,0 +1,336 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'follow_feed.data.gql.dart';
+
+// **************************************************************************
+// BuiltValueGenerator
+// **************************************************************************
+
+Serializer<GFollowFeedData> _$gFollowFeedDataSerializer =
+    new _$GFollowFeedDataSerializer();
+Serializer<GFollowFeedData_followFeeds> _$gFollowFeedDataFollowFeedsSerializer =
+    new _$GFollowFeedData_followFeedsSerializer();
+
+class _$GFollowFeedDataSerializer
+    implements StructuredSerializer<GFollowFeedData> {
+  @override
+  final Iterable<Type> types = const [GFollowFeedData, _$GFollowFeedData];
+  @override
+  final String wireName = 'GFollowFeedData';
+
+  @override
+  Iterable<Object?> serialize(Serializers serializers, GFollowFeedData object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+    ];
+    Object? value;
+    value = object.followFeeds;
+    if (value != null) {
+      result
+        ..add('followFeeds')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(GFollowFeedData_followFeeds)));
+    }
+    return result;
+  }
+
+  @override
+  GFollowFeedData deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GFollowFeedDataBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'followFeeds':
+          result.followFeeds.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(GFollowFeedData_followFeeds))!
+              as GFollowFeedData_followFeeds);
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GFollowFeedData_followFeedsSerializer
+    implements StructuredSerializer<GFollowFeedData_followFeeds> {
+  @override
+  final Iterable<Type> types = const [
+    GFollowFeedData_followFeeds,
+    _$GFollowFeedData_followFeeds
+  ];
+  @override
+  final String wireName = 'GFollowFeedData_followFeeds';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GFollowFeedData_followFeeds object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+    ];
+    Object? value;
+    value = object.result;
+    if (value != null) {
+      result
+        ..add('result')
+        ..add(
+            serializers.serialize(value, specifiedType: const FullType(bool)));
+    }
+    return result;
+  }
+
+  @override
+  GFollowFeedData_followFeeds deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GFollowFeedData_followFeedsBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'result':
+          result.result = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool?;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GFollowFeedData extends GFollowFeedData {
+  @override
+  final String G__typename;
+  @override
+  final GFollowFeedData_followFeeds? followFeeds;
+
+  factory _$GFollowFeedData([void Function(GFollowFeedDataBuilder)? updates]) =>
+      (new GFollowFeedDataBuilder()..update(updates))._build();
+
+  _$GFollowFeedData._({required this.G__typename, this.followFeeds})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        G__typename, r'GFollowFeedData', 'G__typename');
+  }
+
+  @override
+  GFollowFeedData rebuild(void Function(GFollowFeedDataBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GFollowFeedDataBuilder toBuilder() =>
+      new GFollowFeedDataBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GFollowFeedData &&
+        G__typename == other.G__typename &&
+        followFeeds == other.followFeeds;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc($jc(0, G__typename.hashCode), followFeeds.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(r'GFollowFeedData')
+          ..add('G__typename', G__typename)
+          ..add('followFeeds', followFeeds))
+        .toString();
+  }
+}
+
+class GFollowFeedDataBuilder
+    implements Builder<GFollowFeedData, GFollowFeedDataBuilder> {
+  _$GFollowFeedData? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  GFollowFeedData_followFeedsBuilder? _followFeeds;
+  GFollowFeedData_followFeedsBuilder get followFeeds =>
+      _$this._followFeeds ??= new GFollowFeedData_followFeedsBuilder();
+  set followFeeds(GFollowFeedData_followFeedsBuilder? followFeeds) =>
+      _$this._followFeeds = followFeeds;
+
+  GFollowFeedDataBuilder() {
+    GFollowFeedData._initializeBuilder(this);
+  }
+
+  GFollowFeedDataBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _followFeeds = $v.followFeeds?.toBuilder();
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GFollowFeedData other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GFollowFeedData;
+  }
+
+  @override
+  void update(void Function(GFollowFeedDataBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GFollowFeedData build() => _build();
+
+  _$GFollowFeedData _build() {
+    _$GFollowFeedData _$result;
+    try {
+      _$result = _$v ??
+          new _$GFollowFeedData._(
+              G__typename: BuiltValueNullFieldError.checkNotNull(
+                  G__typename, r'GFollowFeedData', 'G__typename'),
+              followFeeds: _followFeeds?.build());
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'followFeeds';
+        _followFeeds?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'GFollowFeedData', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GFollowFeedData_followFeeds extends GFollowFeedData_followFeeds {
+  @override
+  final String G__typename;
+  @override
+  final bool? result;
+
+  factory _$GFollowFeedData_followFeeds(
+          [void Function(GFollowFeedData_followFeedsBuilder)? updates]) =>
+      (new GFollowFeedData_followFeedsBuilder()..update(updates))._build();
+
+  _$GFollowFeedData_followFeeds._({required this.G__typename, this.result})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        G__typename, r'GFollowFeedData_followFeeds', 'G__typename');
+  }
+
+  @override
+  GFollowFeedData_followFeeds rebuild(
+          void Function(GFollowFeedData_followFeedsBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GFollowFeedData_followFeedsBuilder toBuilder() =>
+      new GFollowFeedData_followFeedsBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GFollowFeedData_followFeeds &&
+        G__typename == other.G__typename &&
+        result == other.result;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc($jc(0, G__typename.hashCode), result.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(r'GFollowFeedData_followFeeds')
+          ..add('G__typename', G__typename)
+          ..add('result', result))
+        .toString();
+  }
+}
+
+class GFollowFeedData_followFeedsBuilder
+    implements
+        Builder<GFollowFeedData_followFeeds,
+            GFollowFeedData_followFeedsBuilder> {
+  _$GFollowFeedData_followFeeds? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  bool? _result;
+  bool? get result => _$this._result;
+  set result(bool? result) => _$this._result = result;
+
+  GFollowFeedData_followFeedsBuilder() {
+    GFollowFeedData_followFeeds._initializeBuilder(this);
+  }
+
+  GFollowFeedData_followFeedsBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _result = $v.result;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GFollowFeedData_followFeeds other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GFollowFeedData_followFeeds;
+  }
+
+  @override
+  void update(void Function(GFollowFeedData_followFeedsBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GFollowFeedData_followFeeds build() => _build();
+
+  _$GFollowFeedData_followFeeds _build() {
+    final _$result = _$v ??
+        new _$GFollowFeedData_followFeeds._(
+            G__typename: BuiltValueNullFieldError.checkNotNull(
+                G__typename, r'GFollowFeedData_followFeeds', 'G__typename'),
+            result: result);
+    replace(_$result);
+    return _$result;
+  }
+}
+
+// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas

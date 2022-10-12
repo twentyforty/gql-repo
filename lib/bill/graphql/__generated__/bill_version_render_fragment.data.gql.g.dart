@@ -1,0 +1,512 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'bill_version_render_fragment.data.gql.dart';
+
+// **************************************************************************
+// BuiltValueGenerator
+// **************************************************************************
+
+Serializer<GBillVersionRenderFragmentData>
+    _$gBillVersionRenderFragmentDataSerializer =
+    new _$GBillVersionRenderFragmentDataSerializer();
+Serializer<GBillVersionRenderFragmentData_bill>
+    _$gBillVersionRenderFragmentDataBillSerializer =
+    new _$GBillVersionRenderFragmentData_billSerializer();
+
+class _$GBillVersionRenderFragmentDataSerializer
+    implements StructuredSerializer<GBillVersionRenderFragmentData> {
+  @override
+  final Iterable<Type> types = const [
+    GBillVersionRenderFragmentData,
+    _$GBillVersionRenderFragmentData
+  ];
+  @override
+  final String wireName = 'GBillVersionRenderFragmentData';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GBillVersionRenderFragmentData object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+      'id',
+      serializers.serialize(object.id,
+          specifiedType: const FullType(_i1.GUUID)),
+      'bill',
+      serializers.serialize(object.bill,
+          specifiedType: const FullType(GBillVersionRenderFragmentData_bill)),
+      'note',
+      serializers.serialize(object.note, specifiedType: const FullType(String)),
+      'date',
+      serializers.serialize(object.date, specifiedType: const FullType(String)),
+    ];
+    Object? value;
+    value = object.processedUrl;
+    if (value != null) {
+      result
+        ..add('processedUrl')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.imagePreviewUrl;
+    if (value != null) {
+      result
+        ..add('imagePreviewUrl')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    return result;
+  }
+
+  @override
+  GBillVersionRenderFragmentData deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GBillVersionRenderFragmentDataBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'id':
+          result.id.replace(serializers.deserialize(value,
+              specifiedType: const FullType(_i1.GUUID))! as _i1.GUUID);
+          break;
+        case 'bill':
+          result.bill.replace(serializers.deserialize(value,
+                  specifiedType:
+                      const FullType(GBillVersionRenderFragmentData_bill))!
+              as GBillVersionRenderFragmentData_bill);
+          break;
+        case 'note':
+          result.note = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'date':
+          result.date = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'processedUrl':
+          result.processedUrl = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'imagePreviewUrl':
+          result.imagePreviewUrl = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GBillVersionRenderFragmentData_billSerializer
+    implements StructuredSerializer<GBillVersionRenderFragmentData_bill> {
+  @override
+  final Iterable<Type> types = const [
+    GBillVersionRenderFragmentData_bill,
+    _$GBillVersionRenderFragmentData_bill
+  ];
+  @override
+  final String wireName = 'GBillVersionRenderFragmentData_bill';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GBillVersionRenderFragmentData_bill object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+      'id',
+      serializers.serialize(object.id, specifiedType: const FullType(String)),
+      'identifier',
+      serializers.serialize(object.identifier,
+          specifiedType: const FullType(String)),
+      'title',
+      serializers.serialize(object.title,
+          specifiedType: const FullType(String)),
+    ];
+
+    return result;
+  }
+
+  @override
+  GBillVersionRenderFragmentData_bill deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GBillVersionRenderFragmentData_billBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'id':
+          result.id = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'identifier':
+          result.identifier = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'title':
+          result.title = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GBillVersionRenderFragmentData extends GBillVersionRenderFragmentData {
+  @override
+  final String G__typename;
+  @override
+  final _i1.GUUID id;
+  @override
+  final GBillVersionRenderFragmentData_bill bill;
+  @override
+  final String note;
+  @override
+  final String date;
+  @override
+  final String? processedUrl;
+  @override
+  final String? imagePreviewUrl;
+
+  factory _$GBillVersionRenderFragmentData(
+          [void Function(GBillVersionRenderFragmentDataBuilder)? updates]) =>
+      (new GBillVersionRenderFragmentDataBuilder()..update(updates))._build();
+
+  _$GBillVersionRenderFragmentData._(
+      {required this.G__typename,
+      required this.id,
+      required this.bill,
+      required this.note,
+      required this.date,
+      this.processedUrl,
+      this.imagePreviewUrl})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        G__typename, r'GBillVersionRenderFragmentData', 'G__typename');
+    BuiltValueNullFieldError.checkNotNull(
+        id, r'GBillVersionRenderFragmentData', 'id');
+    BuiltValueNullFieldError.checkNotNull(
+        bill, r'GBillVersionRenderFragmentData', 'bill');
+    BuiltValueNullFieldError.checkNotNull(
+        note, r'GBillVersionRenderFragmentData', 'note');
+    BuiltValueNullFieldError.checkNotNull(
+        date, r'GBillVersionRenderFragmentData', 'date');
+  }
+
+  @override
+  GBillVersionRenderFragmentData rebuild(
+          void Function(GBillVersionRenderFragmentDataBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GBillVersionRenderFragmentDataBuilder toBuilder() =>
+      new GBillVersionRenderFragmentDataBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GBillVersionRenderFragmentData &&
+        G__typename == other.G__typename &&
+        id == other.id &&
+        bill == other.bill &&
+        note == other.note &&
+        date == other.date &&
+        processedUrl == other.processedUrl &&
+        imagePreviewUrl == other.imagePreviewUrl;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(
+        $jc(
+            $jc(
+                $jc(
+                    $jc($jc($jc(0, G__typename.hashCode), id.hashCode),
+                        bill.hashCode),
+                    note.hashCode),
+                date.hashCode),
+            processedUrl.hashCode),
+        imagePreviewUrl.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(r'GBillVersionRenderFragmentData')
+          ..add('G__typename', G__typename)
+          ..add('id', id)
+          ..add('bill', bill)
+          ..add('note', note)
+          ..add('date', date)
+          ..add('processedUrl', processedUrl)
+          ..add('imagePreviewUrl', imagePreviewUrl))
+        .toString();
+  }
+}
+
+class GBillVersionRenderFragmentDataBuilder
+    implements
+        Builder<GBillVersionRenderFragmentData,
+            GBillVersionRenderFragmentDataBuilder> {
+  _$GBillVersionRenderFragmentData? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  _i1.GUUIDBuilder? _id;
+  _i1.GUUIDBuilder get id => _$this._id ??= new _i1.GUUIDBuilder();
+  set id(_i1.GUUIDBuilder? id) => _$this._id = id;
+
+  GBillVersionRenderFragmentData_billBuilder? _bill;
+  GBillVersionRenderFragmentData_billBuilder get bill =>
+      _$this._bill ??= new GBillVersionRenderFragmentData_billBuilder();
+  set bill(GBillVersionRenderFragmentData_billBuilder? bill) =>
+      _$this._bill = bill;
+
+  String? _note;
+  String? get note => _$this._note;
+  set note(String? note) => _$this._note = note;
+
+  String? _date;
+  String? get date => _$this._date;
+  set date(String? date) => _$this._date = date;
+
+  String? _processedUrl;
+  String? get processedUrl => _$this._processedUrl;
+  set processedUrl(String? processedUrl) => _$this._processedUrl = processedUrl;
+
+  String? _imagePreviewUrl;
+  String? get imagePreviewUrl => _$this._imagePreviewUrl;
+  set imagePreviewUrl(String? imagePreviewUrl) =>
+      _$this._imagePreviewUrl = imagePreviewUrl;
+
+  GBillVersionRenderFragmentDataBuilder() {
+    GBillVersionRenderFragmentData._initializeBuilder(this);
+  }
+
+  GBillVersionRenderFragmentDataBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _id = $v.id.toBuilder();
+      _bill = $v.bill.toBuilder();
+      _note = $v.note;
+      _date = $v.date;
+      _processedUrl = $v.processedUrl;
+      _imagePreviewUrl = $v.imagePreviewUrl;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GBillVersionRenderFragmentData other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GBillVersionRenderFragmentData;
+  }
+
+  @override
+  void update(void Function(GBillVersionRenderFragmentDataBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GBillVersionRenderFragmentData build() => _build();
+
+  _$GBillVersionRenderFragmentData _build() {
+    _$GBillVersionRenderFragmentData _$result;
+    try {
+      _$result = _$v ??
+          new _$GBillVersionRenderFragmentData._(
+              G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
+                  r'GBillVersionRenderFragmentData', 'G__typename'),
+              id: id.build(),
+              bill: bill.build(),
+              note: BuiltValueNullFieldError.checkNotNull(
+                  note, r'GBillVersionRenderFragmentData', 'note'),
+              date: BuiltValueNullFieldError.checkNotNull(
+                  date, r'GBillVersionRenderFragmentData', 'date'),
+              processedUrl: processedUrl,
+              imagePreviewUrl: imagePreviewUrl);
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'id';
+        id.build();
+        _$failedField = 'bill';
+        bill.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'GBillVersionRenderFragmentData', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GBillVersionRenderFragmentData_bill
+    extends GBillVersionRenderFragmentData_bill {
+  @override
+  final String G__typename;
+  @override
+  final String id;
+  @override
+  final String identifier;
+  @override
+  final String title;
+
+  factory _$GBillVersionRenderFragmentData_bill(
+          [void Function(GBillVersionRenderFragmentData_billBuilder)?
+              updates]) =>
+      (new GBillVersionRenderFragmentData_billBuilder()..update(updates))
+          ._build();
+
+  _$GBillVersionRenderFragmentData_bill._(
+      {required this.G__typename,
+      required this.id,
+      required this.identifier,
+      required this.title})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        G__typename, r'GBillVersionRenderFragmentData_bill', 'G__typename');
+    BuiltValueNullFieldError.checkNotNull(
+        id, r'GBillVersionRenderFragmentData_bill', 'id');
+    BuiltValueNullFieldError.checkNotNull(
+        identifier, r'GBillVersionRenderFragmentData_bill', 'identifier');
+    BuiltValueNullFieldError.checkNotNull(
+        title, r'GBillVersionRenderFragmentData_bill', 'title');
+  }
+
+  @override
+  GBillVersionRenderFragmentData_bill rebuild(
+          void Function(GBillVersionRenderFragmentData_billBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GBillVersionRenderFragmentData_billBuilder toBuilder() =>
+      new GBillVersionRenderFragmentData_billBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GBillVersionRenderFragmentData_bill &&
+        G__typename == other.G__typename &&
+        id == other.id &&
+        identifier == other.identifier &&
+        title == other.title;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(
+        $jc($jc($jc(0, G__typename.hashCode), id.hashCode),
+            identifier.hashCode),
+        title.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(r'GBillVersionRenderFragmentData_bill')
+          ..add('G__typename', G__typename)
+          ..add('id', id)
+          ..add('identifier', identifier)
+          ..add('title', title))
+        .toString();
+  }
+}
+
+class GBillVersionRenderFragmentData_billBuilder
+    implements
+        Builder<GBillVersionRenderFragmentData_bill,
+            GBillVersionRenderFragmentData_billBuilder> {
+  _$GBillVersionRenderFragmentData_bill? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  String? _id;
+  String? get id => _$this._id;
+  set id(String? id) => _$this._id = id;
+
+  String? _identifier;
+  String? get identifier => _$this._identifier;
+  set identifier(String? identifier) => _$this._identifier = identifier;
+
+  String? _title;
+  String? get title => _$this._title;
+  set title(String? title) => _$this._title = title;
+
+  GBillVersionRenderFragmentData_billBuilder() {
+    GBillVersionRenderFragmentData_bill._initializeBuilder(this);
+  }
+
+  GBillVersionRenderFragmentData_billBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _id = $v.id;
+      _identifier = $v.identifier;
+      _title = $v.title;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GBillVersionRenderFragmentData_bill other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GBillVersionRenderFragmentData_bill;
+  }
+
+  @override
+  void update(
+      void Function(GBillVersionRenderFragmentData_billBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GBillVersionRenderFragmentData_bill build() => _build();
+
+  _$GBillVersionRenderFragmentData_bill _build() {
+    final _$result = _$v ??
+        new _$GBillVersionRenderFragmentData_bill._(
+            G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
+                r'GBillVersionRenderFragmentData_bill', 'G__typename'),
+            id: BuiltValueNullFieldError.checkNotNull(
+                id, r'GBillVersionRenderFragmentData_bill', 'id'),
+            identifier: BuiltValueNullFieldError.checkNotNull(identifier,
+                r'GBillVersionRenderFragmentData_bill', 'identifier'),
+            title: BuiltValueNullFieldError.checkNotNull(
+                title, r'GBillVersionRenderFragmentData_bill', 'title'));
+    replace(_$result);
+    return _$result;
+  }
+}
+
+// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas

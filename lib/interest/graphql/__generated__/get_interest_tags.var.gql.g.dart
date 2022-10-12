@@ -1,0 +1,156 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'get_interest_tags.var.gql.dart';
+
+// **************************************************************************
+// BuiltValueGenerator
+// **************************************************************************
+
+Serializer<GGetInterestTagsVars> _$gGetInterestTagsVarsSerializer =
+    new _$GGetInterestTagsVarsSerializer();
+
+class _$GGetInterestTagsVarsSerializer
+    implements StructuredSerializer<GGetInterestTagsVars> {
+  @override
+  final Iterable<Type> types = const [
+    GGetInterestTagsVars,
+    _$GGetInterestTagsVars
+  ];
+  @override
+  final String wireName = 'GGetInterestTagsVars';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GGetInterestTagsVars object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      'input',
+      serializers.serialize(object.input,
+          specifiedType: const FullType(_i1.GInterestTaggedObjectInput)),
+    ];
+
+    return result;
+  }
+
+  @override
+  GGetInterestTagsVars deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GGetInterestTagsVarsBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case 'input':
+          result.input.replace(serializers.deserialize(value,
+                  specifiedType:
+                      const FullType(_i1.GInterestTaggedObjectInput))!
+              as _i1.GInterestTaggedObjectInput);
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GGetInterestTagsVars extends GGetInterestTagsVars {
+  @override
+  final _i1.GInterestTaggedObjectInput input;
+
+  factory _$GGetInterestTagsVars(
+          [void Function(GGetInterestTagsVarsBuilder)? updates]) =>
+      (new GGetInterestTagsVarsBuilder()..update(updates))._build();
+
+  _$GGetInterestTagsVars._({required this.input}) : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        input, r'GGetInterestTagsVars', 'input');
+  }
+
+  @override
+  GGetInterestTagsVars rebuild(
+          void Function(GGetInterestTagsVarsBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GGetInterestTagsVarsBuilder toBuilder() =>
+      new GGetInterestTagsVarsBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GGetInterestTagsVars && input == other.input;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(0, input.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(r'GGetInterestTagsVars')
+          ..add('input', input))
+        .toString();
+  }
+}
+
+class GGetInterestTagsVarsBuilder
+    implements Builder<GGetInterestTagsVars, GGetInterestTagsVarsBuilder> {
+  _$GGetInterestTagsVars? _$v;
+
+  _i1.GInterestTaggedObjectInputBuilder? _input;
+  _i1.GInterestTaggedObjectInputBuilder get input =>
+      _$this._input ??= new _i1.GInterestTaggedObjectInputBuilder();
+  set input(_i1.GInterestTaggedObjectInputBuilder? input) =>
+      _$this._input = input;
+
+  GGetInterestTagsVarsBuilder();
+
+  GGetInterestTagsVarsBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _input = $v.input.toBuilder();
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GGetInterestTagsVars other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GGetInterestTagsVars;
+  }
+
+  @override
+  void update(void Function(GGetInterestTagsVarsBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GGetInterestTagsVars build() => _build();
+
+  _$GGetInterestTagsVars _build() {
+    _$GGetInterestTagsVars _$result;
+    try {
+      _$result = _$v ?? new _$GGetInterestTagsVars._(input: input.build());
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'input';
+        input.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'GGetInterestTagsVars', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas

@@ -1,0 +1,153 @@
+// **************************************************************************
+// BuiltValueGenerator
+// **************************************************************************
+
+Serializer<GGetMyArchivedQAPostsVars> _$gGetMyArchivedQAPostsVarsSerializer =
+    new _$GGetMyArchivedQAPostsVarsSerializer();
+
+class _$GGetMyArchivedQAPostsVarsSerializer
+    implements StructuredSerializer<GGetMyArchivedQAPostsVars> {
+  @override
+  final Iterable<Type> types = const [
+    GGetMyArchivedQAPostsVars,
+    _$GGetMyArchivedQAPostsVars
+  ];
+  @override
+  final String wireName = 'GGetMyArchivedQAPostsVars';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GGetMyArchivedQAPostsVars object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      'input',
+      serializers.serialize(object.input,
+          specifiedType: const FullType(_i1.GMyArchivedQAPostPaginationInput)),
+    ];
+
+    return result;
+  }
+
+  @override
+  GGetMyArchivedQAPostsVars deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GGetMyArchivedQAPostsVarsBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case 'input':
+          result.input.replace(serializers.deserialize(value,
+                  specifiedType:
+                      const FullType(_i1.GMyArchivedQAPostPaginationInput))!
+              as _i1.GMyArchivedQAPostPaginationInput);
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GGetMyArchivedQAPostsVars extends GGetMyArchivedQAPostsVars {
+  @override
+  final _i1.GMyArchivedQAPostPaginationInput input;
+
+  factory _$GGetMyArchivedQAPostsVars(
+          [void Function(GGetMyArchivedQAPostsVarsBuilder)? updates]) =>
+      (new GGetMyArchivedQAPostsVarsBuilder()..update(updates))._build();
+
+  _$GGetMyArchivedQAPostsVars._({required this.input}) : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        input, r'GGetMyArchivedQAPostsVars', 'input');
+  }
+
+  @override
+  GGetMyArchivedQAPostsVars rebuild(
+          void Function(GGetMyArchivedQAPostsVarsBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GGetMyArchivedQAPostsVarsBuilder toBuilder() =>
+      new GGetMyArchivedQAPostsVarsBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GGetMyArchivedQAPostsVars && input == other.input;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(0, input.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(r'GGetMyArchivedQAPostsVars')
+          ..add('input', input))
+        .toString();
+  }
+}
+
+class GGetMyArchivedQAPostsVarsBuilder
+    implements
+        Builder<GGetMyArchivedQAPostsVars, GGetMyArchivedQAPostsVarsBuilder> {
+  _$GGetMyArchivedQAPostsVars? _$v;
+
+  _i1.GMyArchivedQAPostPaginationInputBuilder? _input;
+  _i1.GMyArchivedQAPostPaginationInputBuilder get input =>
+      _$this._input ??= new _i1.GMyArchivedQAPostPaginationInputBuilder();
+  set input(_i1.GMyArchivedQAPostPaginationInputBuilder? input) =>
+      _$this._input = input;
+
+  GGetMyArchivedQAPostsVarsBuilder();
+
+  GGetMyArchivedQAPostsVarsBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _input = $v.input.toBuilder();
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GGetMyArchivedQAPostsVars other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GGetMyArchivedQAPostsVars;
+  }
+
+  @override
+  void update(void Function(GGetMyArchivedQAPostsVarsBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GGetMyArchivedQAPostsVars build() => _build();
+
+  _$GGetMyArchivedQAPostsVars _build() {
+    _$GGetMyArchivedQAPostsVars _$result;
+    try {
+      _$result = _$v ?? new _$GGetMyArchivedQAPostsVars._(input: input.build());
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'input';
+        input.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'GGetMyArchivedQAPostsVars', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas

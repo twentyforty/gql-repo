@@ -1,0 +1,244 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'organization_render_fragment.data.gql.dart';
+
+// **************************************************************************
+// BuiltValueGenerator
+// **************************************************************************
+
+Serializer<GOrganizationRenderFragmentData>
+    _$gOrganizationRenderFragmentDataSerializer =
+    new _$GOrganizationRenderFragmentDataSerializer();
+
+class _$GOrganizationRenderFragmentDataSerializer
+    implements StructuredSerializer<GOrganizationRenderFragmentData> {
+  @override
+  final Iterable<Type> types = const [
+    GOrganizationRenderFragmentData,
+    _$GOrganizationRenderFragmentData
+  ];
+  @override
+  final String wireName = 'GOrganizationRenderFragmentData';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GOrganizationRenderFragmentData object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+      'id',
+      serializers.serialize(object.id, specifiedType: const FullType(String)),
+      'name',
+      serializers.serialize(object.name, specifiedType: const FullType(String)),
+    ];
+    Object? value;
+    value = object.classification;
+    if (value != null) {
+      result
+        ..add('classification')
+        ..add(serializers.serialize(value,
+            specifiedType:
+                const FullType(_i1.GDataOrganizationClassificationChoices)));
+    }
+    value = object.photoUrl;
+    if (value != null) {
+      result
+        ..add('photoUrl')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    return result;
+  }
+
+  @override
+  GOrganizationRenderFragmentData deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GOrganizationRenderFragmentDataBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'id':
+          result.id = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'name':
+          result.name = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'classification':
+          result.classification = serializers.deserialize(value,
+                  specifiedType: const FullType(
+                      _i1.GDataOrganizationClassificationChoices))
+              as _i1.GDataOrganizationClassificationChoices?;
+          break;
+        case 'photoUrl':
+          result.photoUrl = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GOrganizationRenderFragmentData
+    extends GOrganizationRenderFragmentData {
+  @override
+  final String G__typename;
+  @override
+  final String id;
+  @override
+  final String name;
+  @override
+  final _i1.GDataOrganizationClassificationChoices? classification;
+  @override
+  final String? photoUrl;
+
+  factory _$GOrganizationRenderFragmentData(
+          [void Function(GOrganizationRenderFragmentDataBuilder)? updates]) =>
+      (new GOrganizationRenderFragmentDataBuilder()..update(updates))._build();
+
+  _$GOrganizationRenderFragmentData._(
+      {required this.G__typename,
+      required this.id,
+      required this.name,
+      this.classification,
+      this.photoUrl})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        G__typename, r'GOrganizationRenderFragmentData', 'G__typename');
+    BuiltValueNullFieldError.checkNotNull(
+        id, r'GOrganizationRenderFragmentData', 'id');
+    BuiltValueNullFieldError.checkNotNull(
+        name, r'GOrganizationRenderFragmentData', 'name');
+  }
+
+  @override
+  GOrganizationRenderFragmentData rebuild(
+          void Function(GOrganizationRenderFragmentDataBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GOrganizationRenderFragmentDataBuilder toBuilder() =>
+      new GOrganizationRenderFragmentDataBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GOrganizationRenderFragmentData &&
+        G__typename == other.G__typename &&
+        id == other.id &&
+        name == other.name &&
+        classification == other.classification &&
+        photoUrl == other.photoUrl;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(
+        $jc($jc($jc($jc(0, G__typename.hashCode), id.hashCode), name.hashCode),
+            classification.hashCode),
+        photoUrl.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(r'GOrganizationRenderFragmentData')
+          ..add('G__typename', G__typename)
+          ..add('id', id)
+          ..add('name', name)
+          ..add('classification', classification)
+          ..add('photoUrl', photoUrl))
+        .toString();
+  }
+}
+
+class GOrganizationRenderFragmentDataBuilder
+    implements
+        Builder<GOrganizationRenderFragmentData,
+            GOrganizationRenderFragmentDataBuilder> {
+  _$GOrganizationRenderFragmentData? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  String? _id;
+  String? get id => _$this._id;
+  set id(String? id) => _$this._id = id;
+
+  String? _name;
+  String? get name => _$this._name;
+  set name(String? name) => _$this._name = name;
+
+  _i1.GDataOrganizationClassificationChoices? _classification;
+  _i1.GDataOrganizationClassificationChoices? get classification =>
+      _$this._classification;
+  set classification(
+          _i1.GDataOrganizationClassificationChoices? classification) =>
+      _$this._classification = classification;
+
+  String? _photoUrl;
+  String? get photoUrl => _$this._photoUrl;
+  set photoUrl(String? photoUrl) => _$this._photoUrl = photoUrl;
+
+  GOrganizationRenderFragmentDataBuilder() {
+    GOrganizationRenderFragmentData._initializeBuilder(this);
+  }
+
+  GOrganizationRenderFragmentDataBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _id = $v.id;
+      _name = $v.name;
+      _classification = $v.classification;
+      _photoUrl = $v.photoUrl;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GOrganizationRenderFragmentData other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GOrganizationRenderFragmentData;
+  }
+
+  @override
+  void update(void Function(GOrganizationRenderFragmentDataBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GOrganizationRenderFragmentData build() => _build();
+
+  _$GOrganizationRenderFragmentData _build() {
+    final _$result = _$v ??
+        new _$GOrganizationRenderFragmentData._(
+            G__typename: BuiltValueNullFieldError.checkNotNull(
+                G__typename, r'GOrganizationRenderFragmentData', 'G__typename'),
+            id: BuiltValueNullFieldError.checkNotNull(
+                id, r'GOrganizationRenderFragmentData', 'id'),
+            name: BuiltValueNullFieldError.checkNotNull(
+                name, r'GOrganizationRenderFragmentData', 'name'),
+            classification: classification,
+            photoUrl: photoUrl);
+    replace(_$result);
+    return _$result;
+  }
+}
+
+// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas

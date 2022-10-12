@@ -1,0 +1,99 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'qa_composition_fragment.var.gql.dart';
+
+// **************************************************************************
+// BuiltValueGenerator
+// **************************************************************************
+
+Serializer<GQACompositionFragmentVars> _$gQACompositionFragmentVarsSerializer =
+    new _$GQACompositionFragmentVarsSerializer();
+
+class _$GQACompositionFragmentVarsSerializer
+    implements StructuredSerializer<GQACompositionFragmentVars> {
+  @override
+  final Iterable<Type> types = const [
+    GQACompositionFragmentVars,
+    _$GQACompositionFragmentVars
+  ];
+  @override
+  final String wireName = 'GQACompositionFragmentVars';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GQACompositionFragmentVars object,
+      {FullType specifiedType = FullType.unspecified}) {
+    return <Object?>[];
+  }
+
+  @override
+  GQACompositionFragmentVars deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    return new GQACompositionFragmentVarsBuilder().build();
+  }
+}
+
+class _$GQACompositionFragmentVars extends GQACompositionFragmentVars {
+  factory _$GQACompositionFragmentVars(
+          [void Function(GQACompositionFragmentVarsBuilder)? updates]) =>
+      (new GQACompositionFragmentVarsBuilder()..update(updates))._build();
+
+  _$GQACompositionFragmentVars._() : super._();
+
+  @override
+  GQACompositionFragmentVars rebuild(
+          void Function(GQACompositionFragmentVarsBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GQACompositionFragmentVarsBuilder toBuilder() =>
+      new GQACompositionFragmentVarsBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GQACompositionFragmentVars;
+  }
+
+  @override
+  int get hashCode {
+    return 713247464;
+  }
+
+  @override
+  String toString() {
+    return newBuiltValueToStringHelper(r'GQACompositionFragmentVars')
+        .toString();
+  }
+}
+
+class GQACompositionFragmentVarsBuilder
+    implements
+        Builder<GQACompositionFragmentVars, GQACompositionFragmentVarsBuilder> {
+  _$GQACompositionFragmentVars? _$v;
+
+  GQACompositionFragmentVarsBuilder();
+
+  @override
+  void replace(GQACompositionFragmentVars other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GQACompositionFragmentVars;
+  }
+
+  @override
+  void update(void Function(GQACompositionFragmentVarsBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GQACompositionFragmentVars build() => _build();
+
+  _$GQACompositionFragmentVars _build() {
+    final _$result = _$v ?? new _$GQACompositionFragmentVars._();
+    replace(_$result);
+    return _$result;
+  }
+}
+
+// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas

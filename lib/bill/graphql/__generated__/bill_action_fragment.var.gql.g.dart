@@ -1,0 +1,98 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'bill_action_fragment.var.gql.dart';
+
+// **************************************************************************
+// BuiltValueGenerator
+// **************************************************************************
+
+Serializer<GBillActionFragmentVars> _$gBillActionFragmentVarsSerializer =
+    new _$GBillActionFragmentVarsSerializer();
+
+class _$GBillActionFragmentVarsSerializer
+    implements StructuredSerializer<GBillActionFragmentVars> {
+  @override
+  final Iterable<Type> types = const [
+    GBillActionFragmentVars,
+    _$GBillActionFragmentVars
+  ];
+  @override
+  final String wireName = 'GBillActionFragmentVars';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GBillActionFragmentVars object,
+      {FullType specifiedType = FullType.unspecified}) {
+    return <Object?>[];
+  }
+
+  @override
+  GBillActionFragmentVars deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    return new GBillActionFragmentVarsBuilder().build();
+  }
+}
+
+class _$GBillActionFragmentVars extends GBillActionFragmentVars {
+  factory _$GBillActionFragmentVars(
+          [void Function(GBillActionFragmentVarsBuilder)? updates]) =>
+      (new GBillActionFragmentVarsBuilder()..update(updates))._build();
+
+  _$GBillActionFragmentVars._() : super._();
+
+  @override
+  GBillActionFragmentVars rebuild(
+          void Function(GBillActionFragmentVarsBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GBillActionFragmentVarsBuilder toBuilder() =>
+      new GBillActionFragmentVarsBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GBillActionFragmentVars;
+  }
+
+  @override
+  int get hashCode {
+    return 698030695;
+  }
+
+  @override
+  String toString() {
+    return newBuiltValueToStringHelper(r'GBillActionFragmentVars').toString();
+  }
+}
+
+class GBillActionFragmentVarsBuilder
+    implements
+        Builder<GBillActionFragmentVars, GBillActionFragmentVarsBuilder> {
+  _$GBillActionFragmentVars? _$v;
+
+  GBillActionFragmentVarsBuilder();
+
+  @override
+  void replace(GBillActionFragmentVars other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GBillActionFragmentVars;
+  }
+
+  @override
+  void update(void Function(GBillActionFragmentVarsBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GBillActionFragmentVars build() => _build();
+
+  _$GBillActionFragmentVars _build() {
+    final _$result = _$v ?? new _$GBillActionFragmentVars._();
+    replace(_$result);
+    return _$result;
+  }
+}
+
+// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas

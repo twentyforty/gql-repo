@@ -1,0 +1,207 @@
+// **************************************************************************
+// BuiltValueGenerator
+// **************************************************************************
+
+Serializer<GIconFragmentData> _$gIconFragmentDataSerializer =
+    new _$GIconFragmentDataSerializer();
+
+class _$GIconFragmentDataSerializer
+    implements StructuredSerializer<GIconFragmentData> {
+  @override
+  final Iterable<Type> types = const [GIconFragmentData, _$GIconFragmentData];
+  @override
+  final String wireName = 'GIconFragmentData';
+
+  @override
+  Iterable<Object?> serialize(Serializers serializers, GIconFragmentData object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+    ];
+    Object? value;
+    value = object.codePoint;
+    if (value != null) {
+      result
+        ..add('codePoint')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.fontFamily;
+    if (value != null) {
+      result
+        ..add('fontFamily')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.fontPackage;
+    if (value != null) {
+      result
+        ..add('fontPackage')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    return result;
+  }
+
+  @override
+  GIconFragmentData deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GIconFragmentDataBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'codePoint':
+          result.codePoint = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'fontFamily':
+          result.fontFamily = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'fontPackage':
+          result.fontPackage = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GIconFragmentData extends GIconFragmentData {
+  @override
+  final String G__typename;
+  @override
+  final String? codePoint;
+  @override
+  final String? fontFamily;
+  @override
+  final String? fontPackage;
+
+  factory _$GIconFragmentData(
+          [void Function(GIconFragmentDataBuilder)? updates]) =>
+      (new GIconFragmentDataBuilder()..update(updates))._build();
+
+  _$GIconFragmentData._(
+      {required this.G__typename,
+      this.codePoint,
+      this.fontFamily,
+      this.fontPackage})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        G__typename, r'GIconFragmentData', 'G__typename');
+  }
+
+  @override
+  GIconFragmentData rebuild(void Function(GIconFragmentDataBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GIconFragmentDataBuilder toBuilder() =>
+      new GIconFragmentDataBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GIconFragmentData &&
+        G__typename == other.G__typename &&
+        codePoint == other.codePoint &&
+        fontFamily == other.fontFamily &&
+        fontPackage == other.fontPackage;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(
+        $jc($jc($jc(0, G__typename.hashCode), codePoint.hashCode),
+            fontFamily.hashCode),
+        fontPackage.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(r'GIconFragmentData')
+          ..add('G__typename', G__typename)
+          ..add('codePoint', codePoint)
+          ..add('fontFamily', fontFamily)
+          ..add('fontPackage', fontPackage))
+        .toString();
+  }
+}
+
+class GIconFragmentDataBuilder
+    implements Builder<GIconFragmentData, GIconFragmentDataBuilder> {
+  _$GIconFragmentData? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  String? _codePoint;
+  String? get codePoint => _$this._codePoint;
+  set codePoint(String? codePoint) => _$this._codePoint = codePoint;
+
+  String? _fontFamily;
+  String? get fontFamily => _$this._fontFamily;
+  set fontFamily(String? fontFamily) => _$this._fontFamily = fontFamily;
+
+  String? _fontPackage;
+  String? get fontPackage => _$this._fontPackage;
+  set fontPackage(String? fontPackage) => _$this._fontPackage = fontPackage;
+
+  GIconFragmentDataBuilder() {
+    GIconFragmentData._initializeBuilder(this);
+  }
+
+  GIconFragmentDataBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _codePoint = $v.codePoint;
+      _fontFamily = $v.fontFamily;
+      _fontPackage = $v.fontPackage;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GIconFragmentData other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GIconFragmentData;
+  }
+
+  @override
+  void update(void Function(GIconFragmentDataBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GIconFragmentData build() => _build();
+
+  _$GIconFragmentData _build() {
+    final _$result = _$v ??
+        new _$GIconFragmentData._(
+            G__typename: BuiltValueNullFieldError.checkNotNull(
+                G__typename, r'GIconFragmentData', 'G__typename'),
+            codePoint: codePoint,
+            fontFamily: fontFamily,
+            fontPackage: fontPackage);
+    replace(_$result);
+    return _$result;
+  }
+}
+
+// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas

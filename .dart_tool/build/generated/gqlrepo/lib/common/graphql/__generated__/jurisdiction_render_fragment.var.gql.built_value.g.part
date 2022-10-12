@@ -1,0 +1,98 @@
+// **************************************************************************
+// BuiltValueGenerator
+// **************************************************************************
+
+Serializer<GJurisdictionRenderFragmentVars>
+    _$gJurisdictionRenderFragmentVarsSerializer =
+    new _$GJurisdictionRenderFragmentVarsSerializer();
+
+class _$GJurisdictionRenderFragmentVarsSerializer
+    implements StructuredSerializer<GJurisdictionRenderFragmentVars> {
+  @override
+  final Iterable<Type> types = const [
+    GJurisdictionRenderFragmentVars,
+    _$GJurisdictionRenderFragmentVars
+  ];
+  @override
+  final String wireName = 'GJurisdictionRenderFragmentVars';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GJurisdictionRenderFragmentVars object,
+      {FullType specifiedType = FullType.unspecified}) {
+    return <Object?>[];
+  }
+
+  @override
+  GJurisdictionRenderFragmentVars deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    return new GJurisdictionRenderFragmentVarsBuilder().build();
+  }
+}
+
+class _$GJurisdictionRenderFragmentVars
+    extends GJurisdictionRenderFragmentVars {
+  factory _$GJurisdictionRenderFragmentVars(
+          [void Function(GJurisdictionRenderFragmentVarsBuilder)? updates]) =>
+      (new GJurisdictionRenderFragmentVarsBuilder()..update(updates))._build();
+
+  _$GJurisdictionRenderFragmentVars._() : super._();
+
+  @override
+  GJurisdictionRenderFragmentVars rebuild(
+          void Function(GJurisdictionRenderFragmentVarsBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GJurisdictionRenderFragmentVarsBuilder toBuilder() =>
+      new GJurisdictionRenderFragmentVarsBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GJurisdictionRenderFragmentVars;
+  }
+
+  @override
+  int get hashCode {
+    return 384840313;
+  }
+
+  @override
+  String toString() {
+    return newBuiltValueToStringHelper(r'GJurisdictionRenderFragmentVars')
+        .toString();
+  }
+}
+
+class GJurisdictionRenderFragmentVarsBuilder
+    implements
+        Builder<GJurisdictionRenderFragmentVars,
+            GJurisdictionRenderFragmentVarsBuilder> {
+  _$GJurisdictionRenderFragmentVars? _$v;
+
+  GJurisdictionRenderFragmentVarsBuilder();
+
+  @override
+  void replace(GJurisdictionRenderFragmentVars other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GJurisdictionRenderFragmentVars;
+  }
+
+  @override
+  void update(void Function(GJurisdictionRenderFragmentVarsBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GJurisdictionRenderFragmentVars build() => _build();
+
+  _$GJurisdictionRenderFragmentVars _build() {
+    final _$result = _$v ?? new _$GJurisdictionRenderFragmentVars._();
+    replace(_$result);
+    return _$result;
+  }
+}
+
+// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas

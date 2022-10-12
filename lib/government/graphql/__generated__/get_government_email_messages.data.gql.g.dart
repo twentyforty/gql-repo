@@ -1,0 +1,1038 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'get_government_email_messages.data.gql.dart';
+
+// **************************************************************************
+// BuiltValueGenerator
+// **************************************************************************
+
+Serializer<GGetGovernmentEmailMessagesData>
+    _$gGetGovernmentEmailMessagesDataSerializer =
+    new _$GGetGovernmentEmailMessagesDataSerializer();
+Serializer<GGetGovernmentEmailMessagesData_governmentEmailMessages>
+    _$gGetGovernmentEmailMessagesDataGovernmentEmailMessagesSerializer =
+    new _$GGetGovernmentEmailMessagesData_governmentEmailMessagesSerializer();
+Serializer<GGetGovernmentEmailMessagesData_governmentEmailMessages_items>
+    _$gGetGovernmentEmailMessagesDataGovernmentEmailMessagesItemsSerializer =
+    new _$GGetGovernmentEmailMessagesData_governmentEmailMessages_itemsSerializer();
+Serializer<GGetGovernmentEmailMessagesData_governmentEmailMessages_pagination>
+    _$gGetGovernmentEmailMessagesDataGovernmentEmailMessagesPaginationSerializer =
+    new _$GGetGovernmentEmailMessagesData_governmentEmailMessages_paginationSerializer();
+
+class _$GGetGovernmentEmailMessagesDataSerializer
+    implements StructuredSerializer<GGetGovernmentEmailMessagesData> {
+  @override
+  final Iterable<Type> types = const [
+    GGetGovernmentEmailMessagesData,
+    _$GGetGovernmentEmailMessagesData
+  ];
+  @override
+  final String wireName = 'GGetGovernmentEmailMessagesData';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GGetGovernmentEmailMessagesData object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+    ];
+    Object? value;
+    value = object.governmentEmailMessages;
+    if (value != null) {
+      result
+        ..add('governmentEmailMessages')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(
+                GGetGovernmentEmailMessagesData_governmentEmailMessages)));
+    }
+    return result;
+  }
+
+  @override
+  GGetGovernmentEmailMessagesData deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GGetGovernmentEmailMessagesDataBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'governmentEmailMessages':
+          result.governmentEmailMessages.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(
+                      GGetGovernmentEmailMessagesData_governmentEmailMessages))!
+              as GGetGovernmentEmailMessagesData_governmentEmailMessages);
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GGetGovernmentEmailMessagesData_governmentEmailMessagesSerializer
+    implements
+        StructuredSerializer<
+            GGetGovernmentEmailMessagesData_governmentEmailMessages> {
+  @override
+  final Iterable<Type> types = const [
+    GGetGovernmentEmailMessagesData_governmentEmailMessages,
+    _$GGetGovernmentEmailMessagesData_governmentEmailMessages
+  ];
+  @override
+  final String wireName =
+      'GGetGovernmentEmailMessagesData_governmentEmailMessages';
+
+  @override
+  Iterable<Object?> serialize(Serializers serializers,
+      GGetGovernmentEmailMessagesData_governmentEmailMessages object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+      'pagination',
+      serializers.serialize(object.pagination,
+          specifiedType: const FullType(
+              GGetGovernmentEmailMessagesData_governmentEmailMessages_pagination)),
+    ];
+    Object? value;
+    value = object.items;
+    if (value != null) {
+      result
+        ..add('items')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(BuiltList, const [
+              const FullType(
+                  GGetGovernmentEmailMessagesData_governmentEmailMessages_items)
+            ])));
+    }
+    return result;
+  }
+
+  @override
+  GGetGovernmentEmailMessagesData_governmentEmailMessages deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result =
+        new GGetGovernmentEmailMessagesData_governmentEmailMessagesBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'items':
+          result.items.replace(serializers.deserialize(value,
+              specifiedType: const FullType(BuiltList, const [
+                const FullType(
+                    GGetGovernmentEmailMessagesData_governmentEmailMessages_items)
+              ]))! as BuiltList<Object?>);
+          break;
+        case 'pagination':
+          result.pagination.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(
+                      GGetGovernmentEmailMessagesData_governmentEmailMessages_pagination))!
+              as GGetGovernmentEmailMessagesData_governmentEmailMessages_pagination);
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GGetGovernmentEmailMessagesData_governmentEmailMessages_itemsSerializer
+    implements
+        StructuredSerializer<
+            GGetGovernmentEmailMessagesData_governmentEmailMessages_items> {
+  @override
+  final Iterable<Type> types = const [
+    GGetGovernmentEmailMessagesData_governmentEmailMessages_items,
+    _$GGetGovernmentEmailMessagesData_governmentEmailMessages_items
+  ];
+  @override
+  final String wireName =
+      'GGetGovernmentEmailMessagesData_governmentEmailMessages_items';
+
+  @override
+  Iterable<Object?> serialize(Serializers serializers,
+      GGetGovernmentEmailMessagesData_governmentEmailMessages_items object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+      'id',
+      serializers.serialize(object.id,
+          specifiedType: const FullType(_i3.GUUID)),
+      'timestamp',
+      serializers.serialize(object.timestamp,
+          specifiedType: const FullType(_i3.GDateTime)),
+      'fromAddress',
+      serializers.serialize(object.fromAddress,
+          specifiedType: const FullType(String)),
+      'pdfFileUrl',
+      serializers.serialize(object.pdfFileUrl,
+          specifiedType: const FullType(String)),
+    ];
+    Object? value;
+    value = object.subject;
+    if (value != null) {
+      result
+        ..add('subject')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.bodyText;
+    if (value != null) {
+      result
+        ..add('bodyText')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.bodyHtml;
+    if (value != null) {
+      result
+        ..add('bodyHtml')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.imagePreviewFileUrl;
+    if (value != null) {
+      result
+        ..add('imagePreviewFileUrl')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    return result;
+  }
+
+  @override
+  GGetGovernmentEmailMessagesData_governmentEmailMessages_items deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result =
+        new GGetGovernmentEmailMessagesData_governmentEmailMessages_itemsBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'id':
+          result.id.replace(serializers.deserialize(value,
+              specifiedType: const FullType(_i3.GUUID))! as _i3.GUUID);
+          break;
+        case 'timestamp':
+          result.timestamp.replace(serializers.deserialize(value,
+              specifiedType: const FullType(_i3.GDateTime))! as _i3.GDateTime);
+          break;
+        case 'fromAddress':
+          result.fromAddress = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'subject':
+          result.subject = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'bodyText':
+          result.bodyText = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'bodyHtml':
+          result.bodyHtml = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'pdfFileUrl':
+          result.pdfFileUrl = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'imagePreviewFileUrl':
+          result.imagePreviewFileUrl = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GGetGovernmentEmailMessagesData_governmentEmailMessages_paginationSerializer
+    implements
+        StructuredSerializer<
+            GGetGovernmentEmailMessagesData_governmentEmailMessages_pagination> {
+  @override
+  final Iterable<Type> types = const [
+    GGetGovernmentEmailMessagesData_governmentEmailMessages_pagination,
+    _$GGetGovernmentEmailMessagesData_governmentEmailMessages_pagination
+  ];
+  @override
+  final String wireName =
+      'GGetGovernmentEmailMessagesData_governmentEmailMessages_pagination';
+
+  @override
+  Iterable<Object?> serialize(Serializers serializers,
+      GGetGovernmentEmailMessagesData_governmentEmailMessages_pagination object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+      'token',
+      serializers.serialize(object.token,
+          specifiedType: const FullType(String)),
+    ];
+    Object? value;
+    value = object.nextToken;
+    if (value != null) {
+      result
+        ..add('nextToken')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    return result;
+  }
+
+  @override
+  GGetGovernmentEmailMessagesData_governmentEmailMessages_pagination
+      deserialize(Serializers serializers, Iterable<Object?> serialized,
+          {FullType specifiedType = FullType.unspecified}) {
+    final result =
+        new GGetGovernmentEmailMessagesData_governmentEmailMessages_paginationBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'token':
+          result.token = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'nextToken':
+          result.nextToken = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GGetGovernmentEmailMessagesData
+    extends GGetGovernmentEmailMessagesData {
+  @override
+  final String G__typename;
+  @override
+  final GGetGovernmentEmailMessagesData_governmentEmailMessages?
+      governmentEmailMessages;
+
+  factory _$GGetGovernmentEmailMessagesData(
+          [void Function(GGetGovernmentEmailMessagesDataBuilder)? updates]) =>
+      (new GGetGovernmentEmailMessagesDataBuilder()..update(updates))._build();
+
+  _$GGetGovernmentEmailMessagesData._(
+      {required this.G__typename, this.governmentEmailMessages})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        G__typename, r'GGetGovernmentEmailMessagesData', 'G__typename');
+  }
+
+  @override
+  GGetGovernmentEmailMessagesData rebuild(
+          void Function(GGetGovernmentEmailMessagesDataBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GGetGovernmentEmailMessagesDataBuilder toBuilder() =>
+      new GGetGovernmentEmailMessagesDataBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GGetGovernmentEmailMessagesData &&
+        G__typename == other.G__typename &&
+        governmentEmailMessages == other.governmentEmailMessages;
+  }
+
+  @override
+  int get hashCode {
+    return $jf(
+        $jc($jc(0, G__typename.hashCode), governmentEmailMessages.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(r'GGetGovernmentEmailMessagesData')
+          ..add('G__typename', G__typename)
+          ..add('governmentEmailMessages', governmentEmailMessages))
+        .toString();
+  }
+}
+
+class GGetGovernmentEmailMessagesDataBuilder
+    implements
+        Builder<GGetGovernmentEmailMessagesData,
+            GGetGovernmentEmailMessagesDataBuilder> {
+  _$GGetGovernmentEmailMessagesData? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  GGetGovernmentEmailMessagesData_governmentEmailMessagesBuilder?
+      _governmentEmailMessages;
+  GGetGovernmentEmailMessagesData_governmentEmailMessagesBuilder
+      get governmentEmailMessages => _$this._governmentEmailMessages ??=
+          new GGetGovernmentEmailMessagesData_governmentEmailMessagesBuilder();
+  set governmentEmailMessages(
+          GGetGovernmentEmailMessagesData_governmentEmailMessagesBuilder?
+              governmentEmailMessages) =>
+      _$this._governmentEmailMessages = governmentEmailMessages;
+
+  GGetGovernmentEmailMessagesDataBuilder() {
+    GGetGovernmentEmailMessagesData._initializeBuilder(this);
+  }
+
+  GGetGovernmentEmailMessagesDataBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _governmentEmailMessages = $v.governmentEmailMessages?.toBuilder();
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GGetGovernmentEmailMessagesData other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GGetGovernmentEmailMessagesData;
+  }
+
+  @override
+  void update(void Function(GGetGovernmentEmailMessagesDataBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GGetGovernmentEmailMessagesData build() => _build();
+
+  _$GGetGovernmentEmailMessagesData _build() {
+    _$GGetGovernmentEmailMessagesData _$result;
+    try {
+      _$result = _$v ??
+          new _$GGetGovernmentEmailMessagesData._(
+              G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
+                  r'GGetGovernmentEmailMessagesData', 'G__typename'),
+              governmentEmailMessages: _governmentEmailMessages?.build());
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'governmentEmailMessages';
+        _governmentEmailMessages?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'GGetGovernmentEmailMessagesData', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GGetGovernmentEmailMessagesData_governmentEmailMessages
+    extends GGetGovernmentEmailMessagesData_governmentEmailMessages {
+  @override
+  final String G__typename;
+  @override
+  final BuiltList<
+      GGetGovernmentEmailMessagesData_governmentEmailMessages_items>? items;
+  @override
+  final GGetGovernmentEmailMessagesData_governmentEmailMessages_pagination
+      pagination;
+
+  factory _$GGetGovernmentEmailMessagesData_governmentEmailMessages(
+          [void Function(
+                  GGetGovernmentEmailMessagesData_governmentEmailMessagesBuilder)?
+              updates]) =>
+      (new GGetGovernmentEmailMessagesData_governmentEmailMessagesBuilder()
+            ..update(updates))
+          ._build();
+
+  _$GGetGovernmentEmailMessagesData_governmentEmailMessages._(
+      {required this.G__typename, this.items, required this.pagination})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        G__typename,
+        r'GGetGovernmentEmailMessagesData_governmentEmailMessages',
+        'G__typename');
+    BuiltValueNullFieldError.checkNotNull(
+        pagination,
+        r'GGetGovernmentEmailMessagesData_governmentEmailMessages',
+        'pagination');
+  }
+
+  @override
+  GGetGovernmentEmailMessagesData_governmentEmailMessages rebuild(
+          void Function(
+                  GGetGovernmentEmailMessagesData_governmentEmailMessagesBuilder)
+              updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GGetGovernmentEmailMessagesData_governmentEmailMessagesBuilder toBuilder() =>
+      new GGetGovernmentEmailMessagesData_governmentEmailMessagesBuilder()
+        ..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GGetGovernmentEmailMessagesData_governmentEmailMessages &&
+        G__typename == other.G__typename &&
+        items == other.items &&
+        pagination == other.pagination;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc($jc($jc(0, G__typename.hashCode), items.hashCode),
+        pagination.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(
+            r'GGetGovernmentEmailMessagesData_governmentEmailMessages')
+          ..add('G__typename', G__typename)
+          ..add('items', items)
+          ..add('pagination', pagination))
+        .toString();
+  }
+}
+
+class GGetGovernmentEmailMessagesData_governmentEmailMessagesBuilder
+    implements
+        Builder<GGetGovernmentEmailMessagesData_governmentEmailMessages,
+            GGetGovernmentEmailMessagesData_governmentEmailMessagesBuilder> {
+  _$GGetGovernmentEmailMessagesData_governmentEmailMessages? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  ListBuilder<GGetGovernmentEmailMessagesData_governmentEmailMessages_items>?
+      _items;
+  ListBuilder<GGetGovernmentEmailMessagesData_governmentEmailMessages_items>
+      get items => _$this._items ??= new ListBuilder<
+          GGetGovernmentEmailMessagesData_governmentEmailMessages_items>();
+  set items(
+          ListBuilder<
+                  GGetGovernmentEmailMessagesData_governmentEmailMessages_items>?
+              items) =>
+      _$this._items = items;
+
+  GGetGovernmentEmailMessagesData_governmentEmailMessages_paginationBuilder?
+      _pagination;
+  GGetGovernmentEmailMessagesData_governmentEmailMessages_paginationBuilder
+      get pagination => _$this._pagination ??=
+          new GGetGovernmentEmailMessagesData_governmentEmailMessages_paginationBuilder();
+  set pagination(
+          GGetGovernmentEmailMessagesData_governmentEmailMessages_paginationBuilder?
+              pagination) =>
+      _$this._pagination = pagination;
+
+  GGetGovernmentEmailMessagesData_governmentEmailMessagesBuilder() {
+    GGetGovernmentEmailMessagesData_governmentEmailMessages._initializeBuilder(
+        this);
+  }
+
+  GGetGovernmentEmailMessagesData_governmentEmailMessagesBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _items = $v.items?.toBuilder();
+      _pagination = $v.pagination.toBuilder();
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GGetGovernmentEmailMessagesData_governmentEmailMessages other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GGetGovernmentEmailMessagesData_governmentEmailMessages;
+  }
+
+  @override
+  void update(
+      void Function(
+              GGetGovernmentEmailMessagesData_governmentEmailMessagesBuilder)?
+          updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GGetGovernmentEmailMessagesData_governmentEmailMessages build() => _build();
+
+  _$GGetGovernmentEmailMessagesData_governmentEmailMessages _build() {
+    _$GGetGovernmentEmailMessagesData_governmentEmailMessages _$result;
+    try {
+      _$result = _$v ??
+          new _$GGetGovernmentEmailMessagesData_governmentEmailMessages._(
+              G__typename: BuiltValueNullFieldError.checkNotNull(
+                  G__typename,
+                  r'GGetGovernmentEmailMessagesData_governmentEmailMessages',
+                  'G__typename'),
+              items: _items?.build(),
+              pagination: pagination.build());
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'items';
+        _items?.build();
+        _$failedField = 'pagination';
+        pagination.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'GGetGovernmentEmailMessagesData_governmentEmailMessages',
+            _$failedField,
+            e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GGetGovernmentEmailMessagesData_governmentEmailMessages_items
+    extends GGetGovernmentEmailMessagesData_governmentEmailMessages_items {
+  @override
+  final String G__typename;
+  @override
+  final _i3.GUUID id;
+  @override
+  final _i3.GDateTime timestamp;
+  @override
+  final String fromAddress;
+  @override
+  final String? subject;
+  @override
+  final String? bodyText;
+  @override
+  final String? bodyHtml;
+  @override
+  final String pdfFileUrl;
+  @override
+  final String? imagePreviewFileUrl;
+
+  factory _$GGetGovernmentEmailMessagesData_governmentEmailMessages_items(
+          [void Function(
+                  GGetGovernmentEmailMessagesData_governmentEmailMessages_itemsBuilder)?
+              updates]) =>
+      (new GGetGovernmentEmailMessagesData_governmentEmailMessages_itemsBuilder()
+            ..update(updates))
+          ._build();
+
+  _$GGetGovernmentEmailMessagesData_governmentEmailMessages_items._(
+      {required this.G__typename,
+      required this.id,
+      required this.timestamp,
+      required this.fromAddress,
+      this.subject,
+      this.bodyText,
+      this.bodyHtml,
+      required this.pdfFileUrl,
+      this.imagePreviewFileUrl})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        G__typename,
+        r'GGetGovernmentEmailMessagesData_governmentEmailMessages_items',
+        'G__typename');
+    BuiltValueNullFieldError.checkNotNull(id,
+        r'GGetGovernmentEmailMessagesData_governmentEmailMessages_items', 'id');
+    BuiltValueNullFieldError.checkNotNull(
+        timestamp,
+        r'GGetGovernmentEmailMessagesData_governmentEmailMessages_items',
+        'timestamp');
+    BuiltValueNullFieldError.checkNotNull(
+        fromAddress,
+        r'GGetGovernmentEmailMessagesData_governmentEmailMessages_items',
+        'fromAddress');
+    BuiltValueNullFieldError.checkNotNull(
+        pdfFileUrl,
+        r'GGetGovernmentEmailMessagesData_governmentEmailMessages_items',
+        'pdfFileUrl');
+  }
+
+  @override
+  GGetGovernmentEmailMessagesData_governmentEmailMessages_items rebuild(
+          void Function(
+                  GGetGovernmentEmailMessagesData_governmentEmailMessages_itemsBuilder)
+              updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GGetGovernmentEmailMessagesData_governmentEmailMessages_itemsBuilder
+      toBuilder() =>
+          new GGetGovernmentEmailMessagesData_governmentEmailMessages_itemsBuilder()
+            ..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other
+            is GGetGovernmentEmailMessagesData_governmentEmailMessages_items &&
+        G__typename == other.G__typename &&
+        id == other.id &&
+        timestamp == other.timestamp &&
+        fromAddress == other.fromAddress &&
+        subject == other.subject &&
+        bodyText == other.bodyText &&
+        bodyHtml == other.bodyHtml &&
+        pdfFileUrl == other.pdfFileUrl &&
+        imagePreviewFileUrl == other.imagePreviewFileUrl;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(
+        $jc(
+            $jc(
+                $jc(
+                    $jc(
+                        $jc(
+                            $jc($jc($jc(0, G__typename.hashCode), id.hashCode),
+                                timestamp.hashCode),
+                            fromAddress.hashCode),
+                        subject.hashCode),
+                    bodyText.hashCode),
+                bodyHtml.hashCode),
+            pdfFileUrl.hashCode),
+        imagePreviewFileUrl.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(
+            r'GGetGovernmentEmailMessagesData_governmentEmailMessages_items')
+          ..add('G__typename', G__typename)
+          ..add('id', id)
+          ..add('timestamp', timestamp)
+          ..add('fromAddress', fromAddress)
+          ..add('subject', subject)
+          ..add('bodyText', bodyText)
+          ..add('bodyHtml', bodyHtml)
+          ..add('pdfFileUrl', pdfFileUrl)
+          ..add('imagePreviewFileUrl', imagePreviewFileUrl))
+        .toString();
+  }
+}
+
+class GGetGovernmentEmailMessagesData_governmentEmailMessages_itemsBuilder
+    implements
+        Builder<GGetGovernmentEmailMessagesData_governmentEmailMessages_items,
+            GGetGovernmentEmailMessagesData_governmentEmailMessages_itemsBuilder> {
+  _$GGetGovernmentEmailMessagesData_governmentEmailMessages_items? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  _i3.GUUIDBuilder? _id;
+  _i3.GUUIDBuilder get id => _$this._id ??= new _i3.GUUIDBuilder();
+  set id(_i3.GUUIDBuilder? id) => _$this._id = id;
+
+  _i3.GDateTimeBuilder? _timestamp;
+  _i3.GDateTimeBuilder get timestamp =>
+      _$this._timestamp ??= new _i3.GDateTimeBuilder();
+  set timestamp(_i3.GDateTimeBuilder? timestamp) =>
+      _$this._timestamp = timestamp;
+
+  String? _fromAddress;
+  String? get fromAddress => _$this._fromAddress;
+  set fromAddress(String? fromAddress) => _$this._fromAddress = fromAddress;
+
+  String? _subject;
+  String? get subject => _$this._subject;
+  set subject(String? subject) => _$this._subject = subject;
+
+  String? _bodyText;
+  String? get bodyText => _$this._bodyText;
+  set bodyText(String? bodyText) => _$this._bodyText = bodyText;
+
+  String? _bodyHtml;
+  String? get bodyHtml => _$this._bodyHtml;
+  set bodyHtml(String? bodyHtml) => _$this._bodyHtml = bodyHtml;
+
+  String? _pdfFileUrl;
+  String? get pdfFileUrl => _$this._pdfFileUrl;
+  set pdfFileUrl(String? pdfFileUrl) => _$this._pdfFileUrl = pdfFileUrl;
+
+  String? _imagePreviewFileUrl;
+  String? get imagePreviewFileUrl => _$this._imagePreviewFileUrl;
+  set imagePreviewFileUrl(String? imagePreviewFileUrl) =>
+      _$this._imagePreviewFileUrl = imagePreviewFileUrl;
+
+  GGetGovernmentEmailMessagesData_governmentEmailMessages_itemsBuilder() {
+    GGetGovernmentEmailMessagesData_governmentEmailMessages_items
+        ._initializeBuilder(this);
+  }
+
+  GGetGovernmentEmailMessagesData_governmentEmailMessages_itemsBuilder
+      get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _id = $v.id.toBuilder();
+      _timestamp = $v.timestamp.toBuilder();
+      _fromAddress = $v.fromAddress;
+      _subject = $v.subject;
+      _bodyText = $v.bodyText;
+      _bodyHtml = $v.bodyHtml;
+      _pdfFileUrl = $v.pdfFileUrl;
+      _imagePreviewFileUrl = $v.imagePreviewFileUrl;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(
+      GGetGovernmentEmailMessagesData_governmentEmailMessages_items other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other
+        as _$GGetGovernmentEmailMessagesData_governmentEmailMessages_items;
+  }
+
+  @override
+  void update(
+      void Function(
+              GGetGovernmentEmailMessagesData_governmentEmailMessages_itemsBuilder)?
+          updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GGetGovernmentEmailMessagesData_governmentEmailMessages_items build() =>
+      _build();
+
+  _$GGetGovernmentEmailMessagesData_governmentEmailMessages_items _build() {
+    _$GGetGovernmentEmailMessagesData_governmentEmailMessages_items _$result;
+    try {
+      _$result = _$v ??
+          new _$GGetGovernmentEmailMessagesData_governmentEmailMessages_items._(
+              G__typename: BuiltValueNullFieldError.checkNotNull(
+                  G__typename,
+                  r'GGetGovernmentEmailMessagesData_governmentEmailMessages_items',
+                  'G__typename'),
+              id: id.build(),
+              timestamp: timestamp.build(),
+              fromAddress: BuiltValueNullFieldError.checkNotNull(
+                  fromAddress,
+                  r'GGetGovernmentEmailMessagesData_governmentEmailMessages_items',
+                  'fromAddress'),
+              subject: subject,
+              bodyText: bodyText,
+              bodyHtml: bodyHtml,
+              pdfFileUrl: BuiltValueNullFieldError.checkNotNull(
+                  pdfFileUrl,
+                  r'GGetGovernmentEmailMessagesData_governmentEmailMessages_items',
+                  'pdfFileUrl'),
+              imagePreviewFileUrl: imagePreviewFileUrl);
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'id';
+        id.build();
+        _$failedField = 'timestamp';
+        timestamp.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'GGetGovernmentEmailMessagesData_governmentEmailMessages_items',
+            _$failedField,
+            e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GGetGovernmentEmailMessagesData_governmentEmailMessages_pagination
+    extends GGetGovernmentEmailMessagesData_governmentEmailMessages_pagination {
+  @override
+  final String G__typename;
+  @override
+  final String token;
+  @override
+  final String? nextToken;
+
+  factory _$GGetGovernmentEmailMessagesData_governmentEmailMessages_pagination(
+          [void Function(
+                  GGetGovernmentEmailMessagesData_governmentEmailMessages_paginationBuilder)?
+              updates]) =>
+      (new GGetGovernmentEmailMessagesData_governmentEmailMessages_paginationBuilder()
+            ..update(updates))
+          ._build();
+
+  _$GGetGovernmentEmailMessagesData_governmentEmailMessages_pagination._(
+      {required this.G__typename, required this.token, this.nextToken})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        G__typename,
+        r'GGetGovernmentEmailMessagesData_governmentEmailMessages_pagination',
+        'G__typename');
+    BuiltValueNullFieldError.checkNotNull(
+        token,
+        r'GGetGovernmentEmailMessagesData_governmentEmailMessages_pagination',
+        'token');
+  }
+
+  @override
+  GGetGovernmentEmailMessagesData_governmentEmailMessages_pagination rebuild(
+          void Function(
+                  GGetGovernmentEmailMessagesData_governmentEmailMessages_paginationBuilder)
+              updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GGetGovernmentEmailMessagesData_governmentEmailMessages_paginationBuilder
+      toBuilder() =>
+          new GGetGovernmentEmailMessagesData_governmentEmailMessages_paginationBuilder()
+            ..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other
+            is GGetGovernmentEmailMessagesData_governmentEmailMessages_pagination &&
+        G__typename == other.G__typename &&
+        token == other.token &&
+        nextToken == other.nextToken;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(
+        $jc($jc(0, G__typename.hashCode), token.hashCode), nextToken.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(
+            r'GGetGovernmentEmailMessagesData_governmentEmailMessages_pagination')
+          ..add('G__typename', G__typename)
+          ..add('token', token)
+          ..add('nextToken', nextToken))
+        .toString();
+  }
+}
+
+class GGetGovernmentEmailMessagesData_governmentEmailMessages_paginationBuilder
+    implements
+        Builder<
+            GGetGovernmentEmailMessagesData_governmentEmailMessages_pagination,
+            GGetGovernmentEmailMessagesData_governmentEmailMessages_paginationBuilder> {
+  _$GGetGovernmentEmailMessagesData_governmentEmailMessages_pagination? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  String? _token;
+  String? get token => _$this._token;
+  set token(String? token) => _$this._token = token;
+
+  String? _nextToken;
+  String? get nextToken => _$this._nextToken;
+  set nextToken(String? nextToken) => _$this._nextToken = nextToken;
+
+  GGetGovernmentEmailMessagesData_governmentEmailMessages_paginationBuilder() {
+    GGetGovernmentEmailMessagesData_governmentEmailMessages_pagination
+        ._initializeBuilder(this);
+  }
+
+  GGetGovernmentEmailMessagesData_governmentEmailMessages_paginationBuilder
+      get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _token = $v.token;
+      _nextToken = $v.nextToken;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(
+      GGetGovernmentEmailMessagesData_governmentEmailMessages_pagination
+          other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other
+        as _$GGetGovernmentEmailMessagesData_governmentEmailMessages_pagination;
+  }
+
+  @override
+  void update(
+      void Function(
+              GGetGovernmentEmailMessagesData_governmentEmailMessages_paginationBuilder)?
+          updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GGetGovernmentEmailMessagesData_governmentEmailMessages_pagination build() =>
+      _build();
+
+  _$GGetGovernmentEmailMessagesData_governmentEmailMessages_pagination
+      _build() {
+    final _$result = _$v ??
+        new _$GGetGovernmentEmailMessagesData_governmentEmailMessages_pagination
+                ._(
+            G__typename: BuiltValueNullFieldError.checkNotNull(
+                G__typename,
+                r'GGetGovernmentEmailMessagesData_governmentEmailMessages_pagination',
+                'G__typename'),
+            token: BuiltValueNullFieldError.checkNotNull(
+                token,
+                r'GGetGovernmentEmailMessagesData_governmentEmailMessages_pagination',
+                'token'),
+            nextToken: nextToken);
+    replace(_$result);
+    return _$result;
+  }
+}
+
+// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas

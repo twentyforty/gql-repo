@@ -1,0 +1,571 @@
+// **************************************************************************
+// BuiltValueGenerator
+// **************************************************************************
+
+Serializer<GAttributedStringPartFragmentData>
+    _$gAttributedStringPartFragmentDataSerializer =
+    new _$GAttributedStringPartFragmentDataSerializer();
+Serializer<GAttributedStringFragmentData>
+    _$gAttributedStringFragmentDataSerializer =
+    new _$GAttributedStringFragmentDataSerializer();
+Serializer<GAttributedStringFragmentData_parts>
+    _$gAttributedStringFragmentDataPartsSerializer =
+    new _$GAttributedStringFragmentData_partsSerializer();
+
+class _$GAttributedStringPartFragmentDataSerializer
+    implements StructuredSerializer<GAttributedStringPartFragmentData> {
+  @override
+  final Iterable<Type> types = const [
+    GAttributedStringPartFragmentData,
+    _$GAttributedStringPartFragmentData
+  ];
+  @override
+  final String wireName = 'GAttributedStringPartFragmentData';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GAttributedStringPartFragmentData object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+      'replacement',
+      serializers.serialize(object.replacement,
+          specifiedType: const FullType(String)),
+      'url',
+      serializers.serialize(object.url, specifiedType: const FullType(String)),
+    ];
+
+    return result;
+  }
+
+  @override
+  GAttributedStringPartFragmentData deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GAttributedStringPartFragmentDataBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'replacement':
+          result.replacement = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'url':
+          result.url = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GAttributedStringFragmentDataSerializer
+    implements StructuredSerializer<GAttributedStringFragmentData> {
+  @override
+  final Iterable<Type> types = const [
+    GAttributedStringFragmentData,
+    _$GAttributedStringFragmentData
+  ];
+  @override
+  final String wireName = 'GAttributedStringFragmentData';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GAttributedStringFragmentData object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+      'pattern',
+      serializers.serialize(object.pattern,
+          specifiedType: const FullType(String)),
+      'parts',
+      serializers.serialize(object.parts,
+          specifiedType: const FullType(BuiltList,
+              const [const FullType(GAttributedStringFragmentData_parts)])),
+    ];
+
+    return result;
+  }
+
+  @override
+  GAttributedStringFragmentData deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GAttributedStringFragmentDataBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'pattern':
+          result.pattern = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'parts':
+          result.parts.replace(serializers.deserialize(value,
+              specifiedType: const FullType(BuiltList, const [
+                const FullType(GAttributedStringFragmentData_parts)
+              ]))! as BuiltList<Object?>);
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GAttributedStringFragmentData_partsSerializer
+    implements StructuredSerializer<GAttributedStringFragmentData_parts> {
+  @override
+  final Iterable<Type> types = const [
+    GAttributedStringFragmentData_parts,
+    _$GAttributedStringFragmentData_parts
+  ];
+  @override
+  final String wireName = 'GAttributedStringFragmentData_parts';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GAttributedStringFragmentData_parts object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+      'replacement',
+      serializers.serialize(object.replacement,
+          specifiedType: const FullType(String)),
+      'url',
+      serializers.serialize(object.url, specifiedType: const FullType(String)),
+    ];
+
+    return result;
+  }
+
+  @override
+  GAttributedStringFragmentData_parts deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GAttributedStringFragmentData_partsBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'replacement':
+          result.replacement = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'url':
+          result.url = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GAttributedStringPartFragmentData
+    extends GAttributedStringPartFragmentData {
+  @override
+  final String G__typename;
+  @override
+  final String replacement;
+  @override
+  final String url;
+
+  factory _$GAttributedStringPartFragmentData(
+          [void Function(GAttributedStringPartFragmentDataBuilder)? updates]) =>
+      (new GAttributedStringPartFragmentDataBuilder()..update(updates))
+          ._build();
+
+  _$GAttributedStringPartFragmentData._(
+      {required this.G__typename, required this.replacement, required this.url})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        G__typename, r'GAttributedStringPartFragmentData', 'G__typename');
+    BuiltValueNullFieldError.checkNotNull(
+        replacement, r'GAttributedStringPartFragmentData', 'replacement');
+    BuiltValueNullFieldError.checkNotNull(
+        url, r'GAttributedStringPartFragmentData', 'url');
+  }
+
+  @override
+  GAttributedStringPartFragmentData rebuild(
+          void Function(GAttributedStringPartFragmentDataBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GAttributedStringPartFragmentDataBuilder toBuilder() =>
+      new GAttributedStringPartFragmentDataBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GAttributedStringPartFragmentData &&
+        G__typename == other.G__typename &&
+        replacement == other.replacement &&
+        url == other.url;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(
+        $jc($jc(0, G__typename.hashCode), replacement.hashCode), url.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(r'GAttributedStringPartFragmentData')
+          ..add('G__typename', G__typename)
+          ..add('replacement', replacement)
+          ..add('url', url))
+        .toString();
+  }
+}
+
+class GAttributedStringPartFragmentDataBuilder
+    implements
+        Builder<GAttributedStringPartFragmentData,
+            GAttributedStringPartFragmentDataBuilder> {
+  _$GAttributedStringPartFragmentData? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  String? _replacement;
+  String? get replacement => _$this._replacement;
+  set replacement(String? replacement) => _$this._replacement = replacement;
+
+  String? _url;
+  String? get url => _$this._url;
+  set url(String? url) => _$this._url = url;
+
+  GAttributedStringPartFragmentDataBuilder() {
+    GAttributedStringPartFragmentData._initializeBuilder(this);
+  }
+
+  GAttributedStringPartFragmentDataBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _replacement = $v.replacement;
+      _url = $v.url;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GAttributedStringPartFragmentData other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GAttributedStringPartFragmentData;
+  }
+
+  @override
+  void update(
+      void Function(GAttributedStringPartFragmentDataBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GAttributedStringPartFragmentData build() => _build();
+
+  _$GAttributedStringPartFragmentData _build() {
+    final _$result = _$v ??
+        new _$GAttributedStringPartFragmentData._(
+            G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
+                r'GAttributedStringPartFragmentData', 'G__typename'),
+            replacement: BuiltValueNullFieldError.checkNotNull(replacement,
+                r'GAttributedStringPartFragmentData', 'replacement'),
+            url: BuiltValueNullFieldError.checkNotNull(
+                url, r'GAttributedStringPartFragmentData', 'url'));
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GAttributedStringFragmentData extends GAttributedStringFragmentData {
+  @override
+  final String G__typename;
+  @override
+  final String pattern;
+  @override
+  final BuiltList<GAttributedStringFragmentData_parts> parts;
+
+  factory _$GAttributedStringFragmentData(
+          [void Function(GAttributedStringFragmentDataBuilder)? updates]) =>
+      (new GAttributedStringFragmentDataBuilder()..update(updates))._build();
+
+  _$GAttributedStringFragmentData._(
+      {required this.G__typename, required this.pattern, required this.parts})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        G__typename, r'GAttributedStringFragmentData', 'G__typename');
+    BuiltValueNullFieldError.checkNotNull(
+        pattern, r'GAttributedStringFragmentData', 'pattern');
+    BuiltValueNullFieldError.checkNotNull(
+        parts, r'GAttributedStringFragmentData', 'parts');
+  }
+
+  @override
+  GAttributedStringFragmentData rebuild(
+          void Function(GAttributedStringFragmentDataBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GAttributedStringFragmentDataBuilder toBuilder() =>
+      new GAttributedStringFragmentDataBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GAttributedStringFragmentData &&
+        G__typename == other.G__typename &&
+        pattern == other.pattern &&
+        parts == other.parts;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(
+        $jc($jc(0, G__typename.hashCode), pattern.hashCode), parts.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(r'GAttributedStringFragmentData')
+          ..add('G__typename', G__typename)
+          ..add('pattern', pattern)
+          ..add('parts', parts))
+        .toString();
+  }
+}
+
+class GAttributedStringFragmentDataBuilder
+    implements
+        Builder<GAttributedStringFragmentData,
+            GAttributedStringFragmentDataBuilder> {
+  _$GAttributedStringFragmentData? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  String? _pattern;
+  String? get pattern => _$this._pattern;
+  set pattern(String? pattern) => _$this._pattern = pattern;
+
+  ListBuilder<GAttributedStringFragmentData_parts>? _parts;
+  ListBuilder<GAttributedStringFragmentData_parts> get parts =>
+      _$this._parts ??= new ListBuilder<GAttributedStringFragmentData_parts>();
+  set parts(ListBuilder<GAttributedStringFragmentData_parts>? parts) =>
+      _$this._parts = parts;
+
+  GAttributedStringFragmentDataBuilder() {
+    GAttributedStringFragmentData._initializeBuilder(this);
+  }
+
+  GAttributedStringFragmentDataBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _pattern = $v.pattern;
+      _parts = $v.parts.toBuilder();
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GAttributedStringFragmentData other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GAttributedStringFragmentData;
+  }
+
+  @override
+  void update(void Function(GAttributedStringFragmentDataBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GAttributedStringFragmentData build() => _build();
+
+  _$GAttributedStringFragmentData _build() {
+    _$GAttributedStringFragmentData _$result;
+    try {
+      _$result = _$v ??
+          new _$GAttributedStringFragmentData._(
+              G__typename: BuiltValueNullFieldError.checkNotNull(
+                  G__typename, r'GAttributedStringFragmentData', 'G__typename'),
+              pattern: BuiltValueNullFieldError.checkNotNull(
+                  pattern, r'GAttributedStringFragmentData', 'pattern'),
+              parts: parts.build());
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'parts';
+        parts.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'GAttributedStringFragmentData', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GAttributedStringFragmentData_parts
+    extends GAttributedStringFragmentData_parts {
+  @override
+  final String G__typename;
+  @override
+  final String replacement;
+  @override
+  final String url;
+
+  factory _$GAttributedStringFragmentData_parts(
+          [void Function(GAttributedStringFragmentData_partsBuilder)?
+              updates]) =>
+      (new GAttributedStringFragmentData_partsBuilder()..update(updates))
+          ._build();
+
+  _$GAttributedStringFragmentData_parts._(
+      {required this.G__typename, required this.replacement, required this.url})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        G__typename, r'GAttributedStringFragmentData_parts', 'G__typename');
+    BuiltValueNullFieldError.checkNotNull(
+        replacement, r'GAttributedStringFragmentData_parts', 'replacement');
+    BuiltValueNullFieldError.checkNotNull(
+        url, r'GAttributedStringFragmentData_parts', 'url');
+  }
+
+  @override
+  GAttributedStringFragmentData_parts rebuild(
+          void Function(GAttributedStringFragmentData_partsBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GAttributedStringFragmentData_partsBuilder toBuilder() =>
+      new GAttributedStringFragmentData_partsBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GAttributedStringFragmentData_parts &&
+        G__typename == other.G__typename &&
+        replacement == other.replacement &&
+        url == other.url;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(
+        $jc($jc(0, G__typename.hashCode), replacement.hashCode), url.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(r'GAttributedStringFragmentData_parts')
+          ..add('G__typename', G__typename)
+          ..add('replacement', replacement)
+          ..add('url', url))
+        .toString();
+  }
+}
+
+class GAttributedStringFragmentData_partsBuilder
+    implements
+        Builder<GAttributedStringFragmentData_parts,
+            GAttributedStringFragmentData_partsBuilder> {
+  _$GAttributedStringFragmentData_parts? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  String? _replacement;
+  String? get replacement => _$this._replacement;
+  set replacement(String? replacement) => _$this._replacement = replacement;
+
+  String? _url;
+  String? get url => _$this._url;
+  set url(String? url) => _$this._url = url;
+
+  GAttributedStringFragmentData_partsBuilder() {
+    GAttributedStringFragmentData_parts._initializeBuilder(this);
+  }
+
+  GAttributedStringFragmentData_partsBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _replacement = $v.replacement;
+      _url = $v.url;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GAttributedStringFragmentData_parts other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GAttributedStringFragmentData_parts;
+  }
+
+  @override
+  void update(
+      void Function(GAttributedStringFragmentData_partsBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GAttributedStringFragmentData_parts build() => _build();
+
+  _$GAttributedStringFragmentData_parts _build() {
+    final _$result = _$v ??
+        new _$GAttributedStringFragmentData_parts._(
+            G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
+                r'GAttributedStringFragmentData_parts', 'G__typename'),
+            replacement: BuiltValueNullFieldError.checkNotNull(replacement,
+                r'GAttributedStringFragmentData_parts', 'replacement'),
+            url: BuiltValueNullFieldError.checkNotNull(
+                url, r'GAttributedStringFragmentData_parts', 'url'));
+    replace(_$result);
+    return _$result;
+  }
+}
+
+// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas

@@ -1,0 +1,92 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'lego_fragment.var.gql.dart';
+
+// **************************************************************************
+// BuiltValueGenerator
+// **************************************************************************
+
+Serializer<GLegoFragmentVars> _$gLegoFragmentVarsSerializer =
+    new _$GLegoFragmentVarsSerializer();
+
+class _$GLegoFragmentVarsSerializer
+    implements StructuredSerializer<GLegoFragmentVars> {
+  @override
+  final Iterable<Type> types = const [GLegoFragmentVars, _$GLegoFragmentVars];
+  @override
+  final String wireName = 'GLegoFragmentVars';
+
+  @override
+  Iterable<Object?> serialize(Serializers serializers, GLegoFragmentVars object,
+      {FullType specifiedType = FullType.unspecified}) {
+    return <Object?>[];
+  }
+
+  @override
+  GLegoFragmentVars deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    return new GLegoFragmentVarsBuilder().build();
+  }
+}
+
+class _$GLegoFragmentVars extends GLegoFragmentVars {
+  factory _$GLegoFragmentVars(
+          [void Function(GLegoFragmentVarsBuilder)? updates]) =>
+      (new GLegoFragmentVarsBuilder()..update(updates))._build();
+
+  _$GLegoFragmentVars._() : super._();
+
+  @override
+  GLegoFragmentVars rebuild(void Function(GLegoFragmentVarsBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GLegoFragmentVarsBuilder toBuilder() =>
+      new GLegoFragmentVarsBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GLegoFragmentVars;
+  }
+
+  @override
+  int get hashCode {
+    return 1027818207;
+  }
+
+  @override
+  String toString() {
+    return newBuiltValueToStringHelper(r'GLegoFragmentVars').toString();
+  }
+}
+
+class GLegoFragmentVarsBuilder
+    implements Builder<GLegoFragmentVars, GLegoFragmentVarsBuilder> {
+  _$GLegoFragmentVars? _$v;
+
+  GLegoFragmentVarsBuilder();
+
+  @override
+  void replace(GLegoFragmentVars other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GLegoFragmentVars;
+  }
+
+  @override
+  void update(void Function(GLegoFragmentVarsBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GLegoFragmentVars build() => _build();
+
+  _$GLegoFragmentVars _build() {
+    final _$result = _$v ?? new _$GLegoFragmentVars._();
+    replace(_$result);
+    return _$result;
+  }
+}
+
+// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas
