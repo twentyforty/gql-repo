@@ -1,0 +1,8 @@
+# import './interest_fragment.graphql'
+
+fragment InterestCategoryFragment on InterestType {
+    ...InterestFragment
+    children {
+        ...InterestFragment
+    }
+}

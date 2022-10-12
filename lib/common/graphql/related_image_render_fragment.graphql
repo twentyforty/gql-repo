@@ -1,0 +1,6 @@
+fragment RelatedImageRenderFragment on RelatedImageType {
+    id
+    description
+    imageType
+    imageUrl
+}

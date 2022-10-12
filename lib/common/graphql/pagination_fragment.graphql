@@ -1,0 +1,4 @@
+fragment PaginationOuputFragment on PaginationOutput {
+	token
+	nextToken
+}

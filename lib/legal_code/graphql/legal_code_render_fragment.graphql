@@ -1,0 +1,7 @@
+fragment LegalCodeRenderFragment on LegalCodeType {
+    id
+    title
+    subtitle
+    publishedDate
+    sourceUrl
+}

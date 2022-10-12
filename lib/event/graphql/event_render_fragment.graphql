@@ -1,0 +1,14 @@
+# import '../../common/graphql/jurisdiction_render_fragment.graphql'
+
+
+fragment EventRenderFragment on EventType {
+    id
+    name
+    jurisdiction {
+        ...JurisdictionRenderFragment
+    }
+    description
+    startDate,
+    videoUrl,
+    videoThumbnailUrl,
+}

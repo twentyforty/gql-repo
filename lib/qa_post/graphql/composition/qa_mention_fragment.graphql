@@ -1,0 +1,9 @@
+# import '../../../common/graphql/civiqa_entity_fragment.graphql'
+
+
+fragment QAMentionFragment on QAMentionType {
+    id
+    entity {
+        ...CiviqaEntityFragment
+    }
+}

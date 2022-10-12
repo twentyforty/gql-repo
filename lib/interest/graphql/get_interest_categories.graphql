@@ -1,0 +1,15 @@
+# import './interest_category_fragment.graphql'
+# import '../../common/graphql/pagination_fragment.graphql'
+
+
+
+query GetInterestCategories($input: InterestsPaginationInput!) {
+  interests(input: $input) {
+    items {
+      ...InterestCategoryFragment
+    }
+    pagination {
+      ...PaginationOuputFragment
+    }
+  }
+}

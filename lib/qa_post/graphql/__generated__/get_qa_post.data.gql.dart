@@ -1,0 +1,1276 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
+
+// ignore_for_file: no_leading_underscores_for_library_prefixes
+import 'package:built_collection/built_collection.dart';
+import 'package:built_value/built_value.dart';
+import 'package:built_value/serializer.dart';
+import 'package:gqlrepo/__generated__/schema.schema.gql.dart' as _i3;
+import 'package:gqlrepo/__generated__/serializers.gql.dart' as _i1;
+import 'package:gqlrepo/common/graphql/__generated__/civiqa_entity_fragment.data.gql.dart'
+    as _i8;
+import 'package:gqlrepo/common/graphql/__generated__/icon_fragment.data.gql.dart'
+    as _i9;
+import 'package:gqlrepo/common/graphql/__generated__/jurisdiction_render_fragment.data.gql.dart'
+    as _i13;
+import 'package:gqlrepo/common/graphql/__generated__/user_fragment.data.gql.dart'
+    as _i4;
+import 'package:gqlrepo/interest/graphql/__generated__/interest_fragment.data.gql.dart'
+    as _i15;
+import 'package:gqlrepo/interest/graphql/__generated__/interest_tag_render_fragment.data.gql.dart'
+    as _i14;
+import 'package:gqlrepo/qa_post/graphql/__generated__/qa_post_fragment.data.gql.dart'
+    as _i2;
+import 'package:gqlrepo/qa_post/graphql/composition/__generated__/qa_citation_fragment.data.gql.dart'
+    as _i10;
+import 'package:gqlrepo/qa_post/graphql/composition/__generated__/qa_composition_fragment.data.gql.dart'
+    as _i6;
+import 'package:gqlrepo/qa_post/graphql/composition/__generated__/qa_composition_render_fragment.data.gql.dart'
+    as _i5;
+import 'package:gqlrepo/qa_post/graphql/composition/__generated__/qa_mention_fragment.data.gql.dart'
+    as _i7;
+import 'package:gqlrepo/qa_post/graphql/mediabox/__generated__/qa_post_mediabox_fragment.data.gql.dart'
+    as _i11;
+import 'package:gqlrepo/qa_post/graphql/mediabox/__generated__/qa_post_mediabox_item_fragment.data.gql.dart'
+    as _i12;
+import 'package:gqlrepo/qa_post/graphql/response/__generated__/qa_response_render_fragment.data.gql.dart'
+    as _i16;
+
+part 'get_qa_post.data.gql.g.dart';
+
+abstract class GGetQAPostData
+    implements Built<GGetQAPostData, GGetQAPostDataBuilder> {
+  GGetQAPostData._();
+
+  factory GGetQAPostData([Function(GGetQAPostDataBuilder b) updates]) =
+      _$GGetQAPostData;
+
+  static void _initializeBuilder(GGetQAPostDataBuilder b) =>
+      b..G__typename = 'Queries';
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  GGetQAPostData_qaPost? get qaPost;
+  static Serializer<GGetQAPostData> get serializer =>
+      _$gGetQAPostDataSerializer;
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GGetQAPostData.serializer,
+        this,
+      ) as Map<String, dynamic>);
+  static GGetQAPostData? fromJson(Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GGetQAPostData.serializer,
+        json,
+      );
+}
+
+abstract class GGetQAPostData_qaPost
+    implements
+        Built<GGetQAPostData_qaPost, GGetQAPostData_qaPostBuilder>,
+        _i2.GQAPostFragment {
+  GGetQAPostData_qaPost._();
+
+  factory GGetQAPostData_qaPost(
+          [Function(GGetQAPostData_qaPostBuilder b) updates]) =
+      _$GGetQAPostData_qaPost;
+
+  static void _initializeBuilder(GGetQAPostData_qaPostBuilder b) =>
+      b..G__typename = 'QAPostType';
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  @override
+  _i3.GUUID get id;
+  @override
+  String? get headline;
+  @override
+  GGetQAPostData_qaPost_author? get author;
+  @override
+  GGetQAPostData_qaPost_composition? get composition;
+  @override
+  GGetQAPostData_qaPost_mediabox? get mediabox;
+  @override
+  String? get audienceTitle;
+  @override
+  GGetQAPostData_qaPost_mainAudience? get mainAudience;
+  @override
+  BuiltList<GGetQAPostData_qaPost_tags> get tags;
+  @override
+  bool get isDraft;
+  @override
+  _i3.GDateTime get createdTimestamp;
+  @override
+  _i3.GDateTime? get publishedTimestamp;
+  @override
+  int get yayCount;
+  @override
+  int get responseCount;
+  @override
+  bool get canRespond;
+  @override
+  bool get isYayedByMe;
+  @override
+  bool get isBookmarkedByMe;
+  @override
+  bool get isReportedByMe;
+  @override
+  GGetQAPostData_qaPost_myResponse? get myResponse;
+  @override
+  BuiltList<GGetQAPostData_qaPost_audiences> get audiences;
+  @override
+  GGetQAPostData_qaPost_latestResponse? get latestResponse;
+  @override
+  bool get canApproveTags;
+  @override
+  int get pendingProposalCount;
+  @override
+  BuiltList<GGetQAPostData_qaPost_mediaboxOptions>? get mediaboxOptions;
+  static Serializer<GGetQAPostData_qaPost> get serializer =>
+      _$gGetQAPostDataQaPostSerializer;
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GGetQAPostData_qaPost.serializer,
+        this,
+      ) as Map<String, dynamic>);
+  static GGetQAPostData_qaPost? fromJson(Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GGetQAPostData_qaPost.serializer,
+        json,
+      );
+}
+
+abstract class GGetQAPostData_qaPost_author
+    implements
+        Built<GGetQAPostData_qaPost_author,
+            GGetQAPostData_qaPost_authorBuilder>,
+        _i2.GQAPostFragment_author,
+        _i4.GUserFragment {
+  GGetQAPostData_qaPost_author._();
+
+  factory GGetQAPostData_qaPost_author(
+          [Function(GGetQAPostData_qaPost_authorBuilder b) updates]) =
+      _$GGetQAPostData_qaPost_author;
+
+  static void _initializeBuilder(GGetQAPostData_qaPost_authorBuilder b) =>
+      b..G__typename = 'CiviqaUserType';
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  @override
+  String get id;
+  @override
+  String get username;
+  @override
+  String get fullName;
+  @override
+  String? get photoUrl;
+  @override
+  String? get subtitle;
+  @override
+  String? get officialId;
+  static Serializer<GGetQAPostData_qaPost_author> get serializer =>
+      _$gGetQAPostDataQaPostAuthorSerializer;
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GGetQAPostData_qaPost_author.serializer,
+        this,
+      ) as Map<String, dynamic>);
+  static GGetQAPostData_qaPost_author? fromJson(Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GGetQAPostData_qaPost_author.serializer,
+        json,
+      );
+}
+
+abstract class GGetQAPostData_qaPost_composition
+    implements
+        Built<GGetQAPostData_qaPost_composition,
+            GGetQAPostData_qaPost_compositionBuilder>,
+        _i2.GQAPostFragment_composition,
+        _i5.GQACompositionRenderFragment,
+        _i6.GQACompositionFragment {
+  GGetQAPostData_qaPost_composition._();
+
+  factory GGetQAPostData_qaPost_composition(
+          [Function(GGetQAPostData_qaPost_compositionBuilder b) updates]) =
+      _$GGetQAPostData_qaPost_composition;
+
+  static void _initializeBuilder(GGetQAPostData_qaPost_compositionBuilder b) =>
+      b..G__typename = 'QACompositionType';
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  @override
+  _i3.GUUID get id;
+  @override
+  String get glimpse;
+  @override
+  String get body;
+  @override
+  _i3.GDateTime? get draftLastSavedTimestamp;
+  @override
+  int get citationCount;
+  @override
+  int get mentionCount;
+  @override
+  BuiltList<GGetQAPostData_qaPost_composition_mentions> get mentions;
+  @override
+  BuiltList<GGetQAPostData_qaPost_composition_citations> get citations;
+  static Serializer<GGetQAPostData_qaPost_composition> get serializer =>
+      _$gGetQAPostDataQaPostCompositionSerializer;
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GGetQAPostData_qaPost_composition.serializer,
+        this,
+      ) as Map<String, dynamic>);
+  static GGetQAPostData_qaPost_composition? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GGetQAPostData_qaPost_composition.serializer,
+        json,
+      );
+}
+
+abstract class GGetQAPostData_qaPost_composition_mentions
+    implements
+        Built<GGetQAPostData_qaPost_composition_mentions,
+            GGetQAPostData_qaPost_composition_mentionsBuilder>,
+        _i2.GQAPostFragment_composition_mentions,
+        _i6.GQACompositionFragment_mentions,
+        _i7.GQAMentionFragment {
+  GGetQAPostData_qaPost_composition_mentions._();
+
+  factory GGetQAPostData_qaPost_composition_mentions(
+      [Function(GGetQAPostData_qaPost_composition_mentionsBuilder b)
+          updates]) = _$GGetQAPostData_qaPost_composition_mentions;
+
+  static void _initializeBuilder(
+          GGetQAPostData_qaPost_composition_mentionsBuilder b) =>
+      b..G__typename = 'QAMentionType';
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  @override
+  _i3.GUUID get id;
+  @override
+  GGetQAPostData_qaPost_composition_mentions_entity get entity;
+  static Serializer<GGetQAPostData_qaPost_composition_mentions>
+      get serializer => _$gGetQAPostDataQaPostCompositionMentionsSerializer;
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GGetQAPostData_qaPost_composition_mentions.serializer,
+        this,
+      ) as Map<String, dynamic>);
+  static GGetQAPostData_qaPost_composition_mentions? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GGetQAPostData_qaPost_composition_mentions.serializer,
+        json,
+      );
+}
+
+abstract class GGetQAPostData_qaPost_composition_mentions_entity
+    implements
+        Built<GGetQAPostData_qaPost_composition_mentions_entity,
+            GGetQAPostData_qaPost_composition_mentions_entityBuilder>,
+        _i2.GQAPostFragment_composition_mentions_entity,
+        _i6.GQACompositionFragment_mentions_entity,
+        _i7.GQAMentionFragment_entity,
+        _i8.GCiviqaEntityFragment {
+  GGetQAPostData_qaPost_composition_mentions_entity._();
+
+  factory GGetQAPostData_qaPost_composition_mentions_entity(
+      [Function(GGetQAPostData_qaPost_composition_mentions_entityBuilder b)
+          updates]) = _$GGetQAPostData_qaPost_composition_mentions_entity;
+
+  static void _initializeBuilder(
+          GGetQAPostData_qaPost_composition_mentions_entityBuilder b) =>
+      b..G__typename = 'CiviqaEntityType';
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  @override
+  String get id;
+  @override
+  String get modelId;
+  @override
+  _i3.GCiviqaEntityEnumType get entityType;
+  @override
+  String? get title;
+  @override
+  String? get subtitle;
+  @override
+  String? get subtitle2;
+  @override
+  String? get appLink;
+  @override
+  BuiltList<String>? get carouselImageUrls;
+  @override
+  String? get mainImageUrl;
+  @override
+  String? get tileAvatarLabel;
+  @override
+  bool? get cardUseAvatar;
+  @override
+  bool? get tileUseAvatar;
+  @override
+  String? get videoUrl;
+  @override
+  GGetQAPostData_qaPost_composition_mentions_entity_author? get author;
+  @override
+  _i3.GDateTime? get publishedDate;
+  @override
+  GGetQAPostData_qaPost_composition_mentions_entity_icon? get icon;
+  @override
+  bool? get canDelete;
+  @override
+  bool? get canArchive;
+  @override
+  bool? get canUnarchive;
+  static Serializer<GGetQAPostData_qaPost_composition_mentions_entity>
+      get serializer =>
+          _$gGetQAPostDataQaPostCompositionMentionsEntitySerializer;
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GGetQAPostData_qaPost_composition_mentions_entity.serializer,
+        this,
+      ) as Map<String, dynamic>);
+  static GGetQAPostData_qaPost_composition_mentions_entity? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GGetQAPostData_qaPost_composition_mentions_entity.serializer,
+        json,
+      );
+}
+
+abstract class GGetQAPostData_qaPost_composition_mentions_entity_author
+    implements
+        Built<GGetQAPostData_qaPost_composition_mentions_entity_author,
+            GGetQAPostData_qaPost_composition_mentions_entity_authorBuilder>,
+        _i2.GQAPostFragment_composition_mentions_entity_author,
+        _i6.GQACompositionFragment_mentions_entity_author,
+        _i7.GQAMentionFragment_entity_author,
+        _i8.GCiviqaEntityFragment_author,
+        _i4.GUserFragment {
+  GGetQAPostData_qaPost_composition_mentions_entity_author._();
+
+  factory GGetQAPostData_qaPost_composition_mentions_entity_author(
+      [Function(
+              GGetQAPostData_qaPost_composition_mentions_entity_authorBuilder b)
+          updates]) = _$GGetQAPostData_qaPost_composition_mentions_entity_author;
+
+  static void _initializeBuilder(
+          GGetQAPostData_qaPost_composition_mentions_entity_authorBuilder b) =>
+      b..G__typename = 'CiviqaUserType';
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  @override
+  String get id;
+  @override
+  String get username;
+  @override
+  String get fullName;
+  @override
+  String? get photoUrl;
+  @override
+  String? get subtitle;
+  @override
+  String? get officialId;
+  static Serializer<GGetQAPostData_qaPost_composition_mentions_entity_author>
+      get serializer =>
+          _$gGetQAPostDataQaPostCompositionMentionsEntityAuthorSerializer;
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GGetQAPostData_qaPost_composition_mentions_entity_author.serializer,
+        this,
+      ) as Map<String, dynamic>);
+  static GGetQAPostData_qaPost_composition_mentions_entity_author? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GGetQAPostData_qaPost_composition_mentions_entity_author.serializer,
+        json,
+      );
+}
+
+abstract class GGetQAPostData_qaPost_composition_mentions_entity_icon
+    implements
+        Built<GGetQAPostData_qaPost_composition_mentions_entity_icon,
+            GGetQAPostData_qaPost_composition_mentions_entity_iconBuilder>,
+        _i2.GQAPostFragment_composition_mentions_entity_icon,
+        _i6.GQACompositionFragment_mentions_entity_icon,
+        _i7.GQAMentionFragment_entity_icon,
+        _i8.GCiviqaEntityFragment_icon,
+        _i9.GIconFragment {
+  GGetQAPostData_qaPost_composition_mentions_entity_icon._();
+
+  factory GGetQAPostData_qaPost_composition_mentions_entity_icon(
+      [Function(GGetQAPostData_qaPost_composition_mentions_entity_iconBuilder b)
+          updates]) = _$GGetQAPostData_qaPost_composition_mentions_entity_icon;
+
+  static void _initializeBuilder(
+          GGetQAPostData_qaPost_composition_mentions_entity_iconBuilder b) =>
+      b..G__typename = 'IconType';
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  @override
+  String? get codePoint;
+  @override
+  String? get fontFamily;
+  @override
+  String? get fontPackage;
+  static Serializer<GGetQAPostData_qaPost_composition_mentions_entity_icon>
+      get serializer =>
+          _$gGetQAPostDataQaPostCompositionMentionsEntityIconSerializer;
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GGetQAPostData_qaPost_composition_mentions_entity_icon.serializer,
+        this,
+      ) as Map<String, dynamic>);
+  static GGetQAPostData_qaPost_composition_mentions_entity_icon? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GGetQAPostData_qaPost_composition_mentions_entity_icon.serializer,
+        json,
+      );
+}
+
+abstract class GGetQAPostData_qaPost_composition_citations
+    implements
+        Built<GGetQAPostData_qaPost_composition_citations,
+            GGetQAPostData_qaPost_composition_citationsBuilder>,
+        _i2.GQAPostFragment_composition_citations,
+        _i6.GQACompositionFragment_citations,
+        _i10.GQACitationFragment {
+  GGetQAPostData_qaPost_composition_citations._();
+
+  factory GGetQAPostData_qaPost_composition_citations(
+      [Function(GGetQAPostData_qaPost_composition_citationsBuilder b)
+          updates]) = _$GGetQAPostData_qaPost_composition_citations;
+
+  static void _initializeBuilder(
+          GGetQAPostData_qaPost_composition_citationsBuilder b) =>
+      b..G__typename = 'QACitationType';
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  @override
+  _i3.GUUID get id;
+  @override
+  GGetQAPostData_qaPost_composition_citations_citation get citation;
+  static Serializer<GGetQAPostData_qaPost_composition_citations>
+      get serializer => _$gGetQAPostDataQaPostCompositionCitationsSerializer;
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GGetQAPostData_qaPost_composition_citations.serializer,
+        this,
+      ) as Map<String, dynamic>);
+  static GGetQAPostData_qaPost_composition_citations? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GGetQAPostData_qaPost_composition_citations.serializer,
+        json,
+      );
+}
+
+abstract class GGetQAPostData_qaPost_composition_citations_citation
+    implements
+        Built<GGetQAPostData_qaPost_composition_citations_citation,
+            GGetQAPostData_qaPost_composition_citations_citationBuilder>,
+        _i2.GQAPostFragment_composition_citations_citation,
+        _i6.GQACompositionFragment_citations_citation,
+        _i10.GQACitationFragment_citation,
+        _i8.GCiviqaEntityFragment {
+  GGetQAPostData_qaPost_composition_citations_citation._();
+
+  factory GGetQAPostData_qaPost_composition_citations_citation(
+      [Function(GGetQAPostData_qaPost_composition_citations_citationBuilder b)
+          updates]) = _$GGetQAPostData_qaPost_composition_citations_citation;
+
+  static void _initializeBuilder(
+          GGetQAPostData_qaPost_composition_citations_citationBuilder b) =>
+      b..G__typename = 'CiviqaEntityType';
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  @override
+  String get id;
+  @override
+  String get modelId;
+  @override
+  _i3.GCiviqaEntityEnumType get entityType;
+  @override
+  String? get title;
+  @override
+  String? get subtitle;
+  @override
+  String? get subtitle2;
+  @override
+  String? get appLink;
+  @override
+  BuiltList<String>? get carouselImageUrls;
+  @override
+  String? get mainImageUrl;
+  @override
+  String? get tileAvatarLabel;
+  @override
+  bool? get cardUseAvatar;
+  @override
+  bool? get tileUseAvatar;
+  @override
+  String? get videoUrl;
+  @override
+  GGetQAPostData_qaPost_composition_citations_citation_author? get author;
+  @override
+  _i3.GDateTime? get publishedDate;
+  @override
+  GGetQAPostData_qaPost_composition_citations_citation_icon? get icon;
+  @override
+  bool? get canDelete;
+  @override
+  bool? get canArchive;
+  @override
+  bool? get canUnarchive;
+  static Serializer<GGetQAPostData_qaPost_composition_citations_citation>
+      get serializer =>
+          _$gGetQAPostDataQaPostCompositionCitationsCitationSerializer;
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GGetQAPostData_qaPost_composition_citations_citation.serializer,
+        this,
+      ) as Map<String, dynamic>);
+  static GGetQAPostData_qaPost_composition_citations_citation? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GGetQAPostData_qaPost_composition_citations_citation.serializer,
+        json,
+      );
+}
+
+abstract class GGetQAPostData_qaPost_composition_citations_citation_author
+    implements
+        Built<GGetQAPostData_qaPost_composition_citations_citation_author,
+            GGetQAPostData_qaPost_composition_citations_citation_authorBuilder>,
+        _i2.GQAPostFragment_composition_citations_citation_author,
+        _i6.GQACompositionFragment_citations_citation_author,
+        _i10.GQACitationFragment_citation_author,
+        _i8.GCiviqaEntityFragment_author,
+        _i4.GUserFragment {
+  GGetQAPostData_qaPost_composition_citations_citation_author._();
+
+  factory GGetQAPostData_qaPost_composition_citations_citation_author(
+      [Function(
+              GGetQAPostData_qaPost_composition_citations_citation_authorBuilder
+                  b)
+          updates]) = _$GGetQAPostData_qaPost_composition_citations_citation_author;
+
+  static void _initializeBuilder(
+          GGetQAPostData_qaPost_composition_citations_citation_authorBuilder
+              b) =>
+      b..G__typename = 'CiviqaUserType';
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  @override
+  String get id;
+  @override
+  String get username;
+  @override
+  String get fullName;
+  @override
+  String? get photoUrl;
+  @override
+  String? get subtitle;
+  @override
+  String? get officialId;
+  static Serializer<GGetQAPostData_qaPost_composition_citations_citation_author>
+      get serializer =>
+          _$gGetQAPostDataQaPostCompositionCitationsCitationAuthorSerializer;
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GGetQAPostData_qaPost_composition_citations_citation_author.serializer,
+        this,
+      ) as Map<String, dynamic>);
+  static GGetQAPostData_qaPost_composition_citations_citation_author? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GGetQAPostData_qaPost_composition_citations_citation_author.serializer,
+        json,
+      );
+}
+
+abstract class GGetQAPostData_qaPost_composition_citations_citation_icon
+    implements
+        Built<GGetQAPostData_qaPost_composition_citations_citation_icon,
+            GGetQAPostData_qaPost_composition_citations_citation_iconBuilder>,
+        _i2.GQAPostFragment_composition_citations_citation_icon,
+        _i6.GQACompositionFragment_citations_citation_icon,
+        _i10.GQACitationFragment_citation_icon,
+        _i8.GCiviqaEntityFragment_icon,
+        _i9.GIconFragment {
+  GGetQAPostData_qaPost_composition_citations_citation_icon._();
+
+  factory GGetQAPostData_qaPost_composition_citations_citation_icon(
+      [Function(
+              GGetQAPostData_qaPost_composition_citations_citation_iconBuilder
+                  b)
+          updates]) = _$GGetQAPostData_qaPost_composition_citations_citation_icon;
+
+  static void _initializeBuilder(
+          GGetQAPostData_qaPost_composition_citations_citation_iconBuilder b) =>
+      b..G__typename = 'IconType';
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  @override
+  String? get codePoint;
+  @override
+  String? get fontFamily;
+  @override
+  String? get fontPackage;
+  static Serializer<GGetQAPostData_qaPost_composition_citations_citation_icon>
+      get serializer =>
+          _$gGetQAPostDataQaPostCompositionCitationsCitationIconSerializer;
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GGetQAPostData_qaPost_composition_citations_citation_icon.serializer,
+        this,
+      ) as Map<String, dynamic>);
+  static GGetQAPostData_qaPost_composition_citations_citation_icon? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GGetQAPostData_qaPost_composition_citations_citation_icon.serializer,
+        json,
+      );
+}
+
+abstract class GGetQAPostData_qaPost_mediabox
+    implements
+        Built<GGetQAPostData_qaPost_mediabox,
+            GGetQAPostData_qaPost_mediaboxBuilder>,
+        _i2.GQAPostFragment_mediabox,
+        _i11.GQAPostMediaboxFragment {
+  GGetQAPostData_qaPost_mediabox._();
+
+  factory GGetQAPostData_qaPost_mediabox(
+          [Function(GGetQAPostData_qaPost_mediaboxBuilder b) updates]) =
+      _$GGetQAPostData_qaPost_mediabox;
+
+  static void _initializeBuilder(GGetQAPostData_qaPost_mediaboxBuilder b) =>
+      b..G__typename = 'QAPostMediaboxType';
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  @override
+  bool get leftDirection;
+  @override
+  BuiltList<GGetQAPostData_qaPost_mediabox_mediaItems> get mediaItems;
+  static Serializer<GGetQAPostData_qaPost_mediabox> get serializer =>
+      _$gGetQAPostDataQaPostMediaboxSerializer;
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GGetQAPostData_qaPost_mediabox.serializer,
+        this,
+      ) as Map<String, dynamic>);
+  static GGetQAPostData_qaPost_mediabox? fromJson(Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GGetQAPostData_qaPost_mediabox.serializer,
+        json,
+      );
+}
+
+abstract class GGetQAPostData_qaPost_mediabox_mediaItems
+    implements
+        Built<GGetQAPostData_qaPost_mediabox_mediaItems,
+            GGetQAPostData_qaPost_mediabox_mediaItemsBuilder>,
+        _i2.GQAPostFragment_mediabox_mediaItems,
+        _i11.GQAPostMediaboxFragment_mediaItems,
+        _i12.GQAPostMediaboxItemFragment {
+  GGetQAPostData_qaPost_mediabox_mediaItems._();
+
+  factory GGetQAPostData_qaPost_mediabox_mediaItems(
+      [Function(GGetQAPostData_qaPost_mediabox_mediaItemsBuilder b)
+          updates]) = _$GGetQAPostData_qaPost_mediabox_mediaItems;
+
+  static void _initializeBuilder(
+          GGetQAPostData_qaPost_mediabox_mediaItemsBuilder b) =>
+      b..G__typename = 'QAPostMediaboxItemType';
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  @override
+  String get sourceEntityId;
+  @override
+  String? get imageUrl;
+  @override
+  String? get muxVideoId;
+  @override
+  String? get videoThumbnailUrl;
+  @override
+  String? get animatedGifUrl;
+  @override
+  String? get videoUrl;
+  static Serializer<GGetQAPostData_qaPost_mediabox_mediaItems> get serializer =>
+      _$gGetQAPostDataQaPostMediaboxMediaItemsSerializer;
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GGetQAPostData_qaPost_mediabox_mediaItems.serializer,
+        this,
+      ) as Map<String, dynamic>);
+  static GGetQAPostData_qaPost_mediabox_mediaItems? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GGetQAPostData_qaPost_mediabox_mediaItems.serializer,
+        json,
+      );
+}
+
+abstract class GGetQAPostData_qaPost_mainAudience
+    implements
+        Built<GGetQAPostData_qaPost_mainAudience,
+            GGetQAPostData_qaPost_mainAudienceBuilder>,
+        _i2.GQAPostFragment_mainAudience,
+        _i13.GJurisdictionRenderFragment {
+  GGetQAPostData_qaPost_mainAudience._();
+
+  factory GGetQAPostData_qaPost_mainAudience(
+          [Function(GGetQAPostData_qaPost_mainAudienceBuilder b) updates]) =
+      _$GGetQAPostData_qaPost_mainAudience;
+
+  static void _initializeBuilder(GGetQAPostData_qaPost_mainAudienceBuilder b) =>
+      b..G__typename = 'JurisdictionType';
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  @override
+  String get id;
+  @override
+  String get name;
+  @override
+  String? get photoUrl;
+  @override
+  _i3.GDataJurisdictionClassificationChoices get classification;
+  static Serializer<GGetQAPostData_qaPost_mainAudience> get serializer =>
+      _$gGetQAPostDataQaPostMainAudienceSerializer;
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GGetQAPostData_qaPost_mainAudience.serializer,
+        this,
+      ) as Map<String, dynamic>);
+  static GGetQAPostData_qaPost_mainAudience? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GGetQAPostData_qaPost_mainAudience.serializer,
+        json,
+      );
+}
+
+abstract class GGetQAPostData_qaPost_tags
+    implements
+        Built<GGetQAPostData_qaPost_tags, GGetQAPostData_qaPost_tagsBuilder>,
+        _i2.GQAPostFragment_tags,
+        _i14.GInterestTagRenderFragment {
+  GGetQAPostData_qaPost_tags._();
+
+  factory GGetQAPostData_qaPost_tags(
+          [Function(GGetQAPostData_qaPost_tagsBuilder b) updates]) =
+      _$GGetQAPostData_qaPost_tags;
+
+  static void _initializeBuilder(GGetQAPostData_qaPost_tagsBuilder b) =>
+      b..G__typename = 'InterestTagType';
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  @override
+  String get id;
+  @override
+  GGetQAPostData_qaPost_tags_interest get interest;
+  @override
+  String? get proposalId;
+  @override
+  bool get approved;
+  @override
+  bool get rejected;
+  @override
+  bool get canDeleteProposalEntry;
+  static Serializer<GGetQAPostData_qaPost_tags> get serializer =>
+      _$gGetQAPostDataQaPostTagsSerializer;
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GGetQAPostData_qaPost_tags.serializer,
+        this,
+      ) as Map<String, dynamic>);
+  static GGetQAPostData_qaPost_tags? fromJson(Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GGetQAPostData_qaPost_tags.serializer,
+        json,
+      );
+}
+
+abstract class GGetQAPostData_qaPost_tags_interest
+    implements
+        Built<GGetQAPostData_qaPost_tags_interest,
+            GGetQAPostData_qaPost_tags_interestBuilder>,
+        _i2.GQAPostFragment_tags_interest,
+        _i14.GInterestTagRenderFragment_interest,
+        _i15.GInterestFragment {
+  GGetQAPostData_qaPost_tags_interest._();
+
+  factory GGetQAPostData_qaPost_tags_interest(
+          [Function(GGetQAPostData_qaPost_tags_interestBuilder b) updates]) =
+      _$GGetQAPostData_qaPost_tags_interest;
+
+  static void _initializeBuilder(
+          GGetQAPostData_qaPost_tags_interestBuilder b) =>
+      b..G__typename = 'InterestType';
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  @override
+  _i3.GUUID get id;
+  @override
+  String get name;
+  @override
+  String get slug;
+  @override
+  String get hexColor;
+  @override
+  String get emojiRep;
+  @override
+  GGetQAPostData_qaPost_tags_interest_parent? get parent;
+  static Serializer<GGetQAPostData_qaPost_tags_interest> get serializer =>
+      _$gGetQAPostDataQaPostTagsInterestSerializer;
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GGetQAPostData_qaPost_tags_interest.serializer,
+        this,
+      ) as Map<String, dynamic>);
+  static GGetQAPostData_qaPost_tags_interest? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GGetQAPostData_qaPost_tags_interest.serializer,
+        json,
+      );
+}
+
+abstract class GGetQAPostData_qaPost_tags_interest_parent
+    implements
+        Built<GGetQAPostData_qaPost_tags_interest_parent,
+            GGetQAPostData_qaPost_tags_interest_parentBuilder>,
+        _i2.GQAPostFragment_tags_interest_parent,
+        _i14.GInterestTagRenderFragment_interest_parent,
+        _i15.GInterestFragment_parent {
+  GGetQAPostData_qaPost_tags_interest_parent._();
+
+  factory GGetQAPostData_qaPost_tags_interest_parent(
+      [Function(GGetQAPostData_qaPost_tags_interest_parentBuilder b)
+          updates]) = _$GGetQAPostData_qaPost_tags_interest_parent;
+
+  static void _initializeBuilder(
+          GGetQAPostData_qaPost_tags_interest_parentBuilder b) =>
+      b..G__typename = 'InterestType';
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  @override
+  _i3.GUUID get id;
+  @override
+  String get name;
+  @override
+  String get slug;
+  @override
+  String get hexColor;
+  @override
+  String get emojiRep;
+  static Serializer<GGetQAPostData_qaPost_tags_interest_parent>
+      get serializer => _$gGetQAPostDataQaPostTagsInterestParentSerializer;
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GGetQAPostData_qaPost_tags_interest_parent.serializer,
+        this,
+      ) as Map<String, dynamic>);
+  static GGetQAPostData_qaPost_tags_interest_parent? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GGetQAPostData_qaPost_tags_interest_parent.serializer,
+        json,
+      );
+}
+
+abstract class GGetQAPostData_qaPost_myResponse
+    implements
+        Built<GGetQAPostData_qaPost_myResponse,
+            GGetQAPostData_qaPost_myResponseBuilder>,
+        _i2.GQAPostFragment_myResponse,
+        _i16.GQAResponseRenderFragment {
+  GGetQAPostData_qaPost_myResponse._();
+
+  factory GGetQAPostData_qaPost_myResponse(
+          [Function(GGetQAPostData_qaPost_myResponseBuilder b) updates]) =
+      _$GGetQAPostData_qaPost_myResponse;
+
+  static void _initializeBuilder(GGetQAPostData_qaPost_myResponseBuilder b) =>
+      b..G__typename = 'QAResponseType';
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  @override
+  _i3.GUUID get id;
+  @override
+  GGetQAPostData_qaPost_myResponse_user get user;
+  @override
+  _i3.GDateTime get createdTimestamp;
+  @override
+  _i3.GDateTime? get publishedTimestamp;
+  @override
+  int get yayCount;
+  @override
+  bool get canReply;
+  @override
+  bool get isYayedByMe;
+  @override
+  bool get isBookmarkedByMe;
+  @override
+  bool get isReportedByMe;
+  @override
+  bool get authorReplied;
+  @override
+  GGetQAPostData_qaPost_myResponse_composition? get composition;
+  static Serializer<GGetQAPostData_qaPost_myResponse> get serializer =>
+      _$gGetQAPostDataQaPostMyResponseSerializer;
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GGetQAPostData_qaPost_myResponse.serializer,
+        this,
+      ) as Map<String, dynamic>);
+  static GGetQAPostData_qaPost_myResponse? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GGetQAPostData_qaPost_myResponse.serializer,
+        json,
+      );
+}
+
+abstract class GGetQAPostData_qaPost_myResponse_user
+    implements
+        Built<GGetQAPostData_qaPost_myResponse_user,
+            GGetQAPostData_qaPost_myResponse_userBuilder>,
+        _i2.GQAPostFragment_myResponse_user,
+        _i16.GQAResponseRenderFragment_user,
+        _i4.GUserFragment {
+  GGetQAPostData_qaPost_myResponse_user._();
+
+  factory GGetQAPostData_qaPost_myResponse_user(
+          [Function(GGetQAPostData_qaPost_myResponse_userBuilder b) updates]) =
+      _$GGetQAPostData_qaPost_myResponse_user;
+
+  static void _initializeBuilder(
+          GGetQAPostData_qaPost_myResponse_userBuilder b) =>
+      b..G__typename = 'CiviqaUserType';
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  @override
+  String get id;
+  @override
+  String get username;
+  @override
+  String get fullName;
+  @override
+  String? get photoUrl;
+  @override
+  String? get subtitle;
+  @override
+  String? get officialId;
+  static Serializer<GGetQAPostData_qaPost_myResponse_user> get serializer =>
+      _$gGetQAPostDataQaPostMyResponseUserSerializer;
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GGetQAPostData_qaPost_myResponse_user.serializer,
+        this,
+      ) as Map<String, dynamic>);
+  static GGetQAPostData_qaPost_myResponse_user? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GGetQAPostData_qaPost_myResponse_user.serializer,
+        json,
+      );
+}
+
+abstract class GGetQAPostData_qaPost_myResponse_composition
+    implements
+        Built<GGetQAPostData_qaPost_myResponse_composition,
+            GGetQAPostData_qaPost_myResponse_compositionBuilder>,
+        _i2.GQAPostFragment_myResponse_composition,
+        _i16.GQAResponseRenderFragment_composition,
+        _i5.GQACompositionRenderFragment {
+  GGetQAPostData_qaPost_myResponse_composition._();
+
+  factory GGetQAPostData_qaPost_myResponse_composition(
+      [Function(GGetQAPostData_qaPost_myResponse_compositionBuilder b)
+          updates]) = _$GGetQAPostData_qaPost_myResponse_composition;
+
+  static void _initializeBuilder(
+          GGetQAPostData_qaPost_myResponse_compositionBuilder b) =>
+      b..G__typename = 'QACompositionType';
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  @override
+  _i3.GUUID get id;
+  @override
+  String get glimpse;
+  @override
+  String get body;
+  @override
+  _i3.GDateTime? get draftLastSavedTimestamp;
+  @override
+  int get citationCount;
+  @override
+  int get mentionCount;
+  static Serializer<GGetQAPostData_qaPost_myResponse_composition>
+      get serializer => _$gGetQAPostDataQaPostMyResponseCompositionSerializer;
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GGetQAPostData_qaPost_myResponse_composition.serializer,
+        this,
+      ) as Map<String, dynamic>);
+  static GGetQAPostData_qaPost_myResponse_composition? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GGetQAPostData_qaPost_myResponse_composition.serializer,
+        json,
+      );
+}
+
+abstract class GGetQAPostData_qaPost_audiences
+    implements
+        Built<GGetQAPostData_qaPost_audiences,
+            GGetQAPostData_qaPost_audiencesBuilder>,
+        _i2.GQAPostFragment_audiences,
+        _i13.GJurisdictionRenderFragment {
+  GGetQAPostData_qaPost_audiences._();
+
+  factory GGetQAPostData_qaPost_audiences(
+          [Function(GGetQAPostData_qaPost_audiencesBuilder b) updates]) =
+      _$GGetQAPostData_qaPost_audiences;
+
+  static void _initializeBuilder(GGetQAPostData_qaPost_audiencesBuilder b) =>
+      b..G__typename = 'JurisdictionType';
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  @override
+  String get id;
+  @override
+  String get name;
+  @override
+  String? get photoUrl;
+  @override
+  _i3.GDataJurisdictionClassificationChoices get classification;
+  static Serializer<GGetQAPostData_qaPost_audiences> get serializer =>
+      _$gGetQAPostDataQaPostAudiencesSerializer;
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GGetQAPostData_qaPost_audiences.serializer,
+        this,
+      ) as Map<String, dynamic>);
+  static GGetQAPostData_qaPost_audiences? fromJson(Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GGetQAPostData_qaPost_audiences.serializer,
+        json,
+      );
+}
+
+abstract class GGetQAPostData_qaPost_latestResponse
+    implements
+        Built<GGetQAPostData_qaPost_latestResponse,
+            GGetQAPostData_qaPost_latestResponseBuilder>,
+        _i2.GQAPostFragment_latestResponse,
+        _i16.GQAResponseRenderFragment {
+  GGetQAPostData_qaPost_latestResponse._();
+
+  factory GGetQAPostData_qaPost_latestResponse(
+          [Function(GGetQAPostData_qaPost_latestResponseBuilder b) updates]) =
+      _$GGetQAPostData_qaPost_latestResponse;
+
+  static void _initializeBuilder(
+          GGetQAPostData_qaPost_latestResponseBuilder b) =>
+      b..G__typename = 'QAResponseType';
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  @override
+  _i3.GUUID get id;
+  @override
+  GGetQAPostData_qaPost_latestResponse_user get user;
+  @override
+  _i3.GDateTime get createdTimestamp;
+  @override
+  _i3.GDateTime? get publishedTimestamp;
+  @override
+  int get yayCount;
+  @override
+  bool get canReply;
+  @override
+  bool get isYayedByMe;
+  @override
+  bool get isBookmarkedByMe;
+  @override
+  bool get isReportedByMe;
+  @override
+  bool get authorReplied;
+  @override
+  GGetQAPostData_qaPost_latestResponse_composition? get composition;
+  static Serializer<GGetQAPostData_qaPost_latestResponse> get serializer =>
+      _$gGetQAPostDataQaPostLatestResponseSerializer;
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GGetQAPostData_qaPost_latestResponse.serializer,
+        this,
+      ) as Map<String, dynamic>);
+  static GGetQAPostData_qaPost_latestResponse? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GGetQAPostData_qaPost_latestResponse.serializer,
+        json,
+      );
+}
+
+abstract class GGetQAPostData_qaPost_latestResponse_user
+    implements
+        Built<GGetQAPostData_qaPost_latestResponse_user,
+            GGetQAPostData_qaPost_latestResponse_userBuilder>,
+        _i2.GQAPostFragment_latestResponse_user,
+        _i16.GQAResponseRenderFragment_user,
+        _i4.GUserFragment {
+  GGetQAPostData_qaPost_latestResponse_user._();
+
+  factory GGetQAPostData_qaPost_latestResponse_user(
+      [Function(GGetQAPostData_qaPost_latestResponse_userBuilder b)
+          updates]) = _$GGetQAPostData_qaPost_latestResponse_user;
+
+  static void _initializeBuilder(
+          GGetQAPostData_qaPost_latestResponse_userBuilder b) =>
+      b..G__typename = 'CiviqaUserType';
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  @override
+  String get id;
+  @override
+  String get username;
+  @override
+  String get fullName;
+  @override
+  String? get photoUrl;
+  @override
+  String? get subtitle;
+  @override
+  String? get officialId;
+  static Serializer<GGetQAPostData_qaPost_latestResponse_user> get serializer =>
+      _$gGetQAPostDataQaPostLatestResponseUserSerializer;
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GGetQAPostData_qaPost_latestResponse_user.serializer,
+        this,
+      ) as Map<String, dynamic>);
+  static GGetQAPostData_qaPost_latestResponse_user? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GGetQAPostData_qaPost_latestResponse_user.serializer,
+        json,
+      );
+}
+
+abstract class GGetQAPostData_qaPost_latestResponse_composition
+    implements
+        Built<GGetQAPostData_qaPost_latestResponse_composition,
+            GGetQAPostData_qaPost_latestResponse_compositionBuilder>,
+        _i2.GQAPostFragment_latestResponse_composition,
+        _i16.GQAResponseRenderFragment_composition,
+        _i5.GQACompositionRenderFragment {
+  GGetQAPostData_qaPost_latestResponse_composition._();
+
+  factory GGetQAPostData_qaPost_latestResponse_composition(
+      [Function(GGetQAPostData_qaPost_latestResponse_compositionBuilder b)
+          updates]) = _$GGetQAPostData_qaPost_latestResponse_composition;
+
+  static void _initializeBuilder(
+          GGetQAPostData_qaPost_latestResponse_compositionBuilder b) =>
+      b..G__typename = 'QACompositionType';
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  @override
+  _i3.GUUID get id;
+  @override
+  String get glimpse;
+  @override
+  String get body;
+  @override
+  _i3.GDateTime? get draftLastSavedTimestamp;
+  @override
+  int get citationCount;
+  @override
+  int get mentionCount;
+  static Serializer<GGetQAPostData_qaPost_latestResponse_composition>
+      get serializer =>
+          _$gGetQAPostDataQaPostLatestResponseCompositionSerializer;
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GGetQAPostData_qaPost_latestResponse_composition.serializer,
+        this,
+      ) as Map<String, dynamic>);
+  static GGetQAPostData_qaPost_latestResponse_composition? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GGetQAPostData_qaPost_latestResponse_composition.serializer,
+        json,
+      );
+}
+
+abstract class GGetQAPostData_qaPost_mediaboxOptions
+    implements
+        Built<GGetQAPostData_qaPost_mediaboxOptions,
+            GGetQAPostData_qaPost_mediaboxOptionsBuilder>,
+        _i2.GQAPostFragment_mediaboxOptions,
+        _i12.GQAPostMediaboxItemFragment {
+  GGetQAPostData_qaPost_mediaboxOptions._();
+
+  factory GGetQAPostData_qaPost_mediaboxOptions(
+          [Function(GGetQAPostData_qaPost_mediaboxOptionsBuilder b) updates]) =
+      _$GGetQAPostData_qaPost_mediaboxOptions;
+
+  static void _initializeBuilder(
+          GGetQAPostData_qaPost_mediaboxOptionsBuilder b) =>
+      b..G__typename = 'QAPostMediaboxItemType';
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  @override
+  String get sourceEntityId;
+  @override
+  String? get imageUrl;
+  @override
+  String? get muxVideoId;
+  @override
+  String? get videoThumbnailUrl;
+  @override
+  String? get animatedGifUrl;
+  @override
+  String? get videoUrl;
+  static Serializer<GGetQAPostData_qaPost_mediaboxOptions> get serializer =>
+      _$gGetQAPostDataQaPostMediaboxOptionsSerializer;
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GGetQAPostData_qaPost_mediaboxOptions.serializer,
+        this,
+      ) as Map<String, dynamic>);
+  static GGetQAPostData_qaPost_mediaboxOptions? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GGetQAPostData_qaPost_mediaboxOptions.serializer,
+        json,
+      );
+}

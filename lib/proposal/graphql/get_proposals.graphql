@@ -1,0 +1,13 @@
+# import './proposed_fragment.graphql'
+# import '../../common/graphql/pagination_fragment.graphql'
+
+query GetProposals($input: ProposalPaginationInput!) {
+    proposals(input: $input) {
+        items {
+            ...ProposedFragment
+        }
+        pagination {
+            ...PaginationOuputFragment
+        }
+    }
+}

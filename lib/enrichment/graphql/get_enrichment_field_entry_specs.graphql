@@ -1,0 +1,13 @@
+# import "./field_error_fragment.graphql"
+# import "./field_entry_spec_fragment.graphql"
+
+query GetEnrichmentFieldEntrySpecs($input: EnrichmentFieldEntrySpecsInput!) {
+    enrichmentFieldEntrySpecs(input: $input) {
+        errors {
+            ...FieldErrorFragment
+        }
+        fieldEntrySpecs {
+            ...FieldEntrySpecFragment
+        }
+    }
+}

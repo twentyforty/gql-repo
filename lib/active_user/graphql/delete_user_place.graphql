@@ -1,0 +1,9 @@
+# import './active_user_fragment.graphql'
+
+mutation DeleteUserPlace($input: UserPlaceInput!) {
+    deleteUserPlace(input: $input) {
+        user {
+            ...ActiveUserFragment
+        }
+    }
+}

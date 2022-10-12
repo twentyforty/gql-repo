@@ -1,0 +1,10 @@
+# import './interest_tag_fragment.graphql'
+
+
+mutation DeleteUserInterestTagProposals($input: DeleteUserInterestTagProposalsInput!) {
+    deleteUserInterestTagProposals(input: $input) {
+        result {
+            ...InterestTagFragment
+        }
+    }
+}

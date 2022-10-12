@@ -1,0 +1,17 @@
+# import '../../common/graphql/user_fragment.graphql'
+# import './citation_source_render_fragment.graphql'
+
+
+fragment CitationRenderFragment on CitationType {
+    id
+    firstCitedTimestamp
+    firstCiter {
+        ...UserFragment
+    }
+    isMyDraft
+    highlightCount
+    source {
+        ...CitationSourceRenderFragment
+    }
+    useCount
+}

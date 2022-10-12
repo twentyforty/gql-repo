@@ -1,0 +1,7 @@
+# import './involvement_fragment.graphql'
+
+query GetInvolvement($input: InvolvementInput!) {
+    involvement(input: $input) {
+        ...InvolvementFragment
+    }
+}

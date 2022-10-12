@@ -1,0 +1,23 @@
+# import '../../common/graphql/organization_render_fragment.graphql'
+# import './vote_count_fragment.graphql'
+# import './person_vote_fragment.graphql'
+
+
+
+fragment VoteEventFragment on VoteEventType {
+    id
+    startDate
+    result
+    counts {
+        ...VoteCountFragment
+    }
+    organization {
+        ...OrganizationRenderFragment
+    }
+    bill {
+        identifier
+    }
+    ownOfficials {
+        ...PersonVoteFragment
+    }
+}

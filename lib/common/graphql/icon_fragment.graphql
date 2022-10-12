@@ -1,0 +1,6 @@
+
+fragment IconFragment on IconType {
+    codePoint
+    fontFamily
+    fontPackage
+}

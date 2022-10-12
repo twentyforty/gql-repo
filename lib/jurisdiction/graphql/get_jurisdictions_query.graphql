@@ -1,0 +1,7 @@
+# import './jurisdiction_fragment.graphql'
+
+query GetJurisdictions {
+    jurisdictions {
+        ...JurisdictionFragment
+    }
+}

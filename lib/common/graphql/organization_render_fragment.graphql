@@ -1,0 +1,6 @@
+fragment OrganizationRenderFragment on OrganizationType {
+    id
+    name
+    classification
+    photoUrl
+}

@@ -1,0 +1,9 @@
+# import './interest_tag_render_fragment.graphql'
+
+mutation ProposeInterestTags($input: ProposeInterestTagsInput!) {
+    proposeInterestTags(input: $input) {
+        result {
+            ...InterestTagRenderFragment
+        }
+    }
+}

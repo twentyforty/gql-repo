@@ -1,0 +1,9 @@
+
+fragment QACompositionRenderFragment on QACompositionType {
+    id
+    glimpse
+    body
+    draftLastSavedTimestamp
+    citationCount
+    mentionCount
+}

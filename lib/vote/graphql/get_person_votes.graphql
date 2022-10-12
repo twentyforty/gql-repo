@@ -1,0 +1,18 @@
+# import '../../common/graphql/pagination_fragment.graphql'
+# import './person_vote_fragment.graphql'
+
+
+fragment PersonVoteResults on PersonVotePaginatedType {
+    pagination {
+        ...PaginationOuputFragment
+    }
+	items {
+        ...PersonVoteFragment
+    }
+}
+
+query GetPersonVotes($input: PersonVotePaginationInput!) {
+    personVotes(input: $input) {
+        ...PersonVoteResults
+    }
+}

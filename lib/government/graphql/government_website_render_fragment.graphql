@@ -1,0 +1,14 @@
+
+fragment GovernmentWebsiteRenderFragment on GovernmentWebsiteType {
+    id
+    title
+    domain
+    url
+    faviconUrl
+    searchUrlPattern
+    approved
+    rejected
+    canDeleteProposalEntry
+    proposalId
+    divisionId
+}

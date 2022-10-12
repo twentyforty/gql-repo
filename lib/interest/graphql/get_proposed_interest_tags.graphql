@@ -1,0 +1,14 @@
+# import './interest_tag_fragment.graphql'
+# import '../../common/graphql/pagination_fragment.graphql'
+
+
+query GetProposedInterestTags($input: ProposedInterestTagsInput!) {
+    proposedInterestTags(input: $input) {
+        items {
+            ...InterestTagFragment
+        }
+        pagination {
+            ...PaginationOuputFragment
+        }
+    }
+}

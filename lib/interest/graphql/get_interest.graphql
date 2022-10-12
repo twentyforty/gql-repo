@@ -1,0 +1,7 @@
+# import './interest_fragment.graphql'
+
+query GetInterest($input: InterestInput!) {
+    interest(input: $input) {
+        ...InterestFragment
+    }
+}

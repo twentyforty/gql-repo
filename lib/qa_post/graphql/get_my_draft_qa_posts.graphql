@@ -1,0 +1,13 @@
+# import './qa_post_tile_fragment.graphql'
+# import '../../common/graphql/pagination_fragment.graphql'
+
+query GetMyDraftQAPosts($input: MyDraftQAPostPaginationInput!) {
+    myDraftQaPosts(input: $input) {
+        pagination {
+            ...PaginationOuputFragment
+        }
+        items {
+            ...QAPostTileFragment
+        }
+    }
+}

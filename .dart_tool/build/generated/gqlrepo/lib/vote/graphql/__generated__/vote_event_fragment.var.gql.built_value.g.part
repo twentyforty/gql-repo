@@ -1,0 +1,93 @@
+// **************************************************************************
+// BuiltValueGenerator
+// **************************************************************************
+
+Serializer<GVoteEventFragmentVars> _$gVoteEventFragmentVarsSerializer =
+    new _$GVoteEventFragmentVarsSerializer();
+
+class _$GVoteEventFragmentVarsSerializer
+    implements StructuredSerializer<GVoteEventFragmentVars> {
+  @override
+  final Iterable<Type> types = const [
+    GVoteEventFragmentVars,
+    _$GVoteEventFragmentVars
+  ];
+  @override
+  final String wireName = 'GVoteEventFragmentVars';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GVoteEventFragmentVars object,
+      {FullType specifiedType = FullType.unspecified}) {
+    return <Object?>[];
+  }
+
+  @override
+  GVoteEventFragmentVars deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    return new GVoteEventFragmentVarsBuilder().build();
+  }
+}
+
+class _$GVoteEventFragmentVars extends GVoteEventFragmentVars {
+  factory _$GVoteEventFragmentVars(
+          [void Function(GVoteEventFragmentVarsBuilder)? updates]) =>
+      (new GVoteEventFragmentVarsBuilder()..update(updates))._build();
+
+  _$GVoteEventFragmentVars._() : super._();
+
+  @override
+  GVoteEventFragmentVars rebuild(
+          void Function(GVoteEventFragmentVarsBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GVoteEventFragmentVarsBuilder toBuilder() =>
+      new GVoteEventFragmentVarsBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GVoteEventFragmentVars;
+  }
+
+  @override
+  int get hashCode {
+    return 342971571;
+  }
+
+  @override
+  String toString() {
+    return newBuiltValueToStringHelper(r'GVoteEventFragmentVars').toString();
+  }
+}
+
+class GVoteEventFragmentVarsBuilder
+    implements Builder<GVoteEventFragmentVars, GVoteEventFragmentVarsBuilder> {
+  _$GVoteEventFragmentVars? _$v;
+
+  GVoteEventFragmentVarsBuilder();
+
+  @override
+  void replace(GVoteEventFragmentVars other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GVoteEventFragmentVars;
+  }
+
+  @override
+  void update(void Function(GVoteEventFragmentVarsBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GVoteEventFragmentVars build() => _build();
+
+  _$GVoteEventFragmentVars _build() {
+    final _$result = _$v ?? new _$GVoteEventFragmentVars._();
+    replace(_$result);
+    return _$result;
+  }
+}
+
+// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas

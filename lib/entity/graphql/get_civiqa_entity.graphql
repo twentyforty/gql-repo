@@ -1,0 +1,7 @@
+# import '../../common/graphql/civiqa_entity_fragment.graphql'
+
+query GetCivqiaEntity($input: CiviqaEntityInput!) {
+    civiqaEntity(input: $input) {
+        ...CiviqaEntityFragment
+    }
+}

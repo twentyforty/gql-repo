@@ -1,0 +1,14 @@
+# import '../../common/graphql/icon_fragment.graphql'
+
+fragment LegoCellFragment on LegoCellType {
+    title
+    subtitle
+    textContent
+    date
+    icon {
+        ...IconFragment
+    }
+    appLink
+    imageUrl
+    useAvatar
+}

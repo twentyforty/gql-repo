@@ -1,0 +1,5 @@
+mutation ArchiveEntity($input: CiviqaEntityInput!) {
+    archiveEntity(input: $input) {
+        success
+    }
+}

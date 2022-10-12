@@ -1,0 +1,5 @@
+mutation UnarchiveEntity($input: CiviqaEntityInput!) {
+    unarchiveEntity(input: $input) {
+        success
+    }
+}

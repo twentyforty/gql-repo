@@ -1,0 +1,13 @@
+# import './qa_post_or_response_fragment.graphql'
+# import '../../../common/graphql/pagination_fragment.graphql'
+
+query GetQAHistory($input: QAHistoryInput!) {
+    qaHistory(input: $input) {
+        pagination {
+            ...PaginationOuputFragment
+        }
+        items {
+            ...QAPostOrResponseFragment
+        }
+    }
+}

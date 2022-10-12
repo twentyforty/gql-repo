@@ -1,0 +1,5 @@
+mutation DeleteCitation($input: DeleteCitationInput!) {
+    deleteCitation(input: $input) {
+        success
+    }
+}

@@ -1,0 +1,15 @@
+# import "./field_value_fragment.graphql"
+
+fragment FieldSpecFragment on FieldSpecType {
+    fieldName
+    displayName
+    dataType
+    required
+    minStringLength
+    maxStringLength
+    minNumValue
+    maxNumValue
+    choices {
+        ...FieldValueFragment
+    }
+}

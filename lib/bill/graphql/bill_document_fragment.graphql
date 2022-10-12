@@ -1,0 +1,9 @@
+# import './bill_render_fragment.graphql'
+# import './bill_document_render_fragment.graphql'
+
+fragment BillDocumentFragment on BillDocumentType {
+    ...BillDocumentRenderFragment
+    bill {
+        ...BillRenderFragment
+    }
+}

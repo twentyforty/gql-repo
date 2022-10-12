@@ -1,0 +1,7 @@
+fragment CitationSourceRenderFragment on CitationSourceType {
+    id
+    title
+    subtitle
+    reportedPublishedDate
+    sourcePdfUrl
+}

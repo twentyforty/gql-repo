@@ -1,0 +1,10 @@
+fragment GovernmentEmailMessageFragment on GovernmentEmailMessageType {
+    id
+    timestamp
+    fromAddress
+    subject
+    bodyText
+    bodyHtml
+    pdfFileUrl
+    imagePreviewFileUrl
+}

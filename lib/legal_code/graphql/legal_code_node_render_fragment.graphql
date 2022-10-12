@@ -1,0 +1,9 @@
+fragment LegalCodeNodeRenderFragment on LegalCodeNodeType {
+    id
+    title
+    subtitle
+    sourceUrl
+    docxFileUrl
+    pdfFileUrl
+    childCount
+}

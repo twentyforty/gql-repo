@@ -1,0 +1,6 @@
+
+mutation FollowInterest($input: FollowInterestInput!) {
+    followInterest(input: $input) {
+        result
+    }
+}

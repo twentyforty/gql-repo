@@ -1,0 +1,7 @@
+fragment PlaceFragment on PlaceType {
+  id,
+  lat,
+  lng,
+  gmapsPlaceId,
+  address,
+}

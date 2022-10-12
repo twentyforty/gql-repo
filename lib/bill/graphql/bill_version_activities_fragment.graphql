@@ -1,0 +1,7 @@
+# import './bill_activity_day_fragment.graphql'
+
+fragment BillVersionActivitiesFragment on BillVersionActivitiesType {
+  activitiesByDay {
+    ...BillActivityDayFragment
+  }
+}

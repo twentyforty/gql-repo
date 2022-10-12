@@ -1,0 +1,13 @@
+# import '../../common/graphql/jurisdiction_render_fragment.graphql'
+
+fragment LegislativeSessionFragment on LegislativeSessionType {
+    id
+    identifier
+    name
+    classification
+    jurisdiction {
+        ...JurisdictionRenderFragment
+    }
+    startDate
+    endDate
+}

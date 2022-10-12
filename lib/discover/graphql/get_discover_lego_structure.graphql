@@ -1,0 +1,7 @@
+# import '../../lego/graphql/lego_structure_fragment.graphql'
+
+query GetLegos {
+    discoverLegoStructure {
+        ...LegoStructureFragment
+    }
+}

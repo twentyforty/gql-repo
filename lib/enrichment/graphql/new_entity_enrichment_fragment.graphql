@@ -1,0 +1,11 @@
+# import "./field_value_fragment.graphql"
+
+fragment NewEntityEnrichmentFragment on NewEntityEnrichmentType {
+    id
+    sourceUrl
+    createData
+    enrichmentType
+    displayFields {
+        ...FieldValueFragment
+    }
+}

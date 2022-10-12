@@ -1,0 +1,156 @@
+// **************************************************************************
+// BuiltValueGenerator
+// **************************************************************************
+
+Serializer<GDeleteCitationHighlightVars>
+    _$gDeleteCitationHighlightVarsSerializer =
+    new _$GDeleteCitationHighlightVarsSerializer();
+
+class _$GDeleteCitationHighlightVarsSerializer
+    implements StructuredSerializer<GDeleteCitationHighlightVars> {
+  @override
+  final Iterable<Type> types = const [
+    GDeleteCitationHighlightVars,
+    _$GDeleteCitationHighlightVars
+  ];
+  @override
+  final String wireName = 'GDeleteCitationHighlightVars';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GDeleteCitationHighlightVars object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      'input',
+      serializers.serialize(object.input,
+          specifiedType: const FullType(_i1.GDeleteCitationHighlightInput)),
+    ];
+
+    return result;
+  }
+
+  @override
+  GDeleteCitationHighlightVars deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GDeleteCitationHighlightVarsBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case 'input':
+          result.input.replace(serializers.deserialize(value,
+                  specifiedType:
+                      const FullType(_i1.GDeleteCitationHighlightInput))!
+              as _i1.GDeleteCitationHighlightInput);
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GDeleteCitationHighlightVars extends GDeleteCitationHighlightVars {
+  @override
+  final _i1.GDeleteCitationHighlightInput input;
+
+  factory _$GDeleteCitationHighlightVars(
+          [void Function(GDeleteCitationHighlightVarsBuilder)? updates]) =>
+      (new GDeleteCitationHighlightVarsBuilder()..update(updates))._build();
+
+  _$GDeleteCitationHighlightVars._({required this.input}) : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        input, r'GDeleteCitationHighlightVars', 'input');
+  }
+
+  @override
+  GDeleteCitationHighlightVars rebuild(
+          void Function(GDeleteCitationHighlightVarsBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GDeleteCitationHighlightVarsBuilder toBuilder() =>
+      new GDeleteCitationHighlightVarsBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GDeleteCitationHighlightVars && input == other.input;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(0, input.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(r'GDeleteCitationHighlightVars')
+          ..add('input', input))
+        .toString();
+  }
+}
+
+class GDeleteCitationHighlightVarsBuilder
+    implements
+        Builder<GDeleteCitationHighlightVars,
+            GDeleteCitationHighlightVarsBuilder> {
+  _$GDeleteCitationHighlightVars? _$v;
+
+  _i1.GDeleteCitationHighlightInputBuilder? _input;
+  _i1.GDeleteCitationHighlightInputBuilder get input =>
+      _$this._input ??= new _i1.GDeleteCitationHighlightInputBuilder();
+  set input(_i1.GDeleteCitationHighlightInputBuilder? input) =>
+      _$this._input = input;
+
+  GDeleteCitationHighlightVarsBuilder();
+
+  GDeleteCitationHighlightVarsBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _input = $v.input.toBuilder();
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GDeleteCitationHighlightVars other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GDeleteCitationHighlightVars;
+  }
+
+  @override
+  void update(void Function(GDeleteCitationHighlightVarsBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GDeleteCitationHighlightVars build() => _build();
+
+  _$GDeleteCitationHighlightVars _build() {
+    _$GDeleteCitationHighlightVars _$result;
+    try {
+      _$result =
+          _$v ?? new _$GDeleteCitationHighlightVars._(input: input.build());
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'input';
+        input.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'GDeleteCitationHighlightVars', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas

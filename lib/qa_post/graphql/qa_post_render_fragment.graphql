@@ -1,0 +1,37 @@
+# import './composition/qa_composition_render_fragment.graphql'
+# import './mediabox/qa_post_mediabox_fragment.graphql'
+# import '../../common/graphql/jurisdiction_render_fragment.graphql'
+# import '../../common/graphql/user_fragment.graphql'
+# import '../../interest/graphql/interest_tag_render_fragment.graphql'
+
+fragment QAPostRenderFragment on QAPostType {
+    id
+    headline
+    author {
+        ...UserFragment
+    }
+    composition {
+        ...QACompositionRenderFragment
+    }
+    mediabox {
+        ...QAPostMediaboxFragment
+    }
+    audienceTitle
+    mainAudience {
+        ...JurisdictionRenderFragment
+    }
+    tags {
+        ...InterestTagRenderFragment
+    }
+    isDraft
+    createdTimestamp
+    publishedTimestamp
+
+    yayCount
+    responseCount
+    canRespond
+
+    isYayedByMe
+    isBookmarkedByMe
+    isReportedByMe
+}

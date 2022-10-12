@@ -1,0 +1,7 @@
+# import './legal_code_fragment.graphql'
+
+query GetLegalCode($input: LegalCodeInput!) {
+    legalCode(input: $input) {
+        ...LegalCodeFragment
+    }
+}

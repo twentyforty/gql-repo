@@ -1,0 +1,14 @@
+# import './division_render_fragment.graphql'
+# import './organization_render_fragment.graphql'
+
+fragment PostRenderFragment on PostType {
+    id
+    role
+    label
+    division {
+        ...DivisionRenderFragment
+    }
+    organization {
+        ...OrganizationRenderFragment
+    }
+}

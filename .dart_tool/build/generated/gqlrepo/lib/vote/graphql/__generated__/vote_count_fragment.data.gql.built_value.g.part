@@ -1,0 +1,186 @@
+// **************************************************************************
+// BuiltValueGenerator
+// **************************************************************************
+
+Serializer<GVoteCountFragmentData> _$gVoteCountFragmentDataSerializer =
+    new _$GVoteCountFragmentDataSerializer();
+
+class _$GVoteCountFragmentDataSerializer
+    implements StructuredSerializer<GVoteCountFragmentData> {
+  @override
+  final Iterable<Type> types = const [
+    GVoteCountFragmentData,
+    _$GVoteCountFragmentData
+  ];
+  @override
+  final String wireName = 'GVoteCountFragmentData';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GVoteCountFragmentData object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+      'option',
+      serializers.serialize(object.option,
+          specifiedType: const FullType(_i1.GDataVoteCountOptionChoices)),
+      'value',
+      serializers.serialize(object.value, specifiedType: const FullType(int)),
+    ];
+
+    return result;
+  }
+
+  @override
+  GVoteCountFragmentData deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GVoteCountFragmentDataBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'option':
+          result.option = serializers.deserialize(value,
+                  specifiedType:
+                      const FullType(_i1.GDataVoteCountOptionChoices))!
+              as _i1.GDataVoteCountOptionChoices;
+          break;
+        case 'value':
+          result.value = serializers.deserialize(value,
+              specifiedType: const FullType(int))! as int;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GVoteCountFragmentData extends GVoteCountFragmentData {
+  @override
+  final String G__typename;
+  @override
+  final _i1.GDataVoteCountOptionChoices option;
+  @override
+  final int value;
+
+  factory _$GVoteCountFragmentData(
+          [void Function(GVoteCountFragmentDataBuilder)? updates]) =>
+      (new GVoteCountFragmentDataBuilder()..update(updates))._build();
+
+  _$GVoteCountFragmentData._(
+      {required this.G__typename, required this.option, required this.value})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        G__typename, r'GVoteCountFragmentData', 'G__typename');
+    BuiltValueNullFieldError.checkNotNull(
+        option, r'GVoteCountFragmentData', 'option');
+    BuiltValueNullFieldError.checkNotNull(
+        value, r'GVoteCountFragmentData', 'value');
+  }
+
+  @override
+  GVoteCountFragmentData rebuild(
+          void Function(GVoteCountFragmentDataBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GVoteCountFragmentDataBuilder toBuilder() =>
+      new GVoteCountFragmentDataBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GVoteCountFragmentData &&
+        G__typename == other.G__typename &&
+        option == other.option &&
+        value == other.value;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(
+        $jc($jc(0, G__typename.hashCode), option.hashCode), value.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(r'GVoteCountFragmentData')
+          ..add('G__typename', G__typename)
+          ..add('option', option)
+          ..add('value', value))
+        .toString();
+  }
+}
+
+class GVoteCountFragmentDataBuilder
+    implements Builder<GVoteCountFragmentData, GVoteCountFragmentDataBuilder> {
+  _$GVoteCountFragmentData? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  _i1.GDataVoteCountOptionChoices? _option;
+  _i1.GDataVoteCountOptionChoices? get option => _$this._option;
+  set option(_i1.GDataVoteCountOptionChoices? option) =>
+      _$this._option = option;
+
+  int? _value;
+  int? get value => _$this._value;
+  set value(int? value) => _$this._value = value;
+
+  GVoteCountFragmentDataBuilder() {
+    GVoteCountFragmentData._initializeBuilder(this);
+  }
+
+  GVoteCountFragmentDataBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _option = $v.option;
+      _value = $v.value;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GVoteCountFragmentData other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GVoteCountFragmentData;
+  }
+
+  @override
+  void update(void Function(GVoteCountFragmentDataBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GVoteCountFragmentData build() => _build();
+
+  _$GVoteCountFragmentData _build() {
+    final _$result = _$v ??
+        new _$GVoteCountFragmentData._(
+            G__typename: BuiltValueNullFieldError.checkNotNull(
+                G__typename, r'GVoteCountFragmentData', 'G__typename'),
+            option: BuiltValueNullFieldError.checkNotNull(
+                option, r'GVoteCountFragmentData', 'option'),
+            value: BuiltValueNullFieldError.checkNotNull(
+                value, r'GVoteCountFragmentData', 'value'));
+    replace(_$result);
+    return _$result;
+  }
+}
+
+// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas

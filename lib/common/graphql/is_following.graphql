@@ -1,0 +1,3 @@
+query IsFollowing($input: FeedItemInput!) {
+    isFollowing(input: $input)
+}

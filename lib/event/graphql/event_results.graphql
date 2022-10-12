@@ -1,0 +1,12 @@
+# import '../../common/graphql/pagination_fragment.graphql'
+# import './event_fragment.graphql'
+
+
+fragment EventResults on EventPaginatedType {
+    pagination {
+        ...PaginationOuputFragment
+    }
+	items {
+        ...EventFragment
+    }
+}

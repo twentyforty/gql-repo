@@ -1,0 +1,9 @@
+# import './citation_highlight_fragment.graphql'
+
+mutation UpdateCitationHighlightCaption($input: UpdateCitationHighlightCaptionInput!) {
+    updateCitationHighlightCaption(input: $input) {
+        citationHighlight {
+            ...CitationHighlightFragment
+        }
+    }
+}

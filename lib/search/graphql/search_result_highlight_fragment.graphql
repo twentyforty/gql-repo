@@ -1,0 +1,4 @@
+fragment SearchResultHighlightFragment on SearchResultHiglightType {
+    fieldName
+    html
+}

@@ -1,0 +1,8 @@
+fragment CitationHighlightFragment on CitationHighlightType {
+    id
+    timestamp
+    pageIndex
+    croppedPdfFileUrl
+    imageFileUrl
+    color
+}

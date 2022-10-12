@@ -1,0 +1,14 @@
+# import './legislative_session_fragment.graphql'
+# import '../../common/graphql/pagination_fragment.graphql'
+
+
+query GetLegislativeSessions($input: LegislativeSessionsInput!) {
+    legislativeSessions(input: $input) {
+        items {
+            ...LegislativeSessionFragment
+        }
+        pagination {
+            ...PaginationOuputFragment
+        }    
+    }
+}

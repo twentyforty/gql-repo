@@ -1,0 +1,5 @@
+mutation DiscardQAPostDraft($input: DiscardQAPostDraftInput!) {
+    discardQaPostDraft(input: $input) {
+        discarded
+    }
+}

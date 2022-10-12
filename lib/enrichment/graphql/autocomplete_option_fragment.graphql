@@ -1,0 +1,9 @@
+# import "./field_value_fragment.graphql"
+
+fragment AutocompleteOptionFragment on AutocompleteOptionType {
+    fieldValue {
+        ...FieldValueFragment
+    }
+    subtitle
+    imageUrl
+}

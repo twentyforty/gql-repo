@@ -1,0 +1,19 @@
+# import './bill_action_fragment.graphql'
+# import './bill_document_render_fragment.graphql'
+# import '../../vote/graphql/vote_event_fragment.graphql'
+
+
+fragment BillActivityFragment on BillActivityType {
+  voteEvent {
+    ...VoteEventFragment
+  }
+  billAction {
+    ...BillActionFragment
+  }
+  billDocument {
+    ...BillDocumentRenderFragment
+  }
+  # userAnnotation {
+  #   ...UserAnnotationFragment
+  # }
+}

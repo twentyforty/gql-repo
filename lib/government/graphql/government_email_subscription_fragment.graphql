@@ -1,0 +1,7 @@
+fragment GovernmentEmailSubscriptionFragment on GovernmentEmailSubscriptionType {
+    id
+    startDate
+    active
+    title
+    emailAddress
+}

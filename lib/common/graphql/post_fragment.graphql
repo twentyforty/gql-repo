@@ -1,0 +1,16 @@
+# import './post_render_fragment.graphql'
+# import './organization_fragment.graphql'
+# import './official_render_fragment.graphql'
+
+fragment PostFragment on PostType {
+    ...PostRenderFragment
+    organization {
+        ...OrganizationFragment
+    }
+    currentMemberships {
+        person {
+            ...OfficialRenderFragment
+        }
+    }
+    pendingProposalCount
+}

@@ -1,0 +1,8 @@
+fragment OfficialRenderFragment on OfficialType {
+    id
+    name
+    photoUrl
+    primaryRole
+    primaryParty
+    userId
+}

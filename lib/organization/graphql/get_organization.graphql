@@ -1,0 +1,32 @@
+# import '../../common/graphql/organization_render_fragment.graphql'
+# import '../../common/graphql/organization_membership_fragment.graphql'
+# import '../../common/graphql/jurisdiction_render_fragment.graphql'
+# import '../../common/graphql/organization_fragment.graphql'
+# import '../../legislative_session/graphql/legislative_session_fragment.graphql'
+# import '../../lego/graphql/lego_structure_fragment.graphql'
+
+query GetOrganziation($input: OrganizationInput!) {
+    organization(input: $input) {
+        ...OrganizationFragment
+        jurisdiction {
+            ...JurisdictionRenderFragment
+        }
+        children {
+            ...OrganizationRenderFragment
+        }
+        myCurrentMembers {
+            ...OrganizationMembershipFragment
+        }
+        currentMemberCount
+        currentMemberSample {
+            ...OrganizationMembershipFragment
+        }
+        committeeCount
+        currentLegislativeSession {
+            ...LegislativeSessionFragment
+        }
+        legoStructure {
+            ...LegoStructureFragment
+        }
+    }
+}

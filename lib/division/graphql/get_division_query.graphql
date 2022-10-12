@@ -1,0 +1,7 @@
+# import '../../common/graphql/division_fragment.graphql'
+
+query GetDivision($input: DivisionInput!) {
+    division(input: $input) {
+        ...DivisionFragment
+    }
+}

@@ -1,0 +1,9 @@
+# import '../../common/graphql/division_fragment.graphql'
+
+mutation ProcessDivision($input: DivisionInput!) {
+    processDivision(input: $input) {
+        division {
+            ...DivisionFragment
+        }
+    }
+}

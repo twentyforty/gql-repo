@@ -1,0 +1,14 @@
+# import './involvement_render_fragment.graphql'
+# import '../../common/graphql/pagination_fragment.graphql'
+
+
+query GetMyInvolvements($input: PaginationInput!) {
+    myInvolvements(input: $input) {
+        items {
+            ...InvolvementRenderFragment
+        }
+        pagination {
+            ...PaginationOuputFragment
+        }
+    }
+}

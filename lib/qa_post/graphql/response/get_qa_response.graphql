@@ -1,0 +1,7 @@
+# import './qa_response_fragment.graphql'
+
+query GetQAResponse($input: QAResponseInput!) {
+    qaResponse(input: $input) {
+        ...QAResponseFragment
+    }
+}

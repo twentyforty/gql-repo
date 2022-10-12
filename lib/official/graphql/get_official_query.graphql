@@ -1,0 +1,23 @@
+# import '../../common/graphql/official_fragment.graphql'
+# import './official_contact_info_fragment.graphql'
+# import './external_person_identifier_fragment.graphql'
+# import '../../lego/graphql/lego_structure_fragment.graphql'
+
+
+query GetOfficial($officialId: String!) {
+    officialById(officialId: $officialId) {
+        ...OfficialFragment
+        primaryParty
+        offices {
+            ...OfficialContactInfoFragment
+        }
+        identifiers {
+            ...ExternalPersonIdentifierFragment
+        }
+        committeeCount
+        email
+        legoStructure {
+            ...LegoStructureFragment
+        }
+    }
+}

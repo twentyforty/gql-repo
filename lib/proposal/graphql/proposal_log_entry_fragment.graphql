@@ -1,0 +1,12 @@
+# import '../../common/graphql/user_fragment.graphql'
+
+fragment ProposalLogEntryFragment on ProposalLogEntryType {
+    id
+    user {
+        ...UserFragment
+    }
+    timestamp
+    action
+    comment
+    deleted
+}

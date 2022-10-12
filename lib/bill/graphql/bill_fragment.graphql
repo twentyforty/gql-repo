@@ -1,0 +1,46 @@
+# import '../../common/graphql/organization_render_fragment.graphql'
+# import '../../common/graphql/person_vote_render_fragment.graphql'
+# import '../../legislative_session/graphql/legislative_session_fragment.graphql'
+# import '../../vote/graphql/vote_event_fragment.graphql'
+# import './bill_action_fragment.graphql'
+# import './bill_document_render_fragment.graphql'
+# import './bill_render_fragment.graphql'
+# import './bill_sponsorship_fragment.graphql'
+
+fragment BillFragment on BillType {
+    ...BillRenderFragment
+    subject
+    classification
+    abstracts {
+        abstract
+        note
+    }
+    legislativeSession {
+        ...LegislativeSessionFragment
+    }
+    fromOrganization {
+        ...OrganizationRenderFragment
+    }
+    mainSponsorships {
+        ...BillSponsorshipFragment
+    }
+    latestAction {
+        ...BillActionFragment
+    }
+    latestVote {
+        ...VoteEventFragment
+    }
+    documentSample {
+        ...BillDocumentRenderFragment
+    }
+    documentCount
+    versionCount
+    sponsorshipCount
+    stages
+    isFollowedByMe
+    myRepresentativesLatestVote {
+        ...PersonVoteRenderFragment
+    }
+    canApproveTags
+    pendingProposalCount
+}

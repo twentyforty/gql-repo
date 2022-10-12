@@ -1,0 +1,12 @@
+fragment UserPrivilegeRenderFragment on UserPrivilegeType {
+    id
+    objectId
+    entityType
+    privilegeType
+
+    # proposable
+    approved
+    rejected
+    canDeleteProposalEntry
+    proposalId
+}

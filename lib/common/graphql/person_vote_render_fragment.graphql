@@ -1,0 +1,8 @@
+# import './official_render_fragment.graphql'
+
+fragment PersonVoteRenderFragment on PersonVoteType{
+    option
+    voter {
+        ...OfficialRenderFragment
+    }
+}

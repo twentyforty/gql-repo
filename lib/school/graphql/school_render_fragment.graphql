@@ -1,0 +1,5 @@
+fragment SchoolRenderFragment on SchoolType {
+    id
+    name
+    organizationId
+}

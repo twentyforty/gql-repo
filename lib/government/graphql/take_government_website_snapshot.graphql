@@ -1,0 +1,9 @@
+# import './government_website_snapshot_fragment.graphql'
+
+mutation TakeGovernmentWebsiteSnapshot($input: TakeGovernmentWebsiteSnapshotInput!) {
+    takeGovernmentWebsiteSnapshot(input: $input) {
+        result {
+            ...GovernmentWebsiteSnapshotFragment
+        }
+    }
+}

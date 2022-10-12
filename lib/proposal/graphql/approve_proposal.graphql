@@ -1,0 +1,10 @@
+# import './proposed_fragment.graphql'
+
+
+mutation ApproveProposal($input: ApproveProposableInput!) {
+    approveProposal(input: $input) {
+        proposal {
+            ...ProposedFragment
+        }
+    }
+}

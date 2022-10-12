@@ -1,0 +1,14 @@
+# import './government_website_render_fragment.graphql'
+# import '../../common/graphql/pagination_fragment.graphql'
+
+
+query GetGovernmentWebsites($input: GovernmentWebsitePaginationInput!) {
+    governmentWebsites(input: $input) {
+        items {
+            ...GovernmentWebsiteRenderFragment
+        }
+        pagination {
+            ...PaginationOuputFragment
+        }
+    }
+}

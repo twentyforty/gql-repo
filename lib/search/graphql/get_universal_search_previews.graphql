@@ -1,0 +1,16 @@
+fragment UniversalSearchPreviewFragment on UniversalSearchPreviewType {
+    documentType
+    totalResultCount
+    headerTitle
+}
+
+fragment UniversalSearchPreviewsFragment on UnivesalSearchPreviewsType {
+    previews {
+        ...UniversalSearchPreviewFragment
+    }
+}
+query GetUniversalSearchPreviews($input: UniversalSearchPreviewsInput!) {
+    universalSearchPreviews(input: $input) {
+        ...UniversalSearchPreviewsFragment
+    }
+}

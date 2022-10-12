@@ -1,0 +1,7 @@
+# import './citation_fragment.graphql'
+
+query GetCitation($input: CitationInput!) {
+    citation(input: $input) {
+        ...CitationFragment
+    }
+}

@@ -1,0 +1,14 @@
+# import './bill_render_fragment.graphql'
+
+fragment BillVersionRenderFragment on BillVersionType {
+    id
+    bill {
+        ...BillRenderFragment
+    }
+    note
+    date
+    processedUrl
+    imagePreviewUrl
+}
+
+

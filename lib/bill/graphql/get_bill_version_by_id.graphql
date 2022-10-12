@@ -1,0 +1,7 @@
+# import './bill_version_fragment.graphql'
+
+query GetBillVersionById($billVersionId: String!) {
+    billVersionById(billVersionId: $billVersionId) {
+        ...BillVersionFragment
+    }
+}

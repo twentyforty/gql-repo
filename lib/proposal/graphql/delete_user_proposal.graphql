@@ -1,0 +1,10 @@
+# import './proposed_fragment.graphql'
+
+
+mutation DeleteUserProposal($input: ProposalInput!) {
+    deleteUserProposal(input: $input) {
+        proposal {
+            ...ProposedFragment
+        }
+    }
+}

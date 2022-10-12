@@ -1,0 +1,5 @@
+mutation GetOrCreateDMChannel($input: GetOrCreateDMChannelInput!) {
+    getOrCreateDmChannel(input: $input) {
+        streamChannelId
+    }
+}

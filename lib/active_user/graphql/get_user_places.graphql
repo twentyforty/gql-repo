@@ -1,0 +1,14 @@
+# import './user_place_fragment.graphql'
+# import '../../common/graphql/pagination_fragment.graphql'
+
+
+query GetUserPlaces($input: PaginationInput!) {
+    userPlaces(input: $input) {
+        items {
+            ...UserPlaceFragment
+        }
+        pagination {
+            ...PaginationOuputFragment
+        }
+    }
+}

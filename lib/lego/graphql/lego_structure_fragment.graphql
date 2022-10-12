@@ -1,0 +1,12 @@
+# import './lego_fragment.graphql'
+
+
+fragment LegoStructureFragment on LegoStructureType {
+    lego {
+        ...LegoFragment
+    }
+    useTabTitles
+    trailingFeedSlug
+    trailingFeedId
+    trailingFeedTabTitle
+}

@@ -1,0 +1,9 @@
+# import './active_user_fragment.graphql'
+
+mutation UpdateFcmToken($input: UpdateFcmTokenInput!) {
+    updateFcmToken(input: $input) {
+        user {
+            ...ActiveUserFragment
+        }
+    }
+}

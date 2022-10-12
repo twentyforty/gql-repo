@@ -1,0 +1,6 @@
+fragment EventDocumentFragment on EventDocumentType {
+    date
+    note
+    classification
+    url
+}

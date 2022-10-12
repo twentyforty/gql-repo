@@ -1,0 +1,8 @@
+# import './feed_results_fragment.graphql'
+
+
+query GetFeed($input: FeedItemPaginationInput!) {
+    feedItems(input: $input) {
+        ...FeedResults
+    }
+}

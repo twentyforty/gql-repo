@@ -1,0 +1,10 @@
+# import './search_result_fragment.graphql'
+
+
+query GetUniversalTypeaheadResults($input: UniversalTypeaheadResultsInput!) {
+    universalTypeaheadResults(input: $input) {
+        items {
+            ...SearchResultFragment
+        }
+    }
+}

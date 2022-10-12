@@ -1,0 +1,28 @@
+# import './bill_action_render_fragment.graphql'
+# import './bill_render_fragment.graphql'
+# import '../../common/graphql/pagination_fragment.graphql'
+# import '../../common/graphql/person_vote_render_fragment.graphql'
+
+
+fragment BillResults on BillPaginatedType {
+    pagination {
+        ...PaginationOuputFragment
+    }
+	items {
+        ...BillRenderFragment
+        latestAction {
+            ...BillActionRenderFragment
+        }
+        myRepresentativesLatestVote {
+            ...PersonVoteRenderFragment
+        }
+    }
+}
+
+
+query GetBillsById($input: BillPaginationInput!) {
+    billsById(input: $input) {
+        ...BillResults
+    }
+}
+    

@@ -1,0 +1,15 @@
+# import "./field_value_fragment.graphql"
+# import "./field_spec_fragment.graphql"
+
+fragment FieldEntrySpecFragment on FieldEntrySpecType {
+    fieldSpec {
+        ...FieldSpecFragment
+    }
+    entryType
+    initialValue {
+        ...FieldValueFragment
+    }
+    options {
+        ...FieldValueFragment
+    }
+}

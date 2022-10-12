@@ -1,0 +1,6 @@
+
+mutation FollowFeed($input: FollowFeedsInput!) {
+    followFeeds(input: $input) {
+        result
+    }
+}

@@ -1,0 +1,9 @@
+# import './active_user_fragment.graphql'
+
+mutation UpdateUserCurrentPlace($input: UserPlaceInput!) {
+    updateUserCurrentPlace(input: $input) {
+        user {
+            ...ActiveUserFragment
+        }
+    }
+}

@@ -1,0 +1,9 @@
+# import '../../common/graphql/related_image_fragment.graphql'
+
+mutation ProposeRelatedImage($input: ProposeRelatedImageInput!) {
+    proposeRelatedImage(input: $input) {
+        relatedImage {
+            ...RelatedImageFragment
+        }
+    }
+}

@@ -1,0 +1,12 @@
+# import './civiqa_entity_fragment.graphql'
+
+
+fragment UserBookmarkFragment on UserBookmarkType {
+    id
+    savedTimestamp
+    archivedTimestamp
+    notes
+    entity {
+        ...CiviqaEntityFragment
+    }
+}

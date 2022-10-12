@@ -1,0 +1,14 @@
+# import './qa_response_tile_fragment.graphql'
+# import './qa_response_render_fragment.graphql'
+# import '../composition/qa_composition_fragment.graphql'
+
+
+fragment QAResponseFragment on QAResponseType {
+    ...QAResponseTileFragment
+    composition {
+        ...QACompositionFragment
+    }
+    authorReply {
+        ...QAResponseRenderFragment
+    }
+}

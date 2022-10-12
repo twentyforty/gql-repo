@@ -1,0 +1,14 @@
+fragment InterestFragment on InterestType {
+    id
+    name 
+    slug
+    hexColor
+    emojiRep
+    parent {
+        id
+        name 
+        slug
+        hexColor
+        emojiRep
+    }
+}

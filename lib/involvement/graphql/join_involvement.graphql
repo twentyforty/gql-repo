@@ -1,0 +1,9 @@
+# import './involvement_fragment.graphql'
+
+mutation JoinInvolvement($input: JoinInvolvementInput!) {
+    joinInvolvement(input: $input) {
+        involvement {
+            ...InvolvementFragment
+        }
+    }
+}

@@ -1,0 +1,3 @@
+query IsFollowingInterest($input: InterestInput!) {
+    isFollowingInterest(input: $input)
+}

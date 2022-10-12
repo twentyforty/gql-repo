@@ -1,0 +1,9 @@
+# import '../../common/graphql/user_bookmark_fragment.graphql'
+
+mutation SaveUserBookmark($input: SaveUserBookmarkInput!) {
+    saveUserBookmark(input: $input) {
+        bookmark {
+            ...UserBookmarkFragment
+        }
+    }
+}

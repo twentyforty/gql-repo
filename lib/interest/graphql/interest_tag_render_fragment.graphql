@@ -1,0 +1,12 @@
+# import './interest_fragment.graphql'
+
+fragment InterestTagRenderFragment on InterestTagType {
+    id
+    interest {
+        ...InterestFragment
+    }
+    proposalId
+    approved
+    rejected
+    canDeleteProposalEntry
+}

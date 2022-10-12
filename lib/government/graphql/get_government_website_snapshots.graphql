@@ -1,0 +1,14 @@
+# import './government_website_snapshot_render_fragment.graphql'
+# import '../../common/graphql/pagination_fragment.graphql'
+
+
+query GetGovernmentWebsiteSnapshots($input: GovernmentWebsitePaginationInput!) {
+    governmentWebsiteSnapshots(input: $input) {
+        items {
+            ...GovernmentWebsiteSnapshotRenderFragment
+        }
+        pagination {
+            ...PaginationOuputFragment
+        }
+    }
+}

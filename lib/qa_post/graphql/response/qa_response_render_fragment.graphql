@@ -1,0 +1,25 @@
+# import '../../../common/graphql/user_fragment.graphql'
+# import '../composition/qa_composition_render_fragment.graphql'
+
+
+fragment QAResponseRenderFragment on QAResponseType {
+    id
+    user {
+        ...UserFragment
+    }
+    createdTimestamp
+    publishedTimestamp
+
+    yayCount
+    canReply
+
+    isYayedByMe
+    isBookmarkedByMe
+    isReportedByMe
+
+    authorReplied
+
+    composition {
+        ...QACompositionRenderFragment
+    }
+}

@@ -1,0 +1,10 @@
+# import '../../common/graphql/user_fragment.graphql'
+
+fragment InvolvementMembershipRenderFragment on InvolvementMembershipType {
+    user {
+        ...UserFragment
+    }
+    isAdmin
+    joinedAt
+    leftAt
+}

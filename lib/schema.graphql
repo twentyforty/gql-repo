@@ -1,0 +1,2733 @@
+schema {
+  query: Queries
+  mutation: Mutations
+}
+
+"""Exposes a URL that specifies the behaviour of this scalar."""
+directive @specifiedBy(
+  """The URL that specifies the behaviour of this scalar."""
+  url: String!
+) on SCALAR
+
+type ActivityFeedItemType {
+  title: String
+  titleLinkUrl: String
+  subtitle: String
+  subtitleLinkUrl: String
+  avatarImageUrl: String
+  avatarLabel: String
+  avatarLinkUrl: String
+  timestamp: DateTime
+  textContent: AttributedStringType
+  imageContentUrl: String
+  videoContentUrl: String
+  voteEvent: VoteEventType
+  qaPost: QAPostType
+  origin: AttributedStringType
+}
+
+input AllQAPostsInput {
+  token: String!
+  pageSize: Int!
+  govStackOnly: Boolean
+}
+
+"""An enumeration."""
+enum ApiProposalLogEntryActionChoices {
+  """Propose"""
+  PROPOSE
+
+  """Approve"""
+  APPROVE
+
+  """Reject"""
+  REJECT
+
+  """Comment"""
+  COMMENT
+}
+
+"""An enumeration."""
+enum ApiRelatedImageImageTypeChoices {
+  """Profile photo"""
+  PROFILE_PHOTO
+
+  """Cover photo"""
+  COVER_PHOTO
+}
+
+"""An enumeration."""
+enum ApiSchoolDistrictSurveyGradeHiChoices {
+  """Pre-K"""
+  PK
+
+  """Kindergarten"""
+  KG
+
+  """1st Grade"""
+  A_01
+
+  """2nd Grade"""
+  A_02
+
+  """3rd Grade"""
+  A_03
+
+  """4th Grade"""
+  A_04
+
+  """5th Grade"""
+  A_05
+
+  """6th Grade"""
+  A_06
+
+  """7th Grade"""
+  A_07
+
+  """8th Grade"""
+  A_08
+
+  """9th Grade"""
+  A_09
+
+  """10th Grade"""
+  A_10
+
+  """11th Grade"""
+  A_11
+
+  """12th Grade"""
+  A_12
+
+  """M"""
+  M
+
+  """N"""
+  N
+
+  """Ae"""
+  AE
+
+  """Ug"""
+  UG
+
+  """Grade 13"""
+  A_13
+}
+
+"""An enumeration."""
+enum ApiSchoolDistrictSurveyGradeLoChoices {
+  """Pre-K"""
+  PK
+
+  """Kindergarten"""
+  KG
+
+  """1st Grade"""
+  A_01
+
+  """2nd Grade"""
+  A_02
+
+  """3rd Grade"""
+  A_03
+
+  """4th Grade"""
+  A_04
+
+  """5th Grade"""
+  A_05
+
+  """6th Grade"""
+  A_06
+
+  """7th Grade"""
+  A_07
+
+  """8th Grade"""
+  A_08
+
+  """9th Grade"""
+  A_09
+
+  """10th Grade"""
+  A_10
+
+  """11th Grade"""
+  A_11
+
+  """12th Grade"""
+  A_12
+
+  """M"""
+  M
+
+  """N"""
+  N
+
+  """Ae"""
+  AE
+
+  """Ug"""
+  UG
+
+  """Grade 13"""
+  A_13
+}
+
+"""An enumeration."""
+enum ApiSchoolSurveyGradeHiChoices {
+  """Pre-K"""
+  PK
+
+  """Kindergarten"""
+  KG
+
+  """1st Grade"""
+  A_01
+
+  """2nd Grade"""
+  A_02
+
+  """3rd Grade"""
+  A_03
+
+  """4th Grade"""
+  A_04
+
+  """5th Grade"""
+  A_05
+
+  """6th Grade"""
+  A_06
+
+  """7th Grade"""
+  A_07
+
+  """8th Grade"""
+  A_08
+
+  """9th Grade"""
+  A_09
+
+  """10th Grade"""
+  A_10
+
+  """11th Grade"""
+  A_11
+
+  """12th Grade"""
+  A_12
+
+  """M"""
+  M
+
+  """N"""
+  N
+
+  """Ae"""
+  AE
+
+  """Ug"""
+  UG
+
+  """Grade 13"""
+  A_13
+}
+
+"""An enumeration."""
+enum ApiSchoolSurveyGradeLoChoices {
+  """Pre-K"""
+  PK
+
+  """Kindergarten"""
+  KG
+
+  """1st Grade"""
+  A_01
+
+  """2nd Grade"""
+  A_02
+
+  """3rd Grade"""
+  A_03
+
+  """4th Grade"""
+  A_04
+
+  """5th Grade"""
+  A_05
+
+  """6th Grade"""
+  A_06
+
+  """7th Grade"""
+  A_07
+
+  """8th Grade"""
+  A_08
+
+  """9th Grade"""
+  A_09
+
+  """10th Grade"""
+  A_10
+
+  """11th Grade"""
+  A_11
+
+  """12th Grade"""
+  A_12
+
+  """M"""
+  M
+
+  """N"""
+  N
+
+  """Ae"""
+  AE
+
+  """Ug"""
+  UG
+
+  """Grade 13"""
+  A_13
+}
+
+type ApproveProposable {
+  proposal: ProposalType!
+}
+
+input ApproveProposableInput {
+  proposalId: String!
+  approve: Boolean!
+}
+
+type ArchiveEntity {
+  success: Boolean
+}
+
+type AttributedStringPartType {
+  replacement: String!
+  url: String!
+}
+
+type AttributedStringType {
+  pattern: String!
+  parts: [AttributedStringPartType]!
+}
+
+type AutocompleteOptionType {
+  fieldValue: FieldValueType!
+  imageUrl: String
+  subtitle: String
+}
+
+type BillAbstractType {
+  id: UUID!
+  bill: BillType!
+  abstract: String!
+  note: String!
+}
+
+type BillActionPaginatedType {
+  pagination: PaginationOutput!
+  items: [BillActionType]
+}
+
+input BillActionPaginationInput {
+  token: String!
+  pageSize: Int!
+  legislativeSessionId: String
+  jurisdictionId: String
+  organizationId: String
+}
+
+type BillActionType {
+  id: UUID!
+  bill: BillType!
+  organization: OrganizationType!
+  description: String!
+  date: String!
+  classification: [String!]!
+}
+
+type BillActivityDayType {
+  date: Date!
+  activities: [BillActivityType]!
+  userResponseCount: Int
+}
+
+type BillActivityType {
+  voteEvent: VoteEventType
+  billAction: BillActionType
+  billDocument: BillDocumentType
+}
+
+type BillDocumentLinkType {
+  mediaType: String!
+  url: String!
+  document: BillDocumentType!
+}
+
+type BillDocumentPaginatedType {
+  pagination: PaginationOutput!
+  items: [BillDocumentType]
+}
+
+input BillDocumentPaginationInput {
+  token: String!
+  pageSize: Int!
+  billId: String
+}
+
+type BillDocumentType {
+  id: UUID!
+  bill: BillType!
+  note: String!
+  date: String!
+  classification: DataBillDocumentClassificationChoices
+  extras: JSONString!
+  links: [BillDocumentLinkType!]!
+  processedUrl: String
+  imagePreviewUrl: String
+}
+
+type BillPaginatedType {
+  pagination: PaginationOutput!
+  items: [BillType]
+}
+
+input BillPaginationInput {
+  token: String!
+  pageSize: Int!
+  legislativeSessionId: String
+}
+
+type BillSponsorshipPaginatedType {
+  pagination: PaginationOutput!
+  items: [BillSponsorshipType]
+}
+
+input BillSponsorshipPaginationInput {
+  token: String!
+  pageSize: Int!
+  billId: String
+  officialId: String
+}
+
+type BillSponsorshipType {
+  bill: BillType!
+  primary: Boolean!
+  classification: String!
+  person: OfficialType!
+}
+
+type BillType implements InterestTaggableInterface {
+  id: String!
+  identifier: String!
+  title: String!
+  fromOrganization: OrganizationType
+  classification: [String!]!
+  subject: [String!]!
+  abstracts: [BillAbstractType!]!
+  actions: [BillActionType]!
+  documents: [BillDocumentType!]!
+  versions: [BillVersionType!]!
+  canApproveTags: Boolean!
+  tags: [InterestTagType]!
+  votes: [VoteEventType]!
+  mainSponsorships: [BillSponsorshipType]!
+  latestAction: BillActionType
+  latestVote: VoteEventType
+  latestVersion: BillVersionType
+  stages: JSONString
+  documentCount: Int!
+  versionCount: Int!
+  sponsorshipCount: Int!
+  isFollowedByMe: Boolean!
+  myRepresentativesLatestVote: [PersonVoteType]!
+  documentSample: [BillDocumentType]!
+  pendingProposalCount: Int
+  legislativeSession: LegislativeSessionType!
+}
+
+type BillVersionActivitiesType {
+  activitiesByDay: [BillActivityDayType]!
+}
+
+type BillVersionLinkType {
+  mediaType: String!
+  url: String!
+  version: BillVersionType!
+}
+
+type BillVersionPaginatedType {
+  pagination: PaginationOutput!
+  items: [BillVersionType]
+}
+
+input BillVersionPaginationInput {
+  token: String!
+  pageSize: Int!
+  billId: String
+}
+
+type BillVersionType {
+  id: UUID!
+  bill: BillType!
+  note: String!
+  date: String!
+  classification: DataBillVersionClassificationChoices
+  extras: JSONString!
+  links: [BillVersionLinkType!]!
+  processedUrl: String
+  imagePreviewUrl: String
+  activities: BillVersionActivitiesType!
+}
+
+input ChildDivisionsInput {
+  token: String!
+  pageSize: Int!
+  parentDivisionId: String!
+  childDivisionType: String
+}
+
+type ChildDivisionsType {
+  pagination: PaginationOutput!
+  items: [DivisionType]
+}
+
+type CitationEntityPaginatedType {
+  pagination: PaginationOutput!
+  items: [CiviqaEntityType]
+}
+
+type CitationHighlightType {
+  id: UUID!
+  citation: CitationType!
+  timestamp: DateTime!
+  user: CiviqaUserType!
+  pageIndex: Int!
+  color: String!
+  croppedPdfFileUrl: String
+  imageFileUrl: String
+}
+
+input CitationInput {
+  citationId: String
+}
+
+type CitationPaginatedType {
+  pagination: PaginationOutput!
+  items: [CitationType]
+}
+
+input CitationsInput {
+  token: String!
+  pageSize: Int!
+  billVersionId: String
+  eventDocumentId: String
+  legalCodeNodeId: String
+  governmentWebsiteSnapshotId: String
+  governmentEmailMessageId: String
+}
+
+type CitationSourceType {
+  id: UUID!
+  sourcePdfUrl: String!
+  reportedPublishedDate: DateTime
+  title: String!
+  subtitle: String
+  legalCodeNode: LegalCodeNodeType
+  governmentWebsiteSnapshot: GovernmentWebsiteSnapshotType
+  governmentEmailMessage: GovernmentEmailMessageType
+  billDocument: BillDocumentType
+  billVersion: BillVersionType
+  eventDocument: EventDocumentType
+}
+
+type CitationType {
+  id: UUID!
+  source: CitationSourceType
+  firstCiter: CiviqaUserType!
+  firstCitedTimestamp: DateTime
+  highlightedPdfFileUrl: String
+  highlights: [CitationHighlightType]!
+  highlightCount: Int
+  isMyDraft: Boolean
+  useCount: Int!
+}
+
+"""An enumeration."""
+enum CiviqaEntityEnumType {
+  USER_MEDIA_UPLOAD
+  CITATION
+  QA_POST
+  QA_RESPONSE
+  GOVERNMENT_WEBSITE_SNAPSHOT
+  EVENT
+  BILL
+  GOVERNMENT
+  DIVISION
+  OFFICIAL
+  ORGANIZATION
+  USER_CAMERA_MEDIA
+  SCHOOL_DISTRICT
+  SCHOOL
+  GOVERNMENT_EMAIL_MESSAGE
+  GOVERNMENT_WEBSITE
+  CIVIQA_USER
+}
+
+input CiviqaEntityInput {
+  modelId: String
+  entitiyType: CiviqaEntityEnumType
+}
+
+type CiviqaEntityType {
+  id: String!
+  citation: CitationType
+  qaPost: QAPostType
+  qaResponse: QAResponseType
+  governmentWebsite: GovernmentWebsiteType
+  governmentWebsiteSnapshot: GovernmentWebsiteSnapshotType
+  governmentEmailMessage: GovernmentEmailMessageType
+  civiqaUser: CiviqaUserType
+  mentions: [QAMentionType!]!
+  bookmarks: [UserBookmarkType!]!
+  entityType: CiviqaEntityEnumType!
+  modelId: String!
+  mainImageUrl: String
+  title: String
+  subtitle: String
+  subtitle2: String
+  appLink: String
+  carouselImageUrls: [String]
+  tileAvatarLabel: String
+  icon: IconType
+  cardUseAvatar: Boolean
+  tileUseAvatar: Boolean
+  videoUrl: String
+  author: CiviqaUserType
+  publishedDate: DateTime
+  canDelete: Boolean
+  canArchive: Boolean
+  canUnarchive: Boolean
+}
+
+input CiviqaFeedInput {
+  civiqaId: String!
+  offset: Int
+  limit: Int
+}
+
+type CiviqaFeedType {
+  items: [QAPostType]!
+  offset: Int!
+  nextOffset: Int
+}
+
+type CiviqaUserType {
+  id: ID!
+
+  """Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only."""
+  username: String!
+
+  """Designates whether the user can log into this admin site."""
+  isStaff: Boolean!
+  email: String!
+  needsNux: Boolean!
+  isFirebaseAnonymous: Boolean!
+  fcmToken: String
+  photoUrl: String
+  fullName: String!
+  currentUserPlace: UserPlaceType!
+  places: [UserPlaceType]!
+  streamChatApiKey: String!
+  googleApiKey: String!
+  discoverTabFirst: Boolean!
+  userBookmarkTypeCounts: [UserBookmarkTypeCount]!
+  fcmTokenStale: Boolean
+  official: OfficialType
+  officialId: String
+  subtitle: String
+  latestUserCameraMedia: CiviqaEntityType
+  privileges: [UserPrivilegeType]!
+}
+
+type CompleteNux {
+  user: CiviqaUserType
+}
+
+input CompleteNuxInput {
+  interestIds: [String]!
+}
+
+type CreateEnrichmentProposal {
+  errors: [FieldErrorType]
+}
+
+input CreateEnrichmentProposalInput {
+  enrichmentType: EnrichmentType!
+  createData: JSONString
+}
+
+type CreateGovernmentEmailSubscription {
+  subscription: GovernmentEmailSubscriptionType
+}
+
+input CreateGovernmentEmailSubscriptionInput {
+  title: String
+  jurisdictionId: String
+  organizationId: String
+  officialId: String
+}
+
+type CreateInvolvement {
+  involvement: InvolvementType
+}
+
+input CreateInvolvementInput {
+  name: String
+  purpose: String
+  divisionId: String
+}
+
+type CreateQAPost {
+  qaPost: QAPostType!
+}
+
+input CreateQAPostInput {
+  officialId: String
+  organizationId: String
+  jurisdictionId: String
+}
+
+type CreateUserPlace {
+  user: CiviqaUserType
+}
+
+input CreateUserPlaceInput {
+  address: String!
+  label: String
+  isTemporary: Boolean
+  isCurrent: Boolean
+}
+
+"""An enumeration."""
+enum DataBillDocumentClassificationChoices {
+  """Unknown"""
+  A_
+
+  """Fiscal Note"""
+  FISCAL_NOTE
+
+  """Committee Report"""
+  COMMITTEE_REPORT
+
+  """Summary"""
+  SUMMARY
+
+  """Digest"""
+  DIGEST
+
+  """Veto Message"""
+  VETO_MESSAGE
+
+  """Analysis"""
+  ANALYSIS
+
+  """Law"""
+  LAW
+
+  """Unknown"""
+  A__8
+}
+
+"""An enumeration."""
+enum DataBillVersionClassificationChoices {
+  """Unknown"""
+  A_
+
+  """Filed"""
+  FILED
+
+  """Introduced"""
+  INTRODUCED
+
+  """Amendment"""
+  AMENDMENT
+
+  """Substituted"""
+  SUBSTITUTED
+
+  """Enrolled"""
+  ENROLLED
+
+  """Became Law"""
+  BECAME_LAW
+}
+
+"""An enumeration."""
+enum DataEventDocumentClassificationChoices {
+  """Agenda"""
+  AGENDA
+
+  """Minutes"""
+  MINUTES
+
+  """Transcript"""
+  TRANSCRIPT
+
+  """Testimony"""
+  TESTIMONY
+
+  """Unknown"""
+  A_
+}
+
+"""An enumeration."""
+enum DataJurisdictionClassificationChoices {
+  """State"""
+  STATE
+
+  """Country"""
+  COUNTRY
+
+  """Municipality"""
+  MUNICIPALITY
+
+  """School district"""
+  SCHOOL_DISTRICT
+}
+
+"""An enumeration."""
+enum DataLegislativeSessionClassificationChoices {
+  """Primary"""
+  PRIMARY
+
+  """Special"""
+  SPECIAL
+
+  """Unknown"""
+  A_
+}
+
+"""An enumeration."""
+enum DataOrganizationClassificationChoices {
+  """Legislature"""
+  LEGISLATURE
+
+  """Executive"""
+  EXECUTIVE
+
+  """Upper Chamber"""
+  UPPER
+
+  """Lower Chamber"""
+  LOWER
+
+  """Party"""
+  PARTY
+
+  """Committee"""
+  COMMITTEE
+
+  """Government"""
+  GOVERNMENT
+
+  """Subcommittee"""
+  SUBCOMMITTEE
+
+  """Judicial"""
+  JUDICIAL
+
+  """School"""
+  SCHOOL
+
+  """Unknown"""
+  A_
+}
+
+"""An enumeration."""
+enum DataPersonVoteOptionChoices {
+  """Yes"""
+  YES
+
+  """No"""
+  NO
+
+  """Absent"""
+  ABSENT
+
+  """Abstain"""
+  ABSTAIN
+
+  """Not Voting"""
+  NOT_VOTING
+
+  """Paired"""
+  PAIRED
+
+  """Excused"""
+  EXCUSED
+
+  """Other"""
+  OTHER
+
+  """Unknown"""
+  A_
+}
+
+"""An enumeration."""
+enum DataVoteCountOptionChoices {
+  """Yes"""
+  YES
+
+  """No"""
+  NO
+
+  """Absent"""
+  ABSENT
+
+  """Abstain"""
+  ABSTAIN
+
+  """Not Voting"""
+  NOT_VOTING
+
+  """Paired"""
+  PAIRED
+
+  """Excused"""
+  EXCUSED
+
+  """Other"""
+  OTHER
+
+  """Unknown"""
+  A_
+}
+
+"""An enumeration."""
+enum DataVoteEventResultChoices {
+  """Pass"""
+  PASS
+
+  """Fail"""
+  FAIL
+}
+
+"""
+The `Date` scalar type represents a Date
+value as specified by
+[iso8601](https://en.wikipedia.org/wiki/ISO_8601).
+"""
+scalar Date
+
+"""
+The `DateTime` scalar type represents a DateTime
+value as specified by
+[iso8601](https://en.wikipedia.org/wiki/ISO_8601).
+"""
+scalar DateTime
+
+type DeleteCitation {
+  success: Boolean
+}
+
+type DeleteCitationHighlight {
+  citation: CitationType
+}
+
+input DeleteCitationHighlightInput {
+  citationHighlightId: String!
+}
+
+input DeleteCitationInput {
+  citationId: String!
+}
+
+type DeleteEntity {
+  success: Boolean
+}
+
+type DeleteUserInterestTagProposals {
+  result: [InterestTagType]!
+}
+
+input DeleteUserInterestTagProposalsInput {
+  objectId: String!
+  objectType: TagObjectType!
+  interestTagId: String!
+}
+
+type DeleteUserPlace {
+  user: CiviqaUserType
+}
+
+type DeleteUserProposal {
+  proposal: ProposalType!
+}
+
+type DiscardQAPostDraft {
+  discarded: Boolean
+}
+
+input DiscardQAPostDraftInput {
+  qaPostId: String
+}
+
+type DiscardQAResponseDraft {
+  discarded: Boolean
+}
+
+input DiscardQAResponseDraftInput {
+  qaResponseId: String
+}
+
+input DivisionInput {
+  divisionId: String!
+}
+
+type DivisionType {
+  id: String!
+
+  """The name of the division."""
+  name: String!
+
+  """A link to a Division related to this Jurisdiction."""
+  jurisdictions: [JurisdictionType!]!
+  coverPhotoUrl: String
+  photoUrl: String
+  boundary: String
+  mapImageUrl: String
+  largeMapImageUrl: String
+  mapImageDarkUrl: String
+  largeMapImageDarkUrl: String
+  images: [RelatedImageType]!
+  wikiSummary: String
+  census2020Population: Int
+  census2021Population: Int
+  organizations: [OrganizationType]!
+  parentDivisions: [DivisionType]!
+  canStartQaPost: Boolean
+  pendingProposalCount: Int
+  jurisdictionIds: [String]!
+  geoLastRefreshed: DateTime
+  civicLastRefreshed: DateTime
+  displayString: String!
+}
+
+input EnrichmentAutocompleteInput {
+  enrichmentType: EnrichmentType!
+  currentData: JSONString
+  fieldName: String
+  queryString: String
+}
+
+type EnrichmentFieldEntrySpecs {
+  fieldEntrySpecs: [FieldEntrySpecType]
+  errors: [FieldErrorType]
+}
+
+input EnrichmentFieldEntrySpecsInput {
+  enrichmentType: EnrichmentType!
+  initialData: JSONString
+}
+
+"""An enumeration."""
+enum EnrichmentType {
+  NEW_ORGANIZATION
+  NEW_DIVISION
+  NEW_POST
+  NEW_PERSON
+  NEW_MEMBERSHIP
+  NEW_PERSON_OFFICE
+}
+
+type EventDocumentType {
+  event: EventType!
+  note: String!
+  date: String!
+  classification: DataEventDocumentClassificationChoices
+  url: String
+}
+
+type EventPaginatedType {
+  pagination: PaginationOutput!
+  items: [EventType]
+}
+
+input EventPaginationInput {
+  token: String!
+  pageSize: Int!
+  jurisdictionId: String
+}
+
+type EventType implements InterestTaggableInterface & HasMuxVideoInterface {
+  id: String!
+  jurisdiction: JurisdictionType!
+  description: String!
+  startDate: String!
+  documents: [EventDocumentType!]!
+  canApproveTags: Boolean!
+  tags: [InterestTagType]!
+  duration: Float
+  videoUrl: String
+  videoThumbnailUrl: String
+  animatedGifUrl: String
+  name: String!
+  audioUrl: String
+  pendingProposalCount: Int
+}
+
+input FeedIdType {
+  slug: String!
+  feedId: String!
+}
+
+input FeedItemInput {
+  feedSlug: FeedSlug!
+  feedId: String!
+}
+
+type FeedItemPaginatedType {
+  pagination: PaginationOutput!
+  items: [ActivityFeedItemType]
+}
+
+input FeedItemPaginationInput {
+  token: String!
+  pageSize: Int!
+  feedSlug: FeedSlug!
+  feedId: String!
+}
+
+"""An enumeration."""
+enum FeedSlug {
+  JURISDICTION
+  EVENT
+  BILL
+  INVOLVEMENT
+  ORGANIZATION
+  OFFICIAL
+  OFFICIAL_BILL_VOTES
+  OFFICIAL_BILL_SPONSORSHIPS
+  USER_ACTIVITY
+  USER_FOLLOWING
+  USER_PLACE_FOLLOWING
+  INTEREST
+  DIVISION_INTEREST
+  PLACE_INTEREST
+  CIVIQA
+  QA_POST
+  USER_NOTIFICATION
+}
+
+"""An enumeration."""
+enum FieldDataType {
+  STRING
+  MODEL_ID
+  NUMBER
+  EMAIL
+  URL
+}
+
+type FieldEntrySpecType {
+  fieldSpec: FieldSpecType!
+  entryType: FieldEntryType!
+  initialValue: FieldValueType
+  options: [FieldValueType]
+}
+
+"""An enumeration."""
+enum FieldEntryType {
+  READONLY
+  TEXTBOX
+  DROPDOWN
+  RADIO
+  AUTO_COMPLETE
+  EMAIL
+  URL
+}
+
+type FieldErrorType {
+  fieldName: String
+  error: String!
+}
+
+type FieldSpecType {
+  fieldName: String!
+  displayName: String!
+  dataType: FieldDataType!
+  required: Boolean!
+  minStringLength: Int
+  maxStringLength: Int
+  minNumValue: Int
+  maxNumValue: Int
+  choices: [FieldValueType]
+}
+
+type FieldValueType {
+  value: String!
+  displayString: String!
+  inAppUrl: String
+}
+
+type FollowFeeds {
+  result: Boolean
+}
+
+input FollowFeedsInput {
+  follow: Boolean!
+  targetFeeds: [FeedIdType]
+}
+
+type FollowInterest {
+  result: Boolean!
+}
+
+input FollowInterestInput {
+  interestId: String!
+  doFollow: Boolean!
+}
+
+type GetOrCreateDMChannel {
+  streamChannelId: String
+}
+
+input GetOrCreateDMChannelInput {
+  targetUserId: String
+}
+
+type GetOrCreateQAResponse {
+  qaResponse: QAResponseType!
+}
+
+input GetOrCreateQAResponseInput {
+  qaPostId: String
+  draftQaResponseId: String
+  parentQaResponseId: String
+}
+
+type GovernmentEmailMessagePaginatedType {
+  pagination: PaginationOutput!
+  items: [GovernmentEmailMessageType]
+}
+
+input GovernmentEmailMessagePaginationInput {
+  token: String!
+  pageSize: Int!
+  officialId: String
+  organizationId: String
+  jurisdictionId: String
+  subscriptionId: String
+}
+
+type GovernmentEmailMessageType {
+  id: UUID!
+  subscription: GovernmentEmailSubscriptionType
+  timestamp: DateTime!
+  fromAddress: String!
+  subject: String
+  bodyText: String
+  bodyHtml: String
+  pdfFileUrl: String!
+  imagePreviewFileUrl: String
+}
+
+type GovernmentEmailSubscriptionPaginatedType {
+  pagination: PaginationOutput!
+  items: [GovernmentEmailSubscriptionType]
+}
+
+input GovernmentEmailSubscriptionPaginationInput {
+  token: String!
+  pageSize: Int!
+  officialId: String
+  organizationId: String
+  jurisdictionId: String
+  active: Boolean
+}
+
+type GovernmentEmailSubscriptionType {
+  id: UUID!
+  emailAddress: String!
+  title: String!
+  startDate: DateTime!
+  active: Boolean!
+  jurisdiction: JurisdictionType
+  official: OfficialType
+  organization: OrganizationType
+}
+
+type GovernmentWebsitePaginatedType {
+  pagination: PaginationOutput!
+  items: [GovernmentWebsiteType]
+}
+
+input GovernmentWebsitePaginationInput {
+  token: String!
+  pageSize: Int!
+  jurisdictionId: String
+  officialId: String
+  organizationId: String
+}
+
+type GovernmentWebsiteSnapshotPaginatedType {
+  pagination: PaginationOutput!
+  items: [GovernmentWebsiteSnapshotType]
+}
+
+input GovernmentWebsiteSnapshotPaginationInput {
+  token: String!
+  pageSize: Int!
+  governmentWebsiteId: String!
+}
+
+type GovernmentWebsiteSnapshotType {
+  id: UUID!
+  governmentWebsite: GovernmentWebsiteType!
+  pageTitle: String!
+  caption: String!
+  sourceUrl: String!
+  timestamp: DateTime!
+  createdBy: CiviqaUserType!
+  divisionId: String!
+  pdfFileUrl: String!
+  imagePreviewFileUrl: String
+}
+
+type GovernmentWebsiteType implements ProposableInterface {
+  title: String!
+  domain: String
+  url: String!
+  faviconUrl: String!
+  searchUrlPattern: String
+  id: String!
+  approved: Boolean!
+  rejected: Boolean!
+  canDeleteProposalEntry: Boolean!
+  proposal: ProposalType
+  proposalId: String
+  jurisdiction: JurisdictionType
+  official: OfficialType
+  organization: OrganizationType
+  divisionId: String!
+}
+
+interface HasMuxVideoInterface {
+  duration: Float
+  videoUrl: String
+  videoThumbnailUrl: String
+  animatedGifUrl: String
+}
+
+type IconType {
+  codePoint: String
+  fontFamily: String
+  fontPackage: String
+}
+
+input InterestFeedPaginationInput {
+  token: String!
+  pageSize: Int!
+  interestId: String!
+  govStackOnly: Boolean
+}
+
+input InterestInput {
+  interestId: String!
+}
+
+type InterestPaginatedType {
+  pagination: PaginationOutput!
+  items: [InterestType]
+}
+
+input InterestsPaginationInput {
+  token: String!
+  pageSize: Int!
+  categoriesOnly: Boolean
+  objectId: String
+  objectType: TagObjectType
+}
+
+interface InterestTaggableInterface {
+  canApproveTags: Boolean!
+  tags: [InterestTagType]!
+}
+
+input InterestTaggedObjectInput {
+  objectId: String!
+  objectType: TagObjectType!
+}
+
+type InterestTagPaginatedType {
+  pagination: PaginationOutput!
+  items: [InterestTagType]
+}
+
+type InterestTagType implements ProposableInterface {
+  streamActivityId: String
+  id: String!
+  interest: InterestType!
+  involvement: InvolvementType
+  qaPost: QAPostType
+  proposal: ProposalType
+  approved: Boolean!
+  rejected: Boolean!
+  canDeleteProposalEntry: Boolean!
+  proposalId: String
+  taggedBill: BillType
+  taggedEvent: EventType
+  taggedInvolvement: InvolvementType
+  taggedQaPost: QAPostType
+}
+
+type InterestType {
+  id: UUID!
+  name: String!
+  slug: String!
+  hexColor: String!
+  parent: InterestType
+  children: [InterestType]!
+  emojiRep: String!
+}
+
+input InvolvementInput {
+  involvementId: String
+}
+
+type InvolvementMembershipPaginatedType {
+  pagination: PaginationOutput!
+  items: [InvolvementMembershipType]
+}
+
+input InvolvementMembershipPaginationInput {
+  token: String!
+  pageSize: Int!
+  involvementId: String
+}
+
+type InvolvementMembershipType {
+  id: UUID!
+  involvement: InvolvementType!
+  isAdmin: Boolean!
+  joinedAt: DateTime!
+  leftAt: DateTime
+  user: CiviqaUserType!
+}
+
+type InvolvementPaginatedType {
+  pagination: PaginationOutput!
+  items: [InvolvementType]
+}
+
+type InvolvementType implements InterestTaggableInterface {
+  id: UUID!
+  name: String!
+  purpose: String!
+  streamChannelId: String
+  canApproveTags: Boolean!
+  tags: [InterestTagType]!
+  imageUrl: String
+  division: DivisionType!
+  admins: [InvolvementMembershipType]!
+  pendingProposalCount: Int
+}
+
+type JoinInvolvement {
+  involvement: InvolvementType
+}
+
+input JoinInvolvementInput {
+  involvementId: String!
+  join: Boolean!
+}
+
+"""
+Allows use of a JSON String for input / output from the GraphQL schema.
+
+Use of this type is *not recommended* as you lose the benefits of having a defined, static
+schema (one of the key benefits of GraphQL).
+"""
+scalar JSONString
+
+input JurisdictionInput {
+  jurisdictionId: String!
+}
+
+type JurisdictionType {
+  id: String!
+
+  """The common name of the Jurisdiction, such as 'Wyoming.'"""
+  name: String!
+
+  """The primary website of the Jurisdiction."""
+  url: String!
+
+  """The type of Jurisdiction being defined."""
+  classification: DataJurisdictionClassificationChoices!
+
+  """A link to a Division related to this Jurisdiction."""
+  division: DivisionType
+  schoolDistrict: SchoolDistrictType
+  photoUrl: String
+  coverPhotoUrl: String
+  pendingProposalCount: Int
+  legoStructure: LegoStructureType
+}
+
+input LegalCodeInput {
+  legalCodeId: String
+}
+
+input LegalCodeNodeInput {
+  legalCodeNodeId: String
+}
+
+type LegalCodeNodeType {
+  id: UUID!
+  title: String!
+  subtitle: String!
+  externalNodeId: String!
+  sourceUrl: String!
+  children: [LegalCodeNodeType]!
+  childCount: Int
+  docxFileUrl: String
+  pdfFileUrl: String
+}
+
+input LegalCodesInput {
+  jurisdictionId: String
+}
+
+type LegalCodeType {
+  id: UUID!
+  title: String!
+  subtitle: String!
+  sourceUrl: String!
+  createdAt: DateTime!
+  publishedDate: DateTime
+  rootNode: LegalCodeNodeType
+  jurisdiction: JurisdictionType
+}
+
+input LegislativeSessionInput {
+  legislativeSessionId: String
+}
+
+type LegislativeSessionPaginatedType {
+  pagination: PaginationOutput!
+  items: [LegislativeSessionType]
+}
+
+input LegislativeSessionsInput {
+  token: String!
+  pageSize: Int!
+  jurisdictionId: String
+}
+
+type LegislativeSessionType {
+  id: UUID!
+  jurisdiction: JurisdictionType!
+  identifier: String!
+  name: String!
+  classification: DataLegislativeSessionClassificationChoices
+  startDate: String!
+  endDate: String!
+}
+
+type LegoCellType {
+  title: String!
+  subtitle: String
+  textContent: String
+  useAvatar: Boolean
+  imageUrl: String
+  icon: IconType
+  avatarLabel: String
+  date: String
+  appLink: String
+}
+
+type LegoStructureType {
+  lego: [LegoType]!
+  trailingFeedTabTitle: String
+  trailingFeedSlug: FeedSlug
+  trailingFeedId: String
+  useTabTitles: Boolean!
+}
+
+type LegoType {
+  tabTitle: String
+  title: String
+  textContent: String
+  appLink: String
+  appLinkLabel: String
+  cells: [LegoCellType]
+  legoType: LegoTypeEnum!
+}
+
+"""An enumeration."""
+enum LegoTypeEnum {
+  HORIZONTAL_CARD_CAROUSEL
+  VERTICAL_TILES
+  TREE_CHART
+  EXPANDABLE_TEXT
+  CALL_TO_ACTION
+  FEED
+  DATA_TABLE
+}
+
+input MeInput {
+  publicIp: String
+  userEnteredZipcode: Int
+}
+
+type Mutations {
+  createQaPost(input: CreateQAPostInput!): CreateQAPost
+  saveQaPost(input: SaveQAPostInput!): SaveQAPost
+  discardQaPostDraft(input: DiscardQAPostDraftInput!): DiscardQAPostDraft
+  yayQaPost(input: YayQAPostInput!): YayQAPost
+  reportQaPost(input: ReportQAPostInput!): ReportQAPost
+  yayQaResponse(input: YayQAResponseInput!): YayQAResponse
+  reportQaResponse(input: ReportQAResponseInput!): ReportQAResponse
+  getOrCreateQaResponse(input: GetOrCreateQAResponseInput!): GetOrCreateQAResponse
+  saveQaResponse(input: SaveQAResponseInput!): SaveQAResponse
+  discardQaResponseDraft(input: DiscardQAResponseDraftInput!): DiscardQAResponseDraft
+  createEnrichmentProposal(input: CreateEnrichmentProposalInput!): CreateEnrichmentProposal
+  followFeeds(input: FollowFeedsInput!): FollowFeeds
+  deleteUserProposal(input: ProposalInput!): DeleteUserProposal
+  approveProposal(input: ApproveProposableInput!): ApproveProposable
+  proposeRelatedImage(input: ProposeRelatedImageInput!): ProposeRelatedImage
+  updateUserCurrentPlace(input: UserPlaceInput!): UpdateUserCurrentPlace
+  createUserPlace(input: CreateUserPlaceInput!): CreateUserPlace
+  deleteUserPlace(input: UserPlaceInput!): DeleteUserPlace
+  completeNux(input: CompleteNuxInput!): CompleteNux
+  updateFcmToken(input: UpdateFcmTokenInput!): UpdateFcmToken
+  getOrCreateDmChannel(input: GetOrCreateDMChannelInput!): GetOrCreateDMChannel
+  requestUserPrivilege(input: RequestUserPrivilegeInput!): RequestUserPrivilege
+  deleteEntity(input: CiviqaEntityInput!): DeleteEntity
+  archiveEntity(input: CiviqaEntityInput!): ArchiveEntity
+  unarchiveEntity(input: CiviqaEntityInput!): UnarchiveEntity
+  processDivision(input: DivisionInput!): ProcessDivision
+  saveUserBookmark(input: SaveUserBookmarkInput!): SaveUserBookmark
+  removeUserBookmark(input: RemoveUserBookmarkInput!): RemoveUserBookmark
+  proposeGovernmentWebsite(input: ProposeGovernmentWebsiteInput!): ProposeGovernmentWebsite
+  takeGovernmentWebsiteSnapshot(input: TakeGovernmentWebsiteSnapshotInput!): TakeGovernmentWebsiteSnapshot
+  createGovernmentEmailSubscription(input: CreateGovernmentEmailSubscriptionInput!): CreateGovernmentEmailSubscription
+  joinInvolvement(input: JoinInvolvementInput!): JoinInvolvement
+  createInvolvement(input: CreateInvolvementInput!): CreateInvolvement
+  proposeInterestTags(input: ProposeInterestTagsInput!): ProposeInterestTags
+  deleteUserInterestTagProposals(input: DeleteUserInterestTagProposalsInput!): DeleteUserInterestTagProposals
+  followInterest(input: FollowInterestInput!): FollowInterest
+  deleteCitation(input: DeleteCitationInput!): DeleteCitation
+  deleteCitationHighlight(input: DeleteCitationHighlightInput!): DeleteCitationHighlight
+  updateCitationHighlightCaption(input: UpdateCitationHighlightCaptionInput!): UpdateCitationHighlightCaption
+}
+
+input MyArchivedQAPostPaginationInput {
+  token: String!
+  pageSize: Int!
+}
+
+input MyArchivedQAResponsePaginationInput {
+  token: String!
+  pageSize: Int!
+}
+
+input MyCitationsInput {
+  token: String!
+  pageSize: Int!
+  archived: Boolean
+}
+
+input MyDraftQAPostPaginationInput {
+  token: String!
+  pageSize: Int!
+}
+
+input MyDraftQAResponsePaginationInput {
+  token: String!
+  pageSize: Int!
+}
+
+input MyPublishedQAPostPaginationInput {
+  token: String!
+  pageSize: Int!
+}
+
+type NewEntityEnrichmentType implements ProposableInterface {
+  id: String!
+  sourceUrl: String!
+  createData: JSONString
+  approved: Boolean!
+  rejected: Boolean!
+  canDeleteProposalEntry: Boolean!
+  proposal: ProposalType
+  proposalId: String
+  enrichmentType: String
+  displayFields: [FieldValueType]
+}
+
+type OfficialPaginatedType {
+  pagination: PaginationOutput!
+  items: [OfficialType]
+}
+
+input OfficialPaginationInput {
+  token: String!
+  pageSize: Int!
+  organizationId: String
+}
+
+type OfficialType {
+  id: String!
+
+  """A Person's preferred full name."""
+  name: String!
+
+  """The official email address of the Person."""
+  email: String!
+
+  """Primary party an individual is associated with."""
+  primaryParty: String!
+
+  """A link to the Person connected to this alternative identifier."""
+  identifiers: [PersonIdentifierType!]!
+  offices: [PersonOfficeType!]!
+  votes: [PersonVoteType!]!
+  photoUrl: String
+  coverPhotoUrl: String
+  currentMainMembership: OrganizationMembershipType
+  committeeCount: Int
+  voteCount: Int
+  primaryRole: String
+  canStartQaPost: Boolean
+  pendingProposalCount: Int
+  userId: String
+  legoStructure: LegoStructureType
+}
+
+input OrganizationInput {
+  organizationId: String
+}
+
+type OrganizationMembershipPaginatedType {
+  pagination: PaginationOutput!
+  items: [OrganizationMembershipType]!
+}
+
+input OrganizationMembershipPaginationInput {
+  token: String!
+  pageSize: Int!
+  personId: String
+  divisionId: String
+  organizationId: String
+  postId: String
+  currentOnly: Boolean
+  includeMembershipTypes: [String]
+  excludeMembershipTypes: [String]
+}
+
+type OrganizationMembershipType {
+  id: String!
+
+  """A link to the Organization in which the Person is a member."""
+  organization: OrganizationType!
+
+  """A link to the Person that is a member of the Organization."""
+  person: OfficialType
+
+  """	The Post held by the member in the Organization."""
+  post: PostType
+  role: String
+  label: String
+  startDate: Date
+  endDate: Date
+}
+
+type OrganizationPaginatedType {
+  pagination: PaginationOutput!
+  items: [OrganizationType]!
+}
+
+input OrganizationPaginationInput {
+  token: String!
+  pageSize: Int!
+  parentOrganizationId: String
+  jurisdictionId: String
+  includeMembershipTypes: [String]
+  excludeMembershipTypes: [String]
+}
+
+type OrganizationType {
+  id: String!
+
+  """The name of the Organization."""
+  name: String!
+
+  """
+  A link to another Organization that serves as this Organization's parent.
+  """
+  parent: OrganizationType
+
+  """A link to the Jurisdiction that contains this Organization."""
+  jurisdiction: JurisdictionType
+
+  """The type of Organization being defined."""
+  classification: DataOrganizationClassificationChoices
+  photoUrl: String
+  coverPhotoUrl: String
+  school: SchoolType
+  legoStructure: LegoStructureType
+  committeeCount: Int
+  children: [OrganizationType]!
+  myCurrentMembers: [OrganizationMembershipType]!
+  currentMemberCount: Int
+  currentMemberSample: [OrganizationMembershipType]!
+  currentLegislativeSession: LegislativeSessionType
+  canStartQaPost: Boolean
+  pendingProposalCount: Int
+  postCount: Int
+}
+
+input PaginationInput {
+  token: String!
+  pageSize: Int!
+}
+
+type PaginationOutput {
+  token: String!
+  nextToken: String
+}
+
+type PersonIdentifierType {
+  """A unique identifier developed by an upstream or third party source."""
+  identifier: String!
+
+  """The name of the service that created the identifier."""
+  scheme: String!
+}
+
+type PersonOfficeType {
+  address: String!
+  voice: String!
+  fax: String!
+  name: String!
+  classification: String
+}
+
+type PersonVotePaginatedType {
+  pagination: PaginationOutput!
+  items: [PersonVoteType]
+}
+
+input PersonVotePaginationInput {
+  token: String!
+  pageSize: Int!
+  voteEventId: String
+  option: String
+  personId: String
+}
+
+type PersonVoteType {
+  voteEvent: VoteEventType!
+  option: DataPersonVoteOptionChoices!
+  voterName: String!
+  voter: OfficialType
+}
+
+type PlaceType {
+  id: UUID!
+  address: String!
+  gmapsPlaceId: String!
+  lat: Float
+  lng: Float
+}
+
+input PostInput {
+  postId: String
+}
+
+type PostPaginatedType {
+  pagination: PaginationOutput!
+  items: [PostType]!
+}
+
+input PostPaginationInput {
+  token: String!
+  pageSize: Int!
+  organizationId: String
+}
+
+type PostType {
+  id: String!
+
+  """The function that the holder of the post fulfills."""
+  role: String!
+
+  """The Organization in which the post is held."""
+  organization: OrganizationType!
+
+  """The Division where the post exists."""
+  division: DivisionType
+  currentMemberships: [OrganizationMembershipType]!
+  label: String
+  pendingProposalCount: Int
+}
+
+type ProcessDivision {
+  division: DivisionType
+}
+
+interface ProposableInterface {
+  id: String!
+  approved: Boolean!
+  rejected: Boolean!
+  canDeleteProposalEntry: Boolean!
+  proposal: ProposalType
+  proposalId: String
+}
+
+"""An enumeration."""
+enum ProposalAction {
+  PROPOSE
+  APPROVE
+  REJECT
+  COMMENT
+}
+
+input ProposalHistoryInput {
+  token: String!
+  pageSize: Int!
+  proposalId: String!
+  actionFilter: ProposalAction
+}
+
+input ProposalInput {
+  proposalId: String!
+}
+
+type ProposalLogEntryPaginatedType {
+  pagination: PaginationOutput!
+  items: [ProposalLogEntryType]
+}
+
+type ProposalLogEntryType {
+  id: UUID!
+  timestamp: DateTime!
+  action: ApiProposalLogEntryActionChoices!
+  comment: String
+  deleted: Boolean!
+  user: CiviqaUserType
+}
+
+type ProposalPaginatedType {
+  pagination: PaginationOutput!
+  items: [ProposalType]
+}
+
+input ProposalPaginationInput {
+  token: String!
+  pageSize: Int!
+  proposedObjectType: ProposedObjectType
+  statusFilter: ProposalStatus
+  eventId: String
+  billId: String
+  involvementId: String
+  qaPostId: String
+  jurisdictionId: String
+  personId: String
+  divisionId: String
+  postId: String
+  organizationId: String
+  proposerId: String
+}
+
+"""An enumeration."""
+enum ProposalStatus {
+  PENDING
+  APPROVED
+  REJECTED
+}
+
+type ProposalType {
+  id: UUID!
+  approval: ProposalLogEntryType
+  rejection: ProposalLogEntryType
+  approved: Boolean!
+  rejected: Boolean!
+  proposalCount: Int!
+  initialProposalEntry: ProposalLogEntryType
+  canApprove: Boolean!
+  canReject: Boolean!
+  governmentWebsite: GovernmentWebsiteType
+  interestTag: InterestTagType
+  relatedImage: RelatedImageType
+  newEntityEnrichment: NewEntityEnrichmentType
+  userPrivilege: UserPrivilegeType
+}
+
+input ProposedInterestTagsInput {
+  token: String!
+  pageSize: Int!
+  objectId: String!
+  objectType: TagObjectType!
+}
+
+"""An enumeration."""
+enum ProposedObjectType {
+  INTEREST_TAG
+  GOVERNMENT_WEBSITE
+  RELATED_IMAGE
+  NEW_ENTITY_ENRICHMENT
+  USER_PRIVILEGE
+}
+
+type ProposeGovernmentWebsite {
+  result: GovernmentWebsiteType!
+}
+
+input ProposeGovernmentWebsiteInput {
+  jurisdictionId: String
+  organizationId: String
+  officialId: String
+  title: String!
+  url: String!
+}
+
+type ProposeInterestTags {
+  result: [InterestTagType]!
+}
+
+input ProposeInterestTagsInput {
+  objectId: String!
+  objectType: TagObjectType!
+  interestIds: [String]
+}
+
+type ProposeRelatedImage {
+  relatedImage: RelatedImageType!
+}
+
+input ProposeRelatedImageInput {
+  fileUploadId: String!
+  description: String!
+  officialId: String
+  divisionId: String
+  organizationId: String
+  imageType: RelatedImageEnum!
+}
+
+type QACitationType {
+  id: UUID!
+  citation: CiviqaEntityType!
+}
+
+input QACompositionData {
+  body: String
+  entityIds: [String]
+}
+
+input QACompositionInput {
+  qaCompositionId: String!
+}
+
+type QACompositionType {
+  id: UUID!
+  body: String!
+  draftLastSavedTimestamp: DateTime
+  glimpse: String!
+  mentionCount: Int!
+  citationCount: Int!
+  mentions: [QAMentionType]!
+  citations: [QACitationType]!
+}
+
+input QAHistoryInput {
+  token: String!
+  pageSize: Int!
+  citingCitationId: String
+  mentioningEntityWithModelId: String
+  mentioningEntityWithEntitiyType: CiviqaEntityEnumType
+}
+
+type QAMentionType {
+  id: UUID!
+  entity: CiviqaEntityType!
+}
+
+input QAPostData {
+  qaPostId: String!
+  blurb: String
+  headline: String
+  qaCompositionData: QACompositionData = null
+  qaPostMediaboxData: QAPostMediaboxData = null
+  audienceJurisdictionId: String
+}
+
+input QAPostInput {
+  qaPostId: String!
+}
+
+input QAPostMediaboxData {
+  leftDirection: Boolean!
+  mediaItems: [QAPostMediaboxItemData]
+  carouselMediaItems: [QAPostMediaboxItemData]
+}
+
+input QAPostMediaboxItemData {
+  sourceEntityId: String!
+  imageUrl: String
+  muxVideoId: String
+  fileUploadId: String
+}
+
+type QAPostMediaboxItemType {
+  sourceEntityId: String!
+  imageUrl: String
+  muxVideoId: String
+  videoThumbnailUrl: String
+  animatedGifUrl: String
+  videoUrl: String
+}
+
+type QAPostMediaboxType {
+  leftDirection: Boolean!
+  mediaItems: [QAPostMediaboxItemType]!
+  carouselMediaItems: [QAPostMediaboxItemType]!
+}
+
+type QAPostOrResponsePaginatedType {
+  pagination: PaginationOutput!
+  items: [QAPostOrResponseType]!
+}
+
+type QAPostOrResponseType {
+  qaPost: QAPostType
+  qaResponse: QAResponseType
+}
+
+type QAPostPaginatedType {
+  pagination: PaginationOutput!
+  items: [QAPostType]
+}
+
+type QAPostType implements InterestTaggableInterface {
+  id: UUID!
+  author: CiviqaUserType
+  headline: String
+  audienceTitle: String
+  mediabox: QAPostMediaboxType
+  createdTimestamp: DateTime!
+  publishedTimestamp: DateTime
+  canApproveTags: Boolean!
+  tags: [InterestTagType]!
+  composition: QACompositionType
+  mainAudience: JurisdictionType
+  audiences: [JurisdictionType]!
+  ccOfficials: [OfficialType]!
+  ccOrganizations: [OrganizationType]!
+  isDraft: Boolean!
+  yayCount: Int!
+  responseCount: Int!
+  canRespond: Boolean!
+  isYayedByMe: Boolean!
+  isReportedByMe: Boolean!
+  isBookmarkedByMe: Boolean!
+  latestResponse: QAResponseType
+  myResponse: QAResponseType
+  pendingProposalCount: Int!
+  mediaboxOptions: [QAPostMediaboxItemType]
+}
+
+input QAResponseData {
+  qaResponseId: String!
+  qaCompositionData: QACompositionData = null
+}
+
+input QAResponseInput {
+  qaResponseId: String!
+}
+
+type QAResponsePaginatedType {
+  pagination: PaginationOutput!
+  items: [QAResponseType]
+}
+
+input QAResponsePaginationInput {
+  token: String!
+  pageSize: Int!
+  qaPostId: String!
+}
+
+type QAResponseType {
+  id: UUID!
+  qaPost: QAPostType!
+  user: CiviqaUserType!
+  createdTimestamp: DateTime!
+  publishedTimestamp: DateTime
+  composition: QACompositionType
+  yayCount: Int!
+  canReply: Boolean!
+  isYayedByMe: Boolean!
+  isReportedByMe: Boolean!
+  isBookmarkedByMe: Boolean!
+  authorReply: QAResponseType
+  authorReplied: Boolean!
+}
+
+type Queries {
+  qaPost(input: QAPostInput!): QAPostType
+  allQaPosts(input: AllQAPostsInput!): QAPostPaginatedType
+  myDraftQaPosts(input: MyDraftQAPostPaginationInput!): QAPostPaginatedType
+  myPublishedQaPosts(input: MyPublishedQAPostPaginationInput!): QAPostPaginatedType
+  myArchivedQaPosts(input: MyArchivedQAPostPaginationInput!): QAPostPaginatedType
+  civiqaFeed(input: CiviqaFeedInput!): CiviqaFeedType
+  eventById(eventId: String!): EventType
+  pastEventsById(input: EventPaginationInput!): EventPaginatedType
+  allUpcomingEventsById(input: EventPaginationInput!): [EventPaginatedType]
+  school(input: SchoolInput!): SchoolType
+  schoolDistrict(input: SchoolDistrictInput!): SchoolDistrictType
+  schoolDistrictSchools(input: SchoolDistrictSchoolsPaginationInput!): SchoolPaginatedType
+  qaResponse(input: QAResponseInput!): QAResponseType
+  qaResponses(input: QAResponsePaginationInput!): QAResponsePaginatedType
+  myDraftQaResponses(input: MyDraftQAResponsePaginationInput!): QAResponsePaginatedType
+  myArchivedQaResponses(input: MyArchivedQAResponsePaginationInput!): QAResponsePaginatedType
+  qaHistory(input: QAHistoryInput!): QAPostOrResponsePaginatedType
+  enrichmentFieldEntrySpecs(input: EnrichmentFieldEntrySpecsInput!): EnrichmentFieldEntrySpecs
+  enrichmentAutocompleteOptions(input: EnrichmentAutocompleteInput!): [AutocompleteOptionType]
+  feedItems(input: FeedItemPaginationInput!): FeedItemPaginatedType
+  isFollowing(input: FeedItemInput!): Boolean
+  userCameraMedias(input: UserCameraMediaInput!): UserCameraMediaPaginatedType
+  userMediaUploads(input: UserMediaUploadsInput!): UserMediaUploadPaginatedType
+  proposals(input: ProposalPaginationInput!): ProposalPaginatedType
+  proposalHistory(input: ProposalHistoryInput!): ProposalLogEntryPaginatedType
+  legislativeSession(input: LegislativeSessionInput!): LegislativeSessionType
+  legislativeSessions(input: LegislativeSessionsInput!): LegislativeSessionPaginatedType
+  universalSearchPreviews(input: UniversalSearchPreviewsInput!): UnivesalSearchPreviewsType
+  searchResults(input: SearchResultPaginationInput!): SearchResultsPaginatedType
+  universalTypeaheadResults(input: UniversalTypeaheadResultsInput!): UniversalTypeaheadResultsType
+  typeaheadResults(input: TypeaheadResultsInput!): TypeaheadResultsType
+  qaComposition(input: QACompositionInput!): QACompositionType
+  me(input: MeInput!): CiviqaUserType
+  user(input: UserInput!): CiviqaUserType
+  users(input: UsersInput!): UserPaginatedType
+  userPlaces(input: PaginationInput!): UserPlacePaginatedType
+  userFollowers(input: PaginationInput!): UserFollowersPaginatedType
+  userFollowing(input: PaginationInput!): UserFollowingPaginatedType
+  refreshStreamToken: String
+  legalCodes(input: LegalCodesInput): [LegalCodeType]
+  legalCode(input: LegalCodeInput): LegalCodeType
+  legalCodeNode(input: LegalCodeNodeInput): LegalCodeNodeType
+  civiqaEntity(input: CiviqaEntityInput!): CiviqaEntityType
+  officialById(officialId: String!): OfficialType
+  officials(input: OfficialPaginationInput!): OfficialPaginatedType
+  jurisdictions: [JurisdictionType]
+  jurisdiction(input: JurisdictionInput!): JurisdictionType
+  division(input: DivisionInput!): DivisionType
+  childDivisions(input: ChildDivisionsInput!): ChildDivisionsType
+  billById(billId: String!): BillType
+  billVersionById(billVersionId: String!): BillVersionType
+  billActionsById(input: BillActionPaginationInput!): BillActionPaginatedType
+  billsById(input: BillPaginationInput!): BillPaginatedType
+  billDocuments(input: BillDocumentPaginationInput!): BillDocumentPaginatedType
+  billVersions(input: BillVersionPaginationInput!): BillVersionPaginatedType
+  billSponsorships(input: BillSponsorshipPaginationInput!): BillSponsorshipPaginatedType
+  userBookmarks(input: UserBookmarksInput!): UserBookmarkPaginatedType
+  userBookmark(input: UserBookmarkInput!): UserBookmarkType
+  discoverLegoStructure: LegoStructureType
+  governmentWebsites(input: GovernmentWebsitePaginationInput!): GovernmentWebsitePaginatedType
+  governmentWebsite(input: GovernmentWebsitePaginationInput!): GovernmentWebsiteType
+  governmentWebsiteSnapshots(input: GovernmentWebsiteSnapshotPaginationInput!): GovernmentWebsiteSnapshotPaginatedType
+  governmentEmailSubscriptions(input: GovernmentEmailSubscriptionPaginationInput!): GovernmentEmailSubscriptionPaginatedType
+  governmentEmailMessages(input: GovernmentEmailMessagePaginationInput!): GovernmentEmailMessagePaginatedType
+  involvement(input: InvolvementInput!): InvolvementType
+  myInvolvements(input: PaginationInput!): InvolvementPaginatedType
+  involvementMemberships(input: InvolvementMembershipPaginationInput!): InvolvementMembershipPaginatedType
+  isInvolvementMember(input: InvolvementInput!): Boolean
+  interests(input: InterestsPaginationInput!): InterestPaginatedType
+  interest(input: InterestInput!): InterestType
+  interestTags(input: InterestTaggedObjectInput!): [InterestTagType]
+  proposedInterestTags(input: ProposedInterestTagsInput!): InterestTagPaginatedType
+  isFollowingInterest(input: InterestInput!): Boolean
+  userInterestFeedItems(input: InterestFeedPaginationInput!): FeedItemPaginatedType
+  personVotes(input: PersonVotePaginationInput!): PersonVotePaginatedType
+  voteEvent(input: VoteEventInput!): VoteEventType
+  citation(input: CitationInput!): CitationType
+  citations(input: CitationsInput!): CitationPaginatedType
+  myCitations(input: MyCitationsInput!): CitationEntityPaginatedType
+  organization(input: OrganizationInput!): OrganizationType
+  organizationMemberships(input: OrganizationMembershipPaginationInput!): OrganizationMembershipPaginatedType
+  organizations(input: OrganizationPaginationInput!): OrganizationPaginatedType
+  post(input: PostInput!): PostType
+  posts(input: PostPaginationInput!): PostPaginatedType
+}
+
+input QueryInput {
+  query: String!
+  govStackOnly: Boolean
+  divisionIdPrefix: String
+}
+
+"""An enumeration."""
+enum RelatedImageEnum {
+  PROFILE_PHOTO
+  COVER_PHOTO
+}
+
+type RelatedImageType implements ProposableInterface {
+  description: String
+  imageType: ApiRelatedImageImageTypeChoices
+  id: String!
+  approved: Boolean!
+  rejected: Boolean!
+  canDeleteProposalEntry: Boolean!
+  proposal: ProposalType
+  proposalId: String
+  imageUrl: String!
+  division: DivisionType
+  person: OfficialType
+  organization: OrganizationType
+}
+
+type RemoveUserBookmark {
+  success: Boolean
+}
+
+input RemoveUserBookmarkInput {
+  userBookmarkId: String
+}
+
+type ReportQAPost {
+  qaPost: QAPostType
+}
+
+input ReportQAPostInput {
+  qaPostId: String!
+  report: Boolean!
+}
+
+type ReportQAResponse {
+  qaResponse: QAResponseType
+}
+
+input ReportQAResponseInput {
+  qaResponseId: String!
+  report: Boolean!
+}
+
+type RequestUserPrivilege {
+  userPrivilege: UserPrivilegeType
+}
+
+input RequestUserPrivilegeInput {
+  entityType: CiviqaEntityEnumType!
+  objectId: String!
+}
+
+type SaveQAPost {
+  qaPost: QAPostType!
+}
+
+input SaveQAPostInput {
+  qaPostId: String
+  qaPostData: QAPostData!
+  publish: Boolean!
+}
+
+type SaveQAResponse {
+  qaResponse: QAResponseType!
+}
+
+input SaveQAResponseInput {
+  qaResponseData: QAResponseData!
+  publish: Boolean!
+}
+
+type SaveUserBookmark {
+  bookmark: UserBookmarkType
+}
+
+input SaveUserBookmarkInput {
+  entityType: CiviqaEntityEnumType!
+  objectId: String
+}
+
+input SchoolDistrictInput {
+  schoolDistrictId: String!
+}
+
+input SchoolDistrictSchoolsPaginationInput {
+  token: String!
+  pageSize: Int!
+  schoolDistrictId: String!
+}
+
+type SchoolDistrictSurveyType {
+  surveyYear: Int!
+  officeAddressStreet1: String!
+  officeAddressStreet2: String!
+  officeAddressCity: String!
+  officeAddressState: String!
+  officeAddressZip: Int
+  officeAddressZip4: Int
+  phone: String
+  lat: Float
+  lng: Float
+  gradeLo: ApiSchoolDistrictSurveyGradeLoChoices!
+  gradeHi: ApiSchoolDistrictSurveyGradeHiChoices!
+  studentCount: Int
+  teacherCount: Int
+  studentTeacherRatio: Float
+}
+
+type SchoolDistrictType {
+  id: UUID!
+  name: String!
+  latestSurvey: SchoolDistrictSurveyType
+  jurisdictionId: String!
+}
+
+input SchoolInput {
+  schoolId: String!
+}
+
+type SchoolPaginatedType {
+  pagination: PaginationOutput!
+  items: [SchoolType]!
+}
+
+type SchoolSurveyType {
+  surveyYear: Int!
+  officeAddressStreet1: String!
+  officeAddressStreet2: String!
+  officeAddressCity: String!
+  officeAddressState: String!
+  officeAddressZip: Int
+  officeAddressZip4: Int
+  phone: String
+  lat: Float
+  lng: Float
+  gradeLo: ApiSchoolSurveyGradeLoChoices!
+  gradeHi: ApiSchoolSurveyGradeHiChoices!
+  studentTeacherRatio: Float
+  teacherCount: Int
+}
+
+type SchoolType {
+  id: UUID!
+  name: String!
+  district: SchoolDistrictType!
+  latestSurvey: SchoolSurveyType
+  organizationId: String!
+}
+
+"""An enumeration."""
+enum SearchDocumentType {
+  BILL
+  LEGAL_CODE
+  PERSON
+  INTEREST
+  DIVISION
+  USER
+  ORGANIZATION
+  SCHOOL
+  SCHOOL_DISTRICT
+  STATES_COUNTIES_PLACES
+}
+
+type SearchResultHiglightType {
+  fieldName: String!
+  html: String!
+}
+
+input SearchResultPaginationInput {
+  token: String!
+  pageSize: Int!
+  query: QueryInput!
+  documentType: SearchDocumentType!
+}
+
+type SearchResultsPaginatedType {
+  pagination: PaginationOutput!
+  items: [SearchResultType]!
+  totalResultCount: Int!
+}
+
+type SearchResultType {
+  entityId: String!
+  entityType: SearchDocumentType!
+  divisionId: String!
+  divisionName: String
+  jurisdictionId: String
+  jurisdictionName: String
+  title: String!
+  subtitle: String
+  extraInfo: String
+  imageUrl: String
+  highlights: [SearchResultHiglightType]!
+  wwwUrl: String
+  inAppUrl: String
+  emojiRep: String
+  score: Float
+}
+
+"""An enumeration."""
+enum TagObjectType {
+  BILL
+  EVENT
+  INVOLVEMENT
+  QA_POST
+}
+
+type TakeGovernmentWebsiteSnapshot {
+  result: GovernmentWebsiteSnapshotType!
+}
+
+input TakeGovernmentWebsiteSnapshotInput {
+  governmentWebsiteId: String!
+  sourceUrl: String!
+  caption: String!
+  pageTitle: String!
+}
+
+input TypeaheadResultsInput {
+  query: QueryInput!
+  documentType: SearchDocumentType!
+  limit: Int
+}
+
+type TypeaheadResultsType {
+  searchResults: [SearchResultType]!
+  interests: [InterestType]
+  officials: [OfficialType]
+  organizations: [OrganizationType]
+  divisions: [DivisionType]
+  jurisdictions: [JurisdictionType]
+}
+
+type UnarchiveEntity {
+  success: Boolean
+}
+
+input UniversalSearchPreviewsInput {
+  query: QueryInput!
+  previewSize: Int!
+}
+
+type UniversalSearchPreviewType {
+  documentType: SearchDocumentType!
+  headerTitle: String!
+  items: [SearchResultType]!
+  totalResultCount: Int!
+  highestScore: Float
+}
+
+input UniversalTypeaheadResultsInput {
+  query: QueryInput!
+  limit: Int
+}
+
+type UniversalTypeaheadResultsType {
+  items: [SearchResultType]!
+}
+
+type UnivesalSearchPreviewsType {
+  previews: [UniversalSearchPreviewType]!
+}
+
+type UpdateCitationHighlightCaption {
+  citationHighlight: CitationHighlightType
+}
+
+input UpdateCitationHighlightCaptionInput {
+  citationHighlightId: String!
+  caption: String!
+}
+
+type UpdateFcmToken {
+  user: CiviqaUserType
+}
+
+input UpdateFcmTokenInput {
+  fcmToken: String
+}
+
+type UpdateUserCurrentPlace {
+  user: CiviqaUserType
+}
+
+input UserBookmarkInput {
+  entityType: CiviqaEntityEnumType!
+  objectId: String
+}
+
+type UserBookmarkPaginatedType {
+  pagination: PaginationOutput!
+  items: [UserBookmarkType]!
+}
+
+input UserBookmarksInput {
+  token: String!
+  pageSize: Int!
+  entityType: CiviqaEntityEnumType
+}
+
+type UserBookmarkType {
+  id: UUID!
+  user: CiviqaUserType!
+  entity: CiviqaEntityType!
+  notes: String
+  savedTimestamp: DateTime!
+  archivedTimestamp: DateTime
+}
+
+type UserBookmarkTypeCount {
+  entityType: CiviqaEntityEnumType!
+  count: Int!
+}
+
+input UserCameraMediaInput {
+  token: String!
+  pageSize: Int!
+  archived: Boolean
+}
+
+type UserCameraMediaPaginatedType {
+  pagination: PaginationOutput!
+  items: [CiviqaEntityType]!
+}
+
+type UserFollowersPaginatedType {
+  pagination: PaginationOutput!
+  items: [CiviqaEntityType]!
+}
+
+type UserFollowingPaginatedType {
+  pagination: PaginationOutput!
+  items: [CiviqaEntityType]!
+}
+
+input UserInput {
+  userId: String!
+}
+
+type UserMediaUploadPaginatedType {
+  pagination: PaginationOutput!
+  items: [CiviqaEntityType]!
+}
+
+input UserMediaUploadsInput {
+  token: String!
+  pageSize: Int!
+  archived: Boolean
+}
+
+type UserPaginatedType {
+  pagination: PaginationOutput!
+  items: [CiviqaUserType]!
+}
+
+input UserPlaceInput {
+  userPlaceId: String!
+}
+
+type UserPlacePaginatedType {
+  pagination: PaginationOutput!
+  items: [UserPlaceType]!
+}
+
+type UserPlaceType {
+  id: UUID!
+  label: String
+  isCurrent: Boolean!
+  verified: Boolean!
+  place: PlaceType!
+}
+
+"""An enumeration."""
+enum UserPrivilegeEnumType {
+  DETAILS_ADMIN
+}
+
+type UserPrivilegeType implements ProposableInterface {
+  id: String!
+  user: CiviqaUserType!
+  privilegeType: UserPrivilegeEnumType!
+  createdAt: DateTime!
+  approved: Boolean!
+  rejected: Boolean!
+  canDeleteProposalEntry: Boolean!
+  proposal: ProposalType
+  proposalId: String
+  objectId: String
+  entityType: CiviqaEntityEnumType
+  jurisdiction: JurisdictionType
+  official: OfficialType
+  organization: OrganizationType
+}
+
+input UsersInput {
+  token: String!
+  pageSize: Int!
+  usersWhoYayedQaResponseId: String
+  usersWhoYayedQaPostId: String
+}
+
+"""
+Leverages the internal Python implementation of UUID (uuid.UUID) to provide native UUID objects
+in fields, resolvers and input.
+"""
+scalar UUID
+
+type VoteCountType {
+  voteEvent: VoteEventType!
+  option: DataVoteCountOptionChoices!
+  value: Int!
+}
+
+input VoteEventInput {
+  voteEventId: String
+}
+
+type VoteEventType {
+  id: String!
+  identifier: String!
+  motionText: String!
+  motionClassification: [String!]!
+  startDate: String!
+  result: DataVoteEventResultChoices!
+  legislativeSession: LegislativeSessionType!
+  billAction: BillActionType
+  counts: [VoteCountType!]!
+  votes: [PersonVoteType!]!
+  organization: OrganizationType!
+  bill: BillType
+  ownOfficials: [PersonVoteType]!
+}
+
+type YayQAPost {
+  qaPost: QAPostType
+}
+
+input YayQAPostInput {
+  qaPostId: String!
+  yay: Boolean!
+}
+
+type YayQAResponse {
+  qaResponse: QAResponseType
+}
+
+input YayQAResponseInput {
+  qaResponseId: String!
+  yay: Boolean!
+}
+

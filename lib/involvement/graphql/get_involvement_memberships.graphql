@@ -1,0 +1,14 @@
+# import './involvement_membership_render_fragment.graphql'
+# import '../../common/graphql/pagination_fragment.graphql'
+
+
+query GetInvolvementMemberships($input: InvolvementMembershipPaginationInput!) {
+    involvementMemberships(input: $input) {
+        items {
+            ...InvolvementMembershipRenderFragment
+        }
+        pagination {
+            ...PaginationOuputFragment
+        }
+    }
+}

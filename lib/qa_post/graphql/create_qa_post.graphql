@@ -1,0 +1,9 @@
+# import './qa_post_fragment.graphql'
+
+mutation CreateQAPost($input: CreateQAPostInput!) {
+    createQaPost(input: $input) {
+        qaPost {
+            ...QAPostFragment
+        }
+    }
+}

@@ -1,0 +1,5 @@
+fragment SchoolDistrictRenderFragment on SchoolDistrictType {
+    id
+    jurisdictionId
+    name
+}

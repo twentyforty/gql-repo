@@ -1,0 +1,31 @@
+# import '../../interest/graphql/interest_fragment.graphql'
+# import '../../common/graphql/division_render_fragment.graphql'
+# import '../../common/graphql/organization_render_fragment.graphql'
+# import '../../common/graphql/official_render_fragment.graphql'
+# import '../../common/graphql/jurisdiction_render_fragment.graphql'
+# import './search_result_fragment.graphql'
+
+
+
+query GetTypeaheadResults($input: TypeaheadResultsInput!) {
+    typeaheadResults(input: $input) {
+        searchResults {
+            ...SearchResultFragment
+        }
+        interests {
+            ...InterestFragment
+        }
+        officials {
+            ...OfficialRenderFragment
+        }
+        divisions {
+            ...DivisionRenderFragment
+        }
+        organizations {
+            ...OrganizationRenderFragment
+        }
+        jurisdictions {
+            ...JurisdictionRenderFragment
+        }
+    }
+}

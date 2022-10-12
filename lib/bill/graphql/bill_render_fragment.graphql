@@ -1,0 +1,6 @@
+
+fragment BillRenderFragment on BillType {
+    id
+    identifier
+    title
+}

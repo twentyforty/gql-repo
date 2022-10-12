@@ -1,0 +1,17 @@
+fragment SchoolDistrictSurveyFragment on SchoolDistrictSurveyType {
+    surveyYear
+    officeAddressStreet1
+    officeAddressStreet2
+    officeAddressCity
+    officeAddressState
+    officeAddressZip
+    officeAddressZip4
+    phone
+    lat
+    lng
+    gradeLo
+    gradeHi
+    studentCount
+    teacherCount
+    studentTeacherRatio
+}

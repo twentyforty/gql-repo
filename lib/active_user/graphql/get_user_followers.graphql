@@ -1,0 +1,14 @@
+# import '../../common/graphql/pagination_fragment.graphql'
+# import '../../common/graphql/civiqa_entity_fragment.graphql'
+
+
+query GetUserFollowers($input: PaginationInput!) {
+    userFollowers(input: $input) {
+        items {
+            ...CiviqaEntityFragment
+        }
+        pagination {
+            ...PaginationOuputFragment
+        }
+    }
+}

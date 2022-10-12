@@ -1,0 +1,9 @@
+# import './interest_tag_render_fragment.graphql'
+# import '../../proposal/graphql/proposal_fragment.graphql'
+
+fragment InterestTagFragment on InterestTagType {
+    ...InterestTagRenderFragment
+    proposal {
+        ...ProposalFragment
+    }
+}

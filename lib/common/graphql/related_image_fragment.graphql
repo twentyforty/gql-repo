@@ -1,0 +1,23 @@
+# import './official_render_fragment.graphql'
+# import './organization_render_fragment.graphql'
+# import './division_render_fragment.graphql'
+
+fragment RelatedImageFragment on RelatedImageType {
+    id
+    description
+    imageType
+    imageUrl
+    person {
+        ...OfficialRenderFragment
+    }
+    division {
+        ...DivisionRenderFragment
+    }
+    organization {
+        ...OrganizationRenderFragment
+    }
+    approved
+    rejected
+    canDeleteProposalEntry
+    proposalId
+}

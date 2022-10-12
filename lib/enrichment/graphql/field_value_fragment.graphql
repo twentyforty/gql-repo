@@ -1,0 +1,5 @@
+fragment FieldValueFragment on FieldValueType {
+    value
+    displayString
+    inAppUrl
+}

@@ -1,0 +1,12 @@
+fragment AttributedStringPartFragment on AttributedStringPartType {
+    replacement
+    url
+}
+
+
+fragment AttributedStringFragment on AttributedStringType {
+    pattern
+    parts {
+        ...AttributedStringPartFragment
+    }
+}

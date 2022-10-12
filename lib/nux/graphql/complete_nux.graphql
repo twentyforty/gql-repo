@@ -1,0 +1,9 @@
+# import '../../active_user/graphql/active_user_fragment.graphql'
+
+mutation CompleteNux($input: CompleteNuxInput!) {
+    completeNux(input: $input) {
+        user {
+            ...ActiveUserFragment
+        }
+    }
+}

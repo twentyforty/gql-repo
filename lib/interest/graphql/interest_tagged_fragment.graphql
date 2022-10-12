@@ -1,0 +1,26 @@
+# import './interest_fragment.graphql'
+# import './interest_tag_fragment.graphql'
+# import '../../bill/graphql/bill_render_fragment.graphql'
+# import '../../qa_post/graphql/qa_post_tile_fragment.graphql'
+# import '../../event/graphql/event_render_fragment.graphql'
+# import '../../involvement/graphql/involvement_render_fragment.graphql'
+# import '../../legislative_session/graphql/legislative_session_fragment.graphql'
+
+fragment InterestTaggedFragment on InterestTagType {
+    ...InterestTagFragment
+    taggedBill {
+        ...BillRenderFragment
+        legislativeSession {
+            ...LegislativeSessionFragment
+        }
+    }
+    taggedEvent {
+        ...EventRenderFragment
+    }
+    taggedInvolvement {
+        ...InvolvementRenderFragment
+    }
+    taggedQaPost {
+        ...QAPostTileFragment
+    }
+}

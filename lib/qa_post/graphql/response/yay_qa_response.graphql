@@ -1,0 +1,9 @@
+# import './qa_response_render_fragment.graphql'
+
+mutation YayQAResponse($input: YayQAResponseInput!) {
+    yayQaResponse(input: $input) {
+        qaResponse {
+            ...QAResponseRenderFragment
+        }
+    }
+}

@@ -1,0 +1,9 @@
+
+# import '../../../common/graphql/civiqa_entity_fragment.graphql'
+
+fragment QACitationFragment on QACitationType {
+    id
+    citation {
+        ...CiviqaEntityFragment
+    }
+}

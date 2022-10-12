@@ -1,0 +1,30 @@
+# import './proposal_fragment.graphql'
+# import '../../interest/graphql/interest_tagged_fragment.graphql'
+# import '../../common/graphql/user_privilege_fragment.graphql'
+# import '../../common/graphql/related_image_fragment.graphql'
+# import '../../common/graphql/jurisdiction_render_fragment.graphql'
+# import '../../government/graphql/government_website_render_fragment.graphql'
+# import '../../enrichment/graphql/new_entity_enrichment_fragment.graphql'
+
+
+fragment ProposedFragment on ProposalType {
+    ...ProposalFragment
+    governmentWebsite {
+        ...GovernmentWebsiteRenderFragment
+        jurisdiction {
+            ...JurisdictionRenderFragment
+        }
+    }
+    interestTag {
+        ...InterestTaggedFragment
+    }
+    relatedImage {
+        ...RelatedImageFragment
+    }
+    newEntityEnrichment {
+        ...NewEntityEnrichmentFragment
+    }
+    userPrivilege {
+        ...UserPrivilegeFragment
+    }
+}

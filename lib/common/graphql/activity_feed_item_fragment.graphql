@@ -1,0 +1,28 @@
+# import './attributed_string_fragment.graphql'
+# import '../../vote/graphql/vote_event_fragment.graphql'
+# import '../../qa_post/graphql/qa_post_tile_fragment.graphql'
+
+fragment ActivityFeedItemFragment on ActivityFeedItemType {
+    title
+    titleLinkUrl
+    subtitle
+    subtitleLinkUrl
+    avatarImageUrl
+    avatarLabel
+    avatarLinkUrl
+    timestamp
+    textContent {
+        ...AttributedStringFragment
+    }
+    imageContentUrl
+    videoContentUrl
+    voteEvent {
+        ...VoteEventFragment
+    }
+    qaPost {
+        ...QAPostTileFragment
+    }
+    origin {
+        ...AttributedStringFragment
+    }
+}

@@ -1,0 +1,9 @@
+# import './government_website_render_fragment.graphql'
+# import '../../proposal/graphql/proposal_fragment.graphql'
+
+fragment GovernmentWebsiteFragment on GovernmentWebsiteType {
+    ...GovernmentWebsiteRenderFragment
+    proposal {
+        ...ProposalFragment
+    }
+}

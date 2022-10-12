@@ -1,0 +1,18 @@
+# import '../../common/graphql/pagination_fragment.graphql'
+# import './bill_action_fragment.graphql'
+
+
+fragment BillActionResults on BillActionPaginatedType {
+    pagination {
+        ...PaginationOuputFragment
+    }
+	items {
+        ...BillActionFragment
+    }
+}
+
+query GetBillActionsById($input: BillActionPaginationInput!) {
+    billActionsById(input: $input) {
+        ...BillActionResults
+    }
+}

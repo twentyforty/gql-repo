@@ -1,0 +1,8 @@
+# import './legal_code_node_render_fragment.graphql'
+
+fragment LegalCodeNodeFragment on LegalCodeNodeType {
+    ...LegalCodeNodeRenderFragment
+    children {
+        ...LegalCodeNodeRenderFragment
+    }
+}

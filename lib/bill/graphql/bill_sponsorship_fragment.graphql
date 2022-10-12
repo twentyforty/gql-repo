@@ -1,0 +1,13 @@
+# import '../../common/graphql/official_fragment.graphql'
+# import './bill_render_fragment.graphql'
+
+fragment BillSponsorshipFragment on BillSponsorshipType {
+    primary
+    classification
+    person {
+        ...OfficialFragment
+    }
+    bill {
+        ...BillRenderFragment
+    }
+}

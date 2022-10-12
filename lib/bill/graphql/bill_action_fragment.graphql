@@ -1,0 +1,13 @@
+# import '../../common/graphql/organization_render_fragment.graphql'
+# import './bill_action_render_fragment.graphql'
+# import './bill_render_fragment.graphql'
+
+fragment BillActionFragment on BillActionType {
+    ...BillActionRenderFragment
+    bill {
+        ...BillRenderFragment
+    }
+    organization {
+        ...OrganizationRenderFragment
+    }
+}

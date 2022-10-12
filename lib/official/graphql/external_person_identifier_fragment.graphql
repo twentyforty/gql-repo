@@ -1,0 +1,4 @@
+fragment ExternalPersonIdentifierFragment on PersonIdentifierType {
+    scheme
+    identifier
+}

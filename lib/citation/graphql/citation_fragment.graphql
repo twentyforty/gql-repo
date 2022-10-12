@@ -1,0 +1,15 @@
+# import './citation_render_fragment.graphql'
+# import './citation_highlight_fragment.graphql'
+# import './citation_source_fragment.graphql'
+
+
+fragment CitationFragment on CitationType {
+    ...CitationRenderFragment
+    source {
+        ...CitationSourceFragment
+    }
+    highlightedPdfFileUrl
+    highlights {
+        ...CitationHighlightFragment
+    }
+}

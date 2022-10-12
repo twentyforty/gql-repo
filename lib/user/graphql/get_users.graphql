@@ -1,0 +1,13 @@
+# import '../../common/graphql/pagination_fragment.graphql'
+# import '../../common/graphql/user_fragment.graphql'
+
+query GetUsers($input: UsersInput!) {
+    users(input: $input) {
+        pagination {
+            ...PaginationOuputFragment
+        }
+        items {
+            ...UserFragment
+        }
+    }
+}

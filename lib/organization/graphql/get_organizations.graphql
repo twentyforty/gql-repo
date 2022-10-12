@@ -1,0 +1,14 @@
+# import '../../common/graphql/organization_render_fragment.graphql'
+# import '../../common/graphql/pagination_fragment.graphql'
+
+
+query GetOrganizations($input: OrganizationPaginationInput!) {
+    organizations(input: $input) {
+        pagination {
+            ...PaginationOuputFragment
+        }
+        items {
+            ...OrganizationRenderFragment
+        }
+    }
+}

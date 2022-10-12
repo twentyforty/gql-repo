@@ -1,0 +1,14 @@
+# import '../../common/graphql/post_fragment.graphql'
+# import '../../common/graphql/pagination_fragment.graphql'
+
+
+query GetPosts($input: PostPaginationInput!) {
+    posts(input: $input) {
+        pagination {
+            ...PaginationOuputFragment
+        }
+        items {
+            ...PostFragment
+        }
+    }
+}

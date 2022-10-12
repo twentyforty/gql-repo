@@ -1,0 +1,18 @@
+# import './search_result_fragment.graphql'
+# import '../../common/graphql/pagination_fragment.graphql'
+
+fragment SearchResultsPaginatedFragment on SearchResultsPaginatedType {
+    pagination {
+        ...PaginationOuputFragment
+    }
+    items {
+        ...SearchResultFragment
+    }
+    totalResultCount
+}
+
+query GetSearchResults($input: SearchResultPaginationInput!) {
+    searchResults(input: $input) {
+        ...SearchResultsPaginatedFragment
+    }
+}

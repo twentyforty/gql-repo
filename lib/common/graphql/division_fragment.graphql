@@ -1,0 +1,29 @@
+# import './division_render_fragment.graphql'
+# import './jurisdiction_render_fragment.graphql'
+# import './organization_render_fragment.graphql'
+# import './related_image_render_fragment.graphql'
+
+fragment DivisionFragment on DivisionType {
+    ...DivisionRenderFragment
+    boundary
+    coverPhotoUrl
+    images {
+        ...RelatedImageRenderFragment
+    }
+    wikiSummary
+    census2020Population
+    census2021Population
+    parentDivisions {
+        ...DivisionRenderFragment
+    }
+    jurisdictions {
+        ...JurisdictionRenderFragment
+    }
+    organizations {
+        ...OrganizationRenderFragment
+    }
+    canStartQaPost
+    pendingProposalCount
+    geoLastRefreshed
+    civicLastRefreshed
+}

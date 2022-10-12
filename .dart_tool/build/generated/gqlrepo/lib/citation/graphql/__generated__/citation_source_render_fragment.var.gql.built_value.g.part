@@ -1,0 +1,100 @@
+// **************************************************************************
+// BuiltValueGenerator
+// **************************************************************************
+
+Serializer<GCitationSourceRenderFragmentVars>
+    _$gCitationSourceRenderFragmentVarsSerializer =
+    new _$GCitationSourceRenderFragmentVarsSerializer();
+
+class _$GCitationSourceRenderFragmentVarsSerializer
+    implements StructuredSerializer<GCitationSourceRenderFragmentVars> {
+  @override
+  final Iterable<Type> types = const [
+    GCitationSourceRenderFragmentVars,
+    _$GCitationSourceRenderFragmentVars
+  ];
+  @override
+  final String wireName = 'GCitationSourceRenderFragmentVars';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GCitationSourceRenderFragmentVars object,
+      {FullType specifiedType = FullType.unspecified}) {
+    return <Object?>[];
+  }
+
+  @override
+  GCitationSourceRenderFragmentVars deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    return new GCitationSourceRenderFragmentVarsBuilder().build();
+  }
+}
+
+class _$GCitationSourceRenderFragmentVars
+    extends GCitationSourceRenderFragmentVars {
+  factory _$GCitationSourceRenderFragmentVars(
+          [void Function(GCitationSourceRenderFragmentVarsBuilder)? updates]) =>
+      (new GCitationSourceRenderFragmentVarsBuilder()..update(updates))
+          ._build();
+
+  _$GCitationSourceRenderFragmentVars._() : super._();
+
+  @override
+  GCitationSourceRenderFragmentVars rebuild(
+          void Function(GCitationSourceRenderFragmentVarsBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GCitationSourceRenderFragmentVarsBuilder toBuilder() =>
+      new GCitationSourceRenderFragmentVarsBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GCitationSourceRenderFragmentVars;
+  }
+
+  @override
+  int get hashCode {
+    return 307560200;
+  }
+
+  @override
+  String toString() {
+    return newBuiltValueToStringHelper(r'GCitationSourceRenderFragmentVars')
+        .toString();
+  }
+}
+
+class GCitationSourceRenderFragmentVarsBuilder
+    implements
+        Builder<GCitationSourceRenderFragmentVars,
+            GCitationSourceRenderFragmentVarsBuilder> {
+  _$GCitationSourceRenderFragmentVars? _$v;
+
+  GCitationSourceRenderFragmentVarsBuilder();
+
+  @override
+  void replace(GCitationSourceRenderFragmentVars other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GCitationSourceRenderFragmentVars;
+  }
+
+  @override
+  void update(
+      void Function(GCitationSourceRenderFragmentVarsBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GCitationSourceRenderFragmentVars build() => _build();
+
+  _$GCitationSourceRenderFragmentVars _build() {
+    final _$result = _$v ?? new _$GCitationSourceRenderFragmentVars._();
+    replace(_$result);
+    return _$result;
+  }
+}
+
+// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas

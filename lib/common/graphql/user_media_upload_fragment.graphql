@@ -1,0 +1,15 @@
+# import '../../common/graphql/user_fragment.graphql'
+
+# fragment UserMediaUploadFragment on UserMediaUploadType {
+#     id
+#     user {
+#         ...UserFragment
+#     }
+#     createdTimestamp
+#     publishedTimestamp
+#     imageUrl
+#     videoUrl
+#     duration
+#     animatedGifUrl
+#     videoThumbnailUrl
+# }

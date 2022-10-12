@@ -1,0 +1,7 @@
+# import './vote_event_fragment.graphql'
+
+query GetVoteEvent($input: VoteEventInput!) {
+    voteEvent(input: $input) {
+        ...VoteEventFragment
+    }
+}

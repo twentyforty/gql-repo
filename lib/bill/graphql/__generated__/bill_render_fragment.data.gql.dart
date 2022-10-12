@@ -1,0 +1,52 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
+
+// ignore_for_file: no_leading_underscores_for_library_prefixes
+import 'package:built_value/built_value.dart';
+import 'package:built_value/serializer.dart';
+import 'package:gqlrepo/__generated__/serializers.gql.dart' as _i1;
+
+part 'bill_render_fragment.data.gql.g.dart';
+
+abstract class GBillRenderFragment {
+  String get G__typename;
+  String get id;
+  String get identifier;
+  String get title;
+  Map<String, dynamic> toJson();
+}
+
+abstract class GBillRenderFragmentData
+    implements
+        Built<GBillRenderFragmentData, GBillRenderFragmentDataBuilder>,
+        GBillRenderFragment {
+  GBillRenderFragmentData._();
+
+  factory GBillRenderFragmentData(
+          [Function(GBillRenderFragmentDataBuilder b) updates]) =
+      _$GBillRenderFragmentData;
+
+  static void _initializeBuilder(GBillRenderFragmentDataBuilder b) =>
+      b..G__typename = 'BillType';
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  @override
+  String get id;
+  @override
+  String get identifier;
+  @override
+  String get title;
+  static Serializer<GBillRenderFragmentData> get serializer =>
+      _$gBillRenderFragmentDataSerializer;
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GBillRenderFragmentData.serializer,
+        this,
+      ) as Map<String, dynamic>);
+  static GBillRenderFragmentData? fromJson(Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GBillRenderFragmentData.serializer,
+        json,
+      );
+}

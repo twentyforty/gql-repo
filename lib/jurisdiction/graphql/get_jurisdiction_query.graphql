@@ -1,0 +1,14 @@
+# import './jurisdiction_fragment.graphql'
+# import '../../lego/graphql/lego_structure_fragment.graphql'
+
+
+query GetJurisdiction($input: JurisdictionInput!) {
+    jurisdiction(input: $input) {
+        ...JurisdictionFragment
+        url
+        coverPhotoUrl
+        legoStructure {
+            ...LegoStructureFragment
+        }
+    }
+}

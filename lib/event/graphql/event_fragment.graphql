@@ -1,0 +1,13 @@
+# import './event_document_fragment.graphql'
+# import './event_render_fragment.graphql'
+
+
+fragment EventFragment on EventType {
+    ...EventRenderFragment
+    audioUrl
+    documents {
+        ...EventDocumentFragment
+    }
+    canApproveTags
+    pendingProposalCount
+}

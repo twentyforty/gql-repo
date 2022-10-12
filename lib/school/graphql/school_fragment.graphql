@@ -1,0 +1,13 @@
+# import './school_render_fragment.graphql'
+# import './school_district_render_fragment.graphql'
+# import './school_survey_fragment.graphql'
+
+fragment SchoolFragment on SchoolType {
+    ...SchoolRenderFragment
+    district {
+        ...SchoolDistrictRenderFragment
+    }
+    latestSurvey {
+        ...SchoolSurveyFragment
+    }
+}

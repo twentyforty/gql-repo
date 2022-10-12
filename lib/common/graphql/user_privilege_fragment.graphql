@@ -1,0 +1,22 @@
+# import '../../common/graphql/organization_render_fragment.graphql'
+# import '../../common/graphql/jurisdiction_render_fragment.graphql'
+# import '../../common/graphql/official_render_fragment.graphql'
+# import '../../common/graphql/user_fragment.graphql'
+# import '../../common/graphql/user_privilege_render_fragment.graphql'
+
+fragment UserPrivilegeFragment on UserPrivilegeType {
+    ...UserPrivilegeRenderFragment
+    user {
+        ...UserFragment
+    }
+    organization {
+        ...OrganizationRenderFragment
+    }
+    jurisdiction {
+        ...JurisdictionRenderFragment
+    }
+    official {
+        ...OfficialRenderFragment
+    }
+    createdAt
+}

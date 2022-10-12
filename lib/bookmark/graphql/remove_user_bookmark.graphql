@@ -1,0 +1,5 @@
+mutation RemoveUserBookmark($input: RemoveUserBookmarkInput!) {
+    removeUserBookmark(input: $input) {
+        success
+    }
+}

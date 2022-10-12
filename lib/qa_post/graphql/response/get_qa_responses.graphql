@@ -1,0 +1,13 @@
+# import './qa_response_render_fragment.graphql'
+# import '../../../common/graphql/pagination_fragment.graphql'
+
+query GetQAResponses($input: QAResponsePaginationInput!) {
+    qaResponses(input: $input) {
+        pagination {
+            ...PaginationOuputFragment
+        }
+        items {
+            ...QAResponseRenderFragment
+        }
+    }
+}

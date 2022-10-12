@@ -1,0 +1,10 @@
+# import './qa_post_render_fragment.graphql'
+# import './response/qa_response_render_fragment.graphql'
+
+
+fragment QAPostTileFragment on QAPostType {
+    ...QAPostRenderFragment
+    myResponse {
+        ...QAResponseRenderFragment
+    }
+}

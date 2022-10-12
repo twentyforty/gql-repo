@@ -1,0 +1,8 @@
+fragment QAPostMediaboxItemFragment on QAPostMediaboxItemType {
+    sourceEntityId
+    imageUrl
+    muxVideoId
+    videoThumbnailUrl
+    animatedGifUrl
+    videoUrl
+}

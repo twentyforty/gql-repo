@@ -1,0 +1,14 @@
+# import './government_email_message_fragment.graphql'
+# import '../../common/graphql/pagination_fragment.graphql'
+
+
+query GetGovernmentEmailMessages($input: GovernmentEmailMessagePaginationInput!) {
+    governmentEmailMessages(input: $input) {
+        items {
+            ...GovernmentEmailMessageFragment
+        }
+        pagination {
+            ...PaginationOuputFragment
+        }
+    }
+}

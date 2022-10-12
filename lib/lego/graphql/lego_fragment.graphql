@@ -1,0 +1,13 @@
+# import './lego_cell_fragment.graphql'
+
+fragment LegoFragment on LegoType {
+    legoType
+    tabTitle
+    title
+    textContent
+    appLink
+    appLinkLabel
+    cells {
+        ...LegoCellFragment
+    }
+}

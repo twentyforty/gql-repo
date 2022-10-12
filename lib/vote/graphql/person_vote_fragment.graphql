@@ -1,0 +1,15 @@
+# import '../../common/graphql/official_fragment.graphql'
+# import '../../bill/graphql/bill_render_fragment.graphql'
+
+fragment PersonVoteFragment on PersonVoteType {
+    option
+    voterName
+    voter {
+        ...OfficialFragment
+    }
+    voteEvent {
+        bill {
+            ...BillRenderFragment
+        }
+    }
+}

@@ -1,0 +1,8 @@
+fragment BillActionRenderFragment on BillActionType {
+    date
+    description
+    classification
+    organization {
+        name
+    }
+}

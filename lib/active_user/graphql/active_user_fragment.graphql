@@ -1,0 +1,37 @@
+# import './user_place_fragment.graphql'
+# import '../../common/graphql/civiqa_entity_fragment.graphql'
+# import '../../common/graphql/user_fragment.graphql'
+# import '../../common/graphql/user_privilege_render_fragment.graphql'
+
+fragment ActiveUserFragment on CiviqaUserType {
+    ...UserFragment
+    email
+    currentUserPlace {
+        ...UserPlaceFragment
+    }
+    places {
+        ...UserPlaceFragment
+    }
+    isStaff
+    streamChatApiKey
+    fcmToken
+    fcmTokenStale
+    googleApiKey
+    needsNux
+    isFirebaseAnonymous
+    discoverTabFirst
+    userBookmarkTypeCounts {
+        ...UserBookmarkTypeCountFragment
+    }
+    latestUserCameraMedia {
+        ...CiviqaEntityFragment
+    }
+    privileges {
+        ...UserPrivilegeRenderFragment
+    }
+}
+
+fragment UserBookmarkTypeCountFragment on UserBookmarkTypeCount {
+    entityType
+    count
+}

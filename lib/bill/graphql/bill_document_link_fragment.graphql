@@ -1,0 +1,11 @@
+# import './bill_render_fragment.graphql'
+
+fragment BillDocumentLinkFragment on BillDocumentLinkType {
+    document {
+        bill {
+            ...BillRenderFragment
+        }
+    }
+    mediaType,
+    url
+}

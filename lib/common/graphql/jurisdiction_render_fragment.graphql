@@ -1,0 +1,6 @@
+fragment JurisdictionRenderFragment on JurisdictionType {
+    id
+    name
+    photoUrl
+    classification
+}

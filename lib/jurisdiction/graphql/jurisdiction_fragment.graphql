@@ -1,0 +1,15 @@
+# import '../../common/graphql/division_render_fragment.graphql'
+# import '../../common/graphql/jurisdiction_render_fragment.graphql'
+# import '../../school/graphql/school_district_fragment.graphql'
+
+fragment JurisdictionFragment on JurisdictionType {
+    ...JurisdictionRenderFragment
+    division {
+        ...DivisionRenderFragment
+        wikiSummary
+    }
+    schoolDistrict {
+        ...SchoolDistrictFragment
+    }
+    pendingProposalCount
+}

@@ -1,0 +1,15 @@
+# import '../../common/graphql/organization_membership_fragment.graphql'
+# import '../../common/graphql/pagination_fragment.graphql'
+
+
+
+query GetOrganizationMemberships($input: OrganizationMembershipPaginationInput!) {
+    organizationMemberships(input: $input) {
+        pagination {
+            ...PaginationOuputFragment
+        }
+        items {
+            ...OrganizationMembershipFragment
+        }
+    }
+}

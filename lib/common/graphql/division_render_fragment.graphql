@@ -1,0 +1,11 @@
+fragment DivisionRenderFragment on DivisionType {
+    id
+    name
+    displayString
+    photoUrl
+    mapImageUrl
+    largeMapImageUrl
+    mapImageDarkUrl
+    largeMapImageDarkUrl
+    jurisdictionIds
+}

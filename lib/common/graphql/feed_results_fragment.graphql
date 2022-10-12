@@ -1,0 +1,12 @@
+# import './activity_feed_item_fragment.graphql'
+# import './pagination_fragment.graphql'
+
+
+fragment FeedResults on FeedItemPaginatedType {
+    pagination {
+        ...PaginationOuputFragment
+    }
+	items {
+        ...ActivityFeedItemFragment
+    }
+}

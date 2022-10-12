@@ -1,0 +1,18 @@
+# import '../../common/graphql/pagination_fragment.graphql'
+# import './bill_sponsorship_fragment.graphql'
+
+
+fragment BillSponsorshipResults on BillSponsorshipPaginatedType {
+    pagination {
+        ...PaginationOuputFragment
+    }
+	items {
+        ...BillSponsorshipFragment
+    }
+}
+
+query GetBillSponsorships($input: BillSponsorshipPaginationInput!) {
+    billSponsorships(input: $input) {
+        ...BillSponsorshipResults
+    }
+}

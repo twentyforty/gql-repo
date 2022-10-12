@@ -1,0 +1,9 @@
+# import './citation_fragment.graphql'
+
+mutation DeleteCitationHighlight($input: DeleteCitationHighlightInput!) {
+    deleteCitationHighlight(input: $input) {
+        citation {
+            ...CitationFragment
+        }
+    }
+}

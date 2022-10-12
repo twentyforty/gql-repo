@@ -1,0 +1,21 @@
+# import './proposal_log_entry_fragment.graphql'
+
+fragment ProposalFragment on ProposalType {
+    id
+    approved
+    rejected
+    proposalCount
+    
+    canApprove
+    canReject
+    
+    approval {
+        ...ProposalLogEntryFragment
+    }
+    rejection {
+        ...ProposalLogEntryFragment
+    }
+    initialProposalEntry {
+        ...ProposalLogEntryFragment
+    }
+}

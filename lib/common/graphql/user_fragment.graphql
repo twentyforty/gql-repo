@@ -1,0 +1,8 @@
+fragment UserFragment on CiviqaUserType {
+    id
+    username
+    fullName
+    photoUrl
+    subtitle
+    officialId
+}

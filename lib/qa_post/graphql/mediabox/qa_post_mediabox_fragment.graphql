@@ -1,0 +1,8 @@
+# import './qa_post_mediabox_item_fragment.graphql'
+
+fragment QAPostMediaboxFragment on QAPostMediaboxType {
+    leftDirection
+    mediaItems {
+        ...QAPostMediaboxItemFragment
+    }
+}

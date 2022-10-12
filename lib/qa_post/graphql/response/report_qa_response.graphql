@@ -1,0 +1,9 @@
+# import './qa_response_render_fragment.graphql'
+
+mutation ReportQAResponse($input: ReportQAResponseInput!) {
+    reportQaResponse(input: $input) {
+        qaResponse {
+            ...QAResponseRenderFragment
+        }
+    }
+}

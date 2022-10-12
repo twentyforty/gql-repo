@@ -1,0 +1,7 @@
+# import './bill_fragment.graphql'
+
+query GetBill($billId: String!) {
+    billById(billId: $billId) {
+        ...BillFragment
+    }
+}

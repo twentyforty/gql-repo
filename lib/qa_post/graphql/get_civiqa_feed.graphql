@@ -1,0 +1,11 @@
+# import './qa_post_tile_fragment.graphql'
+
+query GetCiviqaFeed($input: CiviqaFeedInput!) {
+    civiqaFeed(input: $input) {
+        items {
+            ...QAPostTileFragment
+        }
+        offset
+        nextOffset
+    }
+}

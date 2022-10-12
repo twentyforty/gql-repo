@@ -1,0 +1,12 @@
+# import '../../common/graphql/division_render_fragment.graphql'
+
+fragment InvolvementRenderFragment on InvolvementType {
+    id
+    name 
+    purpose
+    streamChannelId
+    imageUrl
+    division {
+        ...DivisionRenderFragment
+    }
+}

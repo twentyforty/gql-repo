@@ -1,0 +1,4 @@
+fragment VoteCountFragment on VoteCountType {
+    option
+    value
+}

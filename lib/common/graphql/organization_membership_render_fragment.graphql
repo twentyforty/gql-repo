@@ -1,0 +1,16 @@
+# import './organization_render_fragment.graphql'
+# import './post_render_fragment.graphql'
+
+fragment OrganizationMembershipRenderFragment on OrganizationMembershipType {
+    id
+    role
+    label
+    post {
+        ...PostRenderFragment
+    }
+    organization {
+        ...OrganizationRenderFragment
+    }
+    startDate
+    endDate
+}

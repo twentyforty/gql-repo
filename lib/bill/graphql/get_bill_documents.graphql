@@ -1,0 +1,18 @@
+# import '../../common/graphql/pagination_fragment.graphql'
+# import './bill_document_fragment.graphql'
+
+
+fragment BillDocumentResults on BillDocumentPaginatedType {
+    pagination {
+        ...PaginationOuputFragment
+    }
+	items {
+        ...BillDocumentFragment
+    }
+}
+
+query GetBillDocuments($input: BillDocumentPaginationInput!) {
+    billDocuments(input: $input) {
+        ...BillDocumentResults
+    }
+}

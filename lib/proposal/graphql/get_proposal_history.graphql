@@ -1,0 +1,14 @@
+# import './proposal_log_entry_fragment.graphql'
+# import '../../common/graphql/pagination_fragment.graphql'
+
+
+query GetProposalHistory($input: ProposalHistoryInput!) {
+    proposalHistory(input: $input) {
+        items {
+            ...ProposalLogEntryFragment
+        }
+        pagination {
+            ...PaginationOuputFragment
+        }
+    }
+}

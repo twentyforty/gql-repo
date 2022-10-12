@@ -1,0 +1,14 @@
+# import './citation_render_fragment.graphql'
+# import '../../common/graphql/pagination_fragment.graphql'
+
+
+query GetCitations($input: CitationsInput!) {
+    citations(input: $input) {
+        items {
+            ...CitationRenderFragment
+        }
+        pagination {
+            ...PaginationOuputFragment
+        }
+    }
+}

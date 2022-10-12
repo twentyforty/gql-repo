@@ -1,0 +1,7 @@
+# import './legislative_session_fragment.graphql'
+
+query GetLegislativeSession($input: LegislativeSessionInput!) {
+    legislativeSession(input: $input) {
+        ...LegislativeSessionFragment
+    }
+}

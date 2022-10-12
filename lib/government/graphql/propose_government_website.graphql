@@ -1,0 +1,9 @@
+# import './government_website_fragment.graphql'
+
+mutation ProposeGovernmentWebsite($input: ProposeGovernmentWebsiteInput!) {
+    proposeGovernmentWebsite(input: $input) {
+        result {
+            ...GovernmentWebsiteFragment
+        }
+    }
+}

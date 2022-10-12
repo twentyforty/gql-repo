@@ -1,0 +1,9 @@
+# import './field_error_fragment.graphql'
+
+mutation CreateEnrichmentProposal($input: CreateEnrichmentProposalInput!) {
+    createEnrichmentProposal(input: $input) {
+        errors {
+            ...FieldErrorFragment
+        }
+    }
+}

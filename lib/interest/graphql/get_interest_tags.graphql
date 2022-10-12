@@ -1,0 +1,8 @@
+# import './interest_tag_render_fragment.graphql'
+
+
+query GetInterestTags($input: InterestTaggedObjectInput!) {
+    interestTags(input: $input) {
+        ...InterestTagRenderFragment
+    }
+}

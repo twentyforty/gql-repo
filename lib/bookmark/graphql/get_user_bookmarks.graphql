@@ -1,0 +1,14 @@
+# import '../../common/graphql/pagination_fragment.graphql'
+# import '../../common/graphql/user_bookmark_fragment.graphql'
+
+
+query GetUserBookmarks($input: UserBookmarksInput!) {
+    userBookmarks(input: $input) {
+        items {
+            ...UserBookmarkFragment
+        }
+        pagination {
+            ...PaginationOuputFragment
+        }
+    }
+}

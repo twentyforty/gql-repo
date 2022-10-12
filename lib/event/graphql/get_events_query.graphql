@@ -1,0 +1,13 @@
+# import './event_results.graphql'
+
+query GetPastEvents($input: EventPaginationInput!) {
+    pastEventsById(input: $input) {
+        ...EventResults
+    }
+}
+
+query GetAllUpcomingEvents($input: EventPaginationInput!) {
+    allUpcomingEventsById(input: $input) {
+        ...EventResults
+    }
+}

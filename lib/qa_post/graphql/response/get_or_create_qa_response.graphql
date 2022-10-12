@@ -1,0 +1,9 @@
+# import './qa_response_fragment.graphql'
+
+mutation GetOrCreateQAResponse($input: GetOrCreateQAResponseInput!) {
+    getOrCreateQaResponse(input: $input) {
+        qaResponse {
+            ...QAResponseFragment
+        }
+    }
+}

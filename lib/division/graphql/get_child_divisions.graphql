@@ -1,0 +1,13 @@
+# import '../../common/graphql/division_render_fragment.graphql'
+# import '../../common/graphql/pagination_fragment.graphql'
+
+query GetChildDivisions($input: ChildDivisionsInput!) {
+    childDivisions(input: $input) {
+        items {
+            ...DivisionRenderFragment
+        }
+        pagination {
+            ...PaginationOuputFragment
+        }
+    }
+}

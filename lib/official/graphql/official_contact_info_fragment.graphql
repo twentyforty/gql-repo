@@ -1,0 +1,6 @@
+fragment OfficialContactInfoFragment on PersonOfficeType {
+    name
+    classification
+    address
+    voice
+}

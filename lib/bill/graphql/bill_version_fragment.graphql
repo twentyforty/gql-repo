@@ -1,0 +1,12 @@
+# import './bill_version_render_fragment.graphql'
+# import './bill_version_activities_fragment.graphql'
+
+
+fragment BillVersionFragment on BillVersionType {
+    ...BillVersionRenderFragment
+    activities {
+        ...BillVersionActivitiesFragment
+    }
+}
+
+

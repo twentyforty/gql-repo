@@ -1,0 +1,15 @@
+# import '../../common/graphql/user_fragment.graphql'
+
+fragment GovernmentWebsiteSnapshotRenderFragment on GovernmentWebsiteSnapshotType {
+    id
+    caption
+    sourceUrl
+    pdfFileUrl
+    imagePreviewFileUrl
+    timestamp
+    createdBy {
+        ...UserFragment
+    }
+    pageTitle
+    divisionId
+}

@@ -1,0 +1,6 @@
+
+query GetUserBookmark($input: UserBookmarkInput!) {
+    userBookmark(input: $input) {
+        id
+    }
+}

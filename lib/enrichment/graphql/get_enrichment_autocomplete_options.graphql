@@ -1,0 +1,7 @@
+# import './autocomplete_option_fragment.graphql'
+
+query GetEnrichmentAutocompleteOptions($input: EnrichmentAutocompleteInput!) {
+    enrichmentAutocompleteOptions(input: $input) {
+        ...AutocompleteOptionFragment
+    }
+}

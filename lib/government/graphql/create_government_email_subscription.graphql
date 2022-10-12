@@ -1,0 +1,9 @@
+# import './government_email_subscription_fragment.graphql'
+
+mutation CreateGovernmentEmailSubscription($input: CreateGovernmentEmailSubscriptionInput!) {
+    createGovernmentEmailSubscription(input: $input) {
+        subscription {
+            ...GovernmentEmailSubscriptionFragment
+        }
+    }
+}

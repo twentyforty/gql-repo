@@ -1,0 +1,7 @@
+# import '../../common/graphql/feed_results_fragment.graphql'
+
+query GetUserInterestFeed($input: InterestFeedPaginationInput!) {
+    userInterestFeedItems(input: $input) {
+        ...FeedResults
+    }
+}

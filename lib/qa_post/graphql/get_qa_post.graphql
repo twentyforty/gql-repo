@@ -1,0 +1,7 @@
+# import './qa_post_fragment.graphql'
+
+query GetQAPost($input: QAPostInput!) {
+    qaPost(input: $input) {
+        ...QAPostFragment
+    }
+}

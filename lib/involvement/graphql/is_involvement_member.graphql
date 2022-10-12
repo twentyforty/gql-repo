@@ -1,0 +1,3 @@
+query IsInvolvementMember($input: InvolvementInput!) {
+    isInvolvementMember(input: $input)
+}

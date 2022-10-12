@@ -1,0 +1,7 @@
+# import './qa_composition_fragment.graphql'
+
+query GetQAComposition($input: QACompositionInput!) {
+    qaComposition(input: $input) {
+        ...QACompositionFragment
+    }
+}

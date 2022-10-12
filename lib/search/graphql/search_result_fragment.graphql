@@ -1,0 +1,21 @@
+# import './search_result_highlight_fragment.graphql'
+
+fragment SearchResultFragment on SearchResultType {
+    entityId
+    entityType
+    title
+    subtitle
+    extraInfo
+    divisionId
+    divisionName
+    jurisdictionId
+    jurisdictionName
+    highlights {
+        ...SearchResultHighlightFragment
+    }
+    inAppUrl
+    wwwUrl
+    imageUrl
+    emojiRep
+    score
+}

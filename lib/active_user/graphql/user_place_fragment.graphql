@@ -1,0 +1,11 @@
+# import '../../place/graphql/place_fragment.graphql'
+
+fragment UserPlaceFragment on UserPlaceType {
+    id
+    place {
+        ...PlaceFragment
+    }
+    label
+    isCurrent
+    verified
+}

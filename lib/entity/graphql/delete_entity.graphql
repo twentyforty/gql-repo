@@ -1,0 +1,5 @@
+mutation DeleteEntity($input: CiviqaEntityInput!) {
+    deleteEntity(input: $input) {
+        success
+    }
+}

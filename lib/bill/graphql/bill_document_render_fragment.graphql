@@ -1,0 +1,14 @@
+# import './bill_render_fragment.graphql'
+# import './bill_document_link_fragment.graphql'
+
+fragment BillDocumentRenderFragment on BillDocumentType {
+    id
+    note
+    date
+    classification
+    links {
+        ...BillDocumentLinkFragment
+    }
+    processedUrl
+    imagePreviewUrl
+}

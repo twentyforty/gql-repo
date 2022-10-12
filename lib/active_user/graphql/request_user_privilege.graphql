@@ -1,0 +1,9 @@
+# import '../../common/graphql/user_privilege_fragment.graphql'
+
+mutation RequestUserPrivilege($input: RequestUserPrivilegeInput!) {
+    requestUserPrivilege(input: $input) {
+        userPrivilege {
+            ...UserPrivilegeFragment
+        }
+    }
+}

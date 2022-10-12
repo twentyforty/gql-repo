@@ -1,0 +1,9 @@
+# import './legal_code_render_fragment.graphql'
+# import './legal_code_node_fragment.graphql'
+
+fragment LegalCodeFragment on LegalCodeType {
+    ...LegalCodeRenderFragment
+    rootNode {
+        ...LegalCodeNodeFragment
+    }
+}

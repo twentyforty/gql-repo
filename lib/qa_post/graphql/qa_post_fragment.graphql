@@ -1,0 +1,25 @@
+# import './qa_post_tile_fragment.graphql'
+# import './response/qa_response_render_fragment.graphql'
+# import './composition/qa_composition_fragment.graphql'
+# import './mediabox/qa_post_mediabox_item_fragment.graphql'
+# import '../../common/graphql/jurisdiction_render_fragment.graphql'
+
+
+fragment QAPostFragment on QAPostType {
+    ...QAPostTileFragment
+    composition {
+        ...QACompositionFragment
+    }
+    audiences {
+        ...JurisdictionRenderFragment
+    }
+    latestResponse {
+        ...QAResponseRenderFragment
+    }
+    canApproveTags
+    pendingProposalCount
+    mediaboxOptions {
+        ...QAPostMediaboxItemFragment
+    }
+}
+

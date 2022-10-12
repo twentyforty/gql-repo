@@ -1,0 +1,10 @@
+# import './government_website_render_fragment.graphql'
+# import './government_website_snapshot_render_fragment.graphql'
+
+
+fragment GovernmentWebsiteSnapshotFragment on GovernmentWebsiteSnapshotType {
+    ...GovernmentWebsiteSnapshotRenderFragment
+    governmentWebsite {
+        ...GovernmentWebsiteRenderFragment
+    }
+}

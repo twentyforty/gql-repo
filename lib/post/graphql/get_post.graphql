@@ -1,0 +1,7 @@
+# import '../../common/graphql/post_fragment.graphql'
+
+query GetPost($input: PostInput!) {
+    post(input: $input) {
+        ...PostFragment
+    }
+}

@@ -1,0 +1,81 @@
+# import './icon_fragment.graphql'
+# import './user_fragment.graphql'
+
+fragment CiviqaEntityFragment on CiviqaEntityType {
+    id
+    modelId
+    entityType
+    title
+    subtitle
+    subtitle2
+    appLink
+    carouselImageUrls
+    mainImageUrl
+    tileAvatarLabel
+    cardUseAvatar
+    tileUseAvatar
+    videoUrl
+    author {
+        ...UserFragment
+    }
+    publishedDate
+    icon {
+        ...IconFragment
+    }
+    canDelete
+    canArchive
+    canUnarchive
+
+    # userMediaUpload {
+    #     ...UserMediaUploadFragment
+    # }
+    # userCameraMedia {
+    #     ...UserCameraMediaFragment
+    # }
+    # citation {
+    #     ...CitationFragment
+    # }
+    # qaPost {
+    #     ...QAPostTileFragment
+    # }
+    # qaResponse {
+    #     ...QAResponseTileFragment
+    # }
+    # governmentWebsite {
+    #     ...GovernmentWebsiteRenderFragment
+    # }
+    # governmentWebsiteSnapshot {
+    #     ...GovernmentWebsiteSnapshotRenderFragment
+    # }
+    # governmentEmailMessage {
+    #     ...GovernmentEmailMessageFragment
+    # }
+    # bill {
+    #     ...BillRenderFragment
+    #     abstracts {
+    #         abstract
+    #         note
+    #     }
+    #     legislativeSession {
+    #         ...LegislativeSessionFragment
+    #     }
+    # }
+    # event {
+    #     ...EventRenderFragment
+    # }
+    # organization {
+    #     ...OrganizationRenderFragment
+    #     jurisdiction {
+    #         ...JurisdictionRenderFragment
+    #     }
+    # }
+    # jurisdiction {
+    #     ...JurisdictionRenderFragment
+    # }
+    # division {
+    #     ...DivisionRenderFragment
+    # }
+    # official {
+    #     ...OfficialRenderFragment
+    # }
+}

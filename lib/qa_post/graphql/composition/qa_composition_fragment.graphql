@@ -1,0 +1,15 @@
+# import './qa_citation_fragment.graphql'
+# import './qa_mention_fragment.graphql'
+# import './qa_composition_render_fragment.graphql'
+# import '../../../common/graphql/civiqa_entity_fragment.graphql'
+
+
+fragment QACompositionFragment on QACompositionType {
+    ...QACompositionRenderFragment
+    mentions {
+        ...QAMentionFragment
+    }
+    citations {
+        ...QACitationFragment
+    }
+}

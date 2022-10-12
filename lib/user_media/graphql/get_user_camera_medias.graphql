@@ -1,0 +1,14 @@
+# import '../../common/graphql/pagination_fragment.graphql'
+# import '../../common/graphql/civiqa_entity_fragment.graphql'
+
+
+query GetUserCameraMedias($input: UserCameraMediaInput!) {
+    userCameraMedias(input: $input) {
+        items {
+            ...CiviqaEntityFragment
+        }
+        pagination {
+            ...PaginationOuputFragment
+        }
+    }
+}
